@@ -522,7 +522,10 @@
 
 <h2 id="installation">Installation</h2>
 <p>In order to use the package, you need to install it first. You can do this by running the following command in your terminal:</p>
-<div class="highlight"><pre><span></span><code><span class="go">pip install thundr</span>
+<div class="highlight"><pre><span></span><code><span class="go">pip install git+https://github.com/MICS-Lab/thunder.git</span>
+</code></pre></div>
+<p>or you can clone the repository and install it locally like so:</p>
+<div class="highlight"><pre><span></span><code><span class="go">pip install .</span>
 </code></pre></div>
 <p>The package is storing all the datasets, models and results under a folder that you will need to define through the environment variable <code>THUNDER_BASE_DATA_FOLDER</code>. You can do this by running the following command in your terminal:
 <div class="highlight"><pre><span></span><code><span class="go">export THUNDER_BASE_DATA_FOLDER=/path/to/thunder_base_data_folder</span>
