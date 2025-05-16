@@ -1,0 +1,1738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mics-lab.github.io/thunder/api/">
+      
+      
+        <link rel="prev" href="../custom_config/">
+      
+      
+      
+      <link rel="icon" href="../logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>API - THUNDER</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thunder.benchmark.benchmark" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="THUNDER" class="md-header__button md-logo" aria-label="THUNDER" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            THUNDER
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="THUNDER" class="md-nav__button md-logo" aria-label="THUNDER" data-md-component="logo">
+      
+  <img src="../logo.svg" alt="logo">
+
+    </a>
+    THUNDER
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmark a Custom Model
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overriding Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.benchmark.benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      benchmark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.download_datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.download_models" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.generate_splits" class="md-nav__link">
+    <span class="md-ellipsis">
+      generate_splits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel" class="md-nav__link">
+    <span class="md-ellipsis">
+      PretrainedModel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PretrainedModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_linear_probing_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_linear_probing_embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_segmentation_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_segmentation_embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_transform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.benchmark.benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      benchmark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.download_datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.download_models" class="md-nav__link">
+    <span class="md-ellipsis">
+      download_models
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.generate_splits" class="md-nav__link">
+    <span class="md-ellipsis">
+      generate_splits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel" class="md-nav__link">
+    <span class="md-ellipsis">
+      PretrainedModel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PretrainedModel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_linear_probing_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_linear_probing_embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_segmentation_embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_segmentation_embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#thunder.models.PretrainedModel.get_transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_transform
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>API</h1>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thunder.benchmark.benchmark" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">loading_mode</span><span class="o">=</span><span class="s1">&#39;online_loading&#39;</span><span class="p">,</span> <span class="n">lora</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ckpt_save_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">online_wandb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents first">
+
+        <p>Runs a benchmark for a pretrained model on a dataset with a task-specific approach.</p>
+
+
+<details class="where-options-are" open>
+  <summary>where options are</summary>
+  <ul>
+<li>dataset: <em>bach</em>, <em>bcss</em>, <em>bracs</em>, <em>break_his</em>, <em>ccrcc</em>, <em>crc</em>, <em>esca</em>, <em>mhist</em>, <em>ocelot</em>, <em>pannuke</em>, <em>patch_camelyon</em>, <em>segpath_epithelial</em>, <em>segpath_lymphocytes</em>, <em>tcga_crc_msi</em>, <em>tcga_tils</em>, <em>tcga_uniform</em>, <em>wilds</em></li>
+<li>model: <em>hiboub</em>, <em>hiboul</em>, <em>hoptimus0</em>, <em>hoptimus1</em>, <em>midnight</em>, <em>phikon</em>, <em>phikon2</em>, <em>uni</em>, <em>uni2h</em>, <em>virchow</em>, <em>virchow2</em>, <em>conch</em>, <em>titan</em>, <em>keep</em>, <em>musk</em>, <em>plip</em>, <em>quiltnetb32</em>, <em>dinov2base</em>, <em>dinov2large</em>, <em>vitbasepatch16224in21k</em>, <em>vitlargepatch16224in21k</em>, <em>clipvitbasepatch32</em>, <em>clipvitlargepatch14</em></li>
+<li>task: <em>adversarial_attack_linear</em>, <em>alignment_scoring</em>, <em>image_retrieval</em>, <em>knn</em>, <em>linear_probing</em>, <em>pre_computing_embeddings</em>, <em>segmentation</em>, <em>simple_shot</em>, <em>transformation_invariance</em></li>
+<li>loading_mode: <em>online_loading</em>, <em>image_pre_loading</em>, <em>embedding_pre_loading</em></li>
+</ul>
+</details>
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>model</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the pretrained model to use.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dataset</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the dataset to use.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>task</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The name of the task to perform.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>loading_mode</code>
+            </td>
+            <td>
+                  <code><span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The type of data loading to use.</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;online_loading&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>lora</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to use LoRA (Low-Rank Adaptation) for model adaptation. Default is False.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>ckpt_save_all</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to save all checkpoints during training. Default is False which means that only the best is saved.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>online_wandb</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to use online mode for Weights &amp; Biases (wandb) logging. Default is False which means offline mode.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/benchmark.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">benchmark</span><span class="p">(</span>
+    <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;online_loading&quot;</span><span class="p">,</span>
+    <span class="n">lora</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">ckpt_save_all</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">online_wandb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Runs a benchmark for a pretrained model on a dataset with a task-specific approach.</span>
+
+<span class="sd">    where options are:</span>
+<span class="sd">        - dataset: *bach*, *bcss*, *bracs*, *break_his*, *ccrcc*, *crc*, *esca*, *mhist*, *ocelot*, *pannuke*, *patch_camelyon*, *segpath_epithelial*, *segpath_lymphocytes*, *tcga_crc_msi*, *tcga_tils*, *tcga_uniform*, *wilds*</span>
+<span class="sd">        - model: *hiboub*, *hiboul*, *hoptimus0*, *hoptimus1*, *midnight*, *phikon*, *phikon2*, *uni*, *uni2h*, *virchow*, *virchow2*, *conch*, *titan*, *keep*, *musk*, *plip*, *quiltnetb32*, *dinov2base*, *dinov2large*, *vitbasepatch16224in21k*, *vitlargepatch16224in21k*, *clipvitbasepatch32*, *clipvitlargepatch14*</span>
+<span class="sd">        - task: *adversarial_attack_linear*, *alignment_scoring*, *image_retrieval*, *knn*, *linear_probing*, *pre_computing_embeddings*, *segmentation*, *simple_shot*, *transformation_invariance*</span>
+<span class="sd">        - loading_mode: *online_loading*, *image_pre_loading*, *embedding_pre_loading*</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        model (str): The name of the pretrained model to use.</span>
+<span class="sd">        dataset (str): The name of the dataset to use.</span>
+<span class="sd">        task (str): The name of the task to perform.</span>
+<span class="sd">        loading_mode (str): The type of data loading to use.</span>
+<span class="sd">        lora (bool): Whether to use LoRA (Low-Rank Adaptation) for model adaptation. Default is False.</span>
+<span class="sd">        ckpt_save_all (bool): Whether to save all checkpoints during training. Default is False which means that only the best is saved.</span>
+<span class="sd">        online_wandb (bool): Whether to use online mode for Weights &amp; Biases (wandb) logging. Default is False which means offline mode.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">hydra</span><span class="w"> </span><span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">initialize</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">omegaconf</span><span class="w"> </span><span class="kn">import</span> <span class="n">OmegaConf</span>
+
+    <span class="kn">from</span><span class="w"> </span><span class="nn">.utils.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_config</span>
+
+    <span class="n">wandb_mode</span> <span class="o">=</span> <span class="s2">&quot;online&quot;</span> <span class="k">if</span> <span class="n">online_wandb</span> <span class="k">else</span> <span class="s2">&quot;offline&quot;</span>
+    <span class="n">adaptation_type</span> <span class="o">=</span> <span class="s2">&quot;lora&quot;</span> <span class="k">if</span> <span class="n">lora</span> <span class="k">else</span> <span class="s2">&quot;frozen&quot;</span>
+    <span class="n">ckpt_saving</span> <span class="o">=</span> <span class="s2">&quot;save_ckpts_all_epochs&quot;</span> <span class="k">if</span> <span class="n">ckpt_save_all</span> <span class="k">else</span> <span class="s2">&quot;save_best_ckpt_only&quot;</span>
+    <span class="n">model_name</span> <span class="o">=</span> <span class="n">model</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="n">model_name</span> <span class="ow">and</span> <span class="n">model_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;custom:&quot;</span><span class="p">):</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">load_custom_model_from_file</span><span class="p">(</span><span class="n">model_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">model_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="c1"># Get Config</span>
+    <span class="n">cfg</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">(</span>
+        <span class="n">task</span><span class="p">,</span>
+        <span class="n">ckpt_saving</span><span class="p">,</span>
+        <span class="n">dataset</span><span class="p">,</span>
+        <span class="n">model_name</span><span class="p">,</span>
+        <span class="n">adaptation_type</span><span class="p">,</span>
+        <span class="n">loading_mode</span><span class="p">,</span>
+        <span class="n">wandb_mode</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_dataset_available</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_datasets</span>
+
+        <span class="n">download_datasets</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">make_splits</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">model_name</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">is_model_available</span><span class="p">(</span><span class="n">model_name</span><span class="p">):</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_models</span>
+
+        <span class="n">download_models</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="c1"># If model is a string, cfg is already populated with the model details</span>
+        <span class="n">run_benchmark</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># If model is a callable, pass it directly to the benchmark function</span>
+        <span class="n">run_benchmark</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thunder.download_datasets" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="n">make_splits</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents first">
+
+        <p>Downloads the benchmark datasets specified in the list of dataset names.</p>
+<p>This function requires the <code>$THUNDER_BASE_DATA_FOLDER</code> environment variable to be set,
+which indicates the base directory where the datasets will be downloaded.</p>
+
+
+<details class="the-list-of-all-available-datasets" open>
+  <summary>The list of all available datasets</summary>
+  <ul>
+<li>bach</li>
+<li>bracs</li>
+<li>break_his</li>
+<li>ccrcc</li>
+<li>crc</li>
+<li>esca</li>
+<li>mhist</li>
+<li>ocelot</li>
+<li>pannuke</li>
+<li>patch_camelyon</li>
+<li>segpath_epithelial</li>
+<li>segpath_lymphocytes</li>
+<li>tcga_crc_msi</li>
+<li>tcga_tils</li>
+<li>tcga_uniform</li>
+<li>wilds</li>
+</ul>
+</details>
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>datasets</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>] or <span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A dataset name string or a List of dataset names to download or one of the following aliases: <code>all</code>, <code>classification</code>, <code>segmentation</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>make_splits</code>
+            </td>
+            <td>
+                  <code><span title="bool">bool</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to generate data splits for the datasets. Defaults to False.</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/datasets/download.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads the benchmark datasets specified in the list of dataset names.</span>
+
+<span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
+<span class="sd">    which indicates the base directory where the datasets will be downloaded.</span>
+
+<span class="sd">    The list of all available datasets:</span>
+<span class="sd">        * bach</span>
+<span class="sd">        * bracs</span>
+<span class="sd">        * break_his</span>
+<span class="sd">        * ccrcc</span>
+<span class="sd">        * crc</span>
+<span class="sd">        * esca</span>
+<span class="sd">        * mhist</span>
+<span class="sd">        * ocelot</span>
+<span class="sd">        * pannuke</span>
+<span class="sd">        * patch_camelyon</span>
+<span class="sd">        * segpath_epithelial</span>
+<span class="sd">        * segpath_lymphocytes</span>
+<span class="sd">        * tcga_crc_msi</span>
+<span class="sd">        * tcga_tils</span>
+<span class="sd">        * tcga_uniform</span>
+<span class="sd">        * wilds</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        datasets (List[str] or str): A dataset name string or a List of dataset names to download or one of the following aliases: `all`, `classification`, `segmentation`.</span>
+<span class="sd">        make_splits (bool): Whether to generate data splits for the datasets. Defaults to False.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;THUNDER_BASE_DATA_FOLDER&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">EnvironmentError</span><span class="p">(</span>
+            <span class="s2">&quot;Please set base data directory of thunder using `export THUNDER_BASE_DATA_FOLDER=/base/data/directory`&quot;</span>
+        <span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">datasets</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+        <span class="n">download_dataset</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">make_splits</span><span class="p">:</span>
+            <span class="n">generate_splits</span><span class="p">([</span><span class="n">dataset</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thunder.download_models" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents first">
+
+        <p>Download model checkpoints from Hugging Face.</p>
+
+
+<details class="the-list-of-all-available-models" open>
+  <summary>The list of all available models</summary>
+  <ul>
+<li>uni</li>
+<li>uni2h</li>
+<li>virchow</li>
+<li>virchow2</li>
+<li>hoptimus0</li>
+<li>hoptimus1</li>
+<li>conch</li>
+<li>titan</li>
+<li>phikon</li>
+<li>phikon2</li>
+<li>hiboub</li>
+<li>hiboul</li>
+<li>midnight</li>
+<li>keep</li>
+<li>quiltb32</li>
+<li>plip</li>
+<li>musk</li>
+<li>dinov2base</li>
+<li>dinov2large</li>
+<li>vitbasepatch16224in21k</li>
+<li>vitlargepatch16224in21k</li>
+<li>clipvitbasepatch32</li>
+<li>clipvitlargepatch14</li>
+</ul>
+</details>
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>models</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>] or <span title="str">str</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>a list of model names or single a model name str.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/models/download.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download model checkpoints from Hugging Face.</span>
+
+<span class="sd">    The list of all available models:</span>
+<span class="sd">        * uni</span>
+<span class="sd">        * uni2h</span>
+<span class="sd">        * virchow</span>
+<span class="sd">        * virchow2</span>
+<span class="sd">        * hoptimus0</span>
+<span class="sd">        * hoptimus1</span>
+<span class="sd">        * conch</span>
+<span class="sd">        * titan</span>
+<span class="sd">        * phikon</span>
+<span class="sd">        * phikon2</span>
+<span class="sd">        * hiboub</span>
+<span class="sd">        * hiboul</span>
+<span class="sd">        * midnight</span>
+<span class="sd">        * keep</span>
+<span class="sd">        * quiltb32</span>
+<span class="sd">        * plip</span>
+<span class="sd">        * musk</span>
+<span class="sd">        * dinov2base</span>
+<span class="sd">        * dinov2large</span>
+<span class="sd">        * vitbasepatch16224in21k</span>
+<span class="sd">        * vitlargepatch16224in21k</span>
+<span class="sd">        * clipvitbasepatch32</span>
+<span class="sd">        * clipvitlargepatch14</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        models (List[str] or str): a list of model names or single a model name str.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">models</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">model</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">TAGS_FILENAMES</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> is not available.&quot;</span><span class="p">)</span>
+        <span class="n">download_model</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="thunder.generate_splits" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents first">
+
+        <p>Generates the data splits for all datasets in input list.</p>
+<p>This function requires the <code>$THUNDER_BASE_DATA_FOLDER</code> environment variable to be set,
+which indicates the base directory where the datasets will be downloaded.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>datasets</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="str">str</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>List of dataset names to generate splits for or one of the following aliases: <code>all</code>, <code>classification</code>, <code>segmentation</code>.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/datasets/data_splits.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates the data splits for all datasets in input list.</span>
+
+<span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
+<span class="sd">    which indicates the base directory where the datasets will be downloaded.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        datasets (List[str]): List of dataset names to generate splits for or one of the following aliases: `all`, `classification`, `segmentation`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">datasets</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+            <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+
+    <span class="n">base_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;THUNDER_BASE_DATA_FOLDER&quot;</span><span class="p">],</span> <span class="s2">&quot;datasets&quot;</span><span class="p">)</span>
+    <span class="n">data_splits_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_folder</span><span class="p">,</span> <span class="s2">&quot;data_splits&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">data_splits_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Generating data splits</span>
+    <span class="k">for</span> <span class="n">dataset_name</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+        <span class="n">generate_splits_for_dataset</span><span class="p">(</span><span class="n">dataset_name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="thunder.models.PretrainedModel" class="doc doc-heading">
+            <code>thunder.models.PretrainedModel</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="torch.nn.Module">Module</span></code>, <code><span title="abc.ABC">ABC</span></code></p>
+
+
+        <p>Abstract class to be inherited by custom pretrained models.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PretrainedModel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract class to be inherited by custom pretrained models.&quot;&quot;&quot;</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the transform function to be applied to the input images.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_linear_probing_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the embeddings for linear probing.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_segmentation_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the pixel dense embeddings for segmentation.&quot;&quot;&quot;</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">task_type</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">&quot;linear_probing&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_linear_probing_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_segmentation_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid task type </span><span class="si">{</span><span class="n">task_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thunder.models.PretrainedModel.get_linear_probing_embeddings" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_linear_probing_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the embeddings for linear probing.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_linear_probing_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the embeddings for linear probing.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thunder.models.PretrainedModel.get_segmentation_embeddings" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_segmentation_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the pixel dense embeddings for segmentation.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_segmentation_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the pixel dense embeddings for segmentation.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="thunder.models.PretrainedModel.get_transform" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_transform</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-abstractmethod"><code>abstractmethod</code></small>
+  </span>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Returns the transform function to be applied to the input images.</p>
+
+
+            <details class="quote">
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the transform function to be applied to the input images.&quot;&quot;&quot;</span>
+    <span class="k">pass</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
