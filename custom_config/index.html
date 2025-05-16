@@ -678,8 +678,8 @@
 
 <h2 id="overriding-config-parameters">Overriding config parameters</h2>
 <p>Default parameters are used for various aspects of the benchmark, e.g., the batch sizes, learning rates. These default parameters can be overriden using the following syntaxes for both CLI and API uses.</p>
-<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>bach<span class="w"> </span>knn<span class="w"> </span>--task.pre_comp_emb_batch_size<span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="se">\</span>
-<span class="w">                                  </span>--task.k_vals<span class="w"> </span><span class="s2">&quot;[1, 2, 3]&quot;</span>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>keep<span class="w"> </span>bach<span class="w"> </span>knn<span class="w"> </span>--task.pre_comp_emb_batch_size<span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="se">\</span>
+<span class="w">                                </span>--task.k_vals<span class="w"> </span><span class="s2">&quot;[1, 2, 3]&quot;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
 <span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="s1">&#39;hiboub&#39;</span><span class="p">,</span>
