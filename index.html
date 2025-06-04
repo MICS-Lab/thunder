@@ -605,11 +605,11 @@
 
 
 <h1 id="tile-level-histopathology-image-understanding-benchmark">Tile-level Histopathology image Understanding benchmark</h1>
-<p><img src="banner.svg" /></p>
+<p><img src="banner.png" /></p>
 <p>We introduce <strong>THUNDER</strong>, a comprehensive benchmark designed to rigorously compare foundation models across various downstream tasks in computational pathology. THUNDER enables the evaluation and analysis of feature representations, robustness, and uncertainty quantification of these models across different datasets. Our benchmark encompasses a diverse collection of well-established datasets, covering multiple cancer types, image magnifications, and varying image and sample sizes. We propose an extensive set of tasks aimed at thoroughly assessing the capabilities and limitations of foundation models in digital pathology.</p>
 <h2 id="overview">Overview</h2>
 <p>We propose a benchmark to compare and study foundation models across three axes: (i) downstream task performance, (ii) feature space comparisons, and (iii) uncertainty and robustness. Our current version integrates 23 foundation models, vision-only, vision-language, trained on pathology or natural images, on 16 datasets covering different magnifications and organs. THUNDER also supports the use of new user-defined models for direct comparisons.</p>
-<p><img src="overview.svg" /></p>
+<p><img src="overview.png" /></p>
 <h2 id="usage">Usage</h2>
 <p>An API and command line interface (CLI) are provided to allow users to download datasets, models, and run benchmarks. The API is designed to be user-friendly and allows for easy integration into existing workflows. The CLI provides a convenient way to access the same functionality from the command line.</p>
 <div class="admonition important">
@@ -643,7 +643,7 @@
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
-<th style="text-align: center;">Short name</th>
+<th style="text-align: center;">Benchmark name</th>
 <th style="text-align: center;">Labels</th>
 <th style="text-align: center;">Nb. classes</th>
 <th style="text-align: center;">Organ(s)</th>
@@ -675,7 +675,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">BreakHis</td>
-<td style="text-align: center;">break-h</td>
+<td style="text-align: center;">break_his</td>
 <td style="text-align: center;">Classif.</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">Breast</td>
@@ -692,16 +692,6 @@
 <td style="text-align: center;">96x96</td>
 <td style="text-align: center;">10x</td>
 <td style="text-align: center;">302,436</td>
-</tr>
-<tr>
-<td style="text-align: left;">Patch Camelyon</td>
-<td style="text-align: center;">pcam</td>
-<td style="text-align: center;">Classif.</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">Breast</td>
-<td style="text-align: center;">96x96</td>
-<td style="text-align: center;">10x</td>
-<td style="text-align: center;">327,680</td>
 </tr>
 <tr>
 <td style="text-align: left;">CCRCC</td>
@@ -724,26 +714,6 @@
 <td style="text-align: center;">107,180</td>
 </tr>
 <tr>
-<td style="text-align: left;">MHIST</td>
-<td style="text-align: center;">mhist</td>
-<td style="text-align: center;">Classif.</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">CRC</td>
-<td style="text-align: center;">224x224</td>
-<td style="text-align: center;">5x</td>
-<td style="text-align: center;">3,152</td>
-</tr>
-<tr>
-<td style="text-align: left;">TCGA CRC-MSI</td>
-<td style="text-align: center;">tcga-crc</td>
-<td style="text-align: center;">Classif.</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">CRC</td>
-<td style="text-align: center;">512x512</td>
-<td style="text-align: center;">20x</td>
-<td style="text-align: center;">51,918</td>
-</tr>
-<tr>
 <td style="text-align: left;">ESCA</td>
 <td style="text-align: center;">esca</td>
 <td style="text-align: center;">Classif.</td>
@@ -754,8 +724,38 @@
 <td style="text-align: center;">367,229</td>
 </tr>
 <tr>
+<td style="text-align: left;">MHIST</td>
+<td style="text-align: center;">mhist</td>
+<td style="text-align: center;">Classif.</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">CRC</td>
+<td style="text-align: center;">224x224</td>
+<td style="text-align: center;">5x</td>
+<td style="text-align: center;">3,152</td>
+</tr>
+<tr>
+<td style="text-align: left;">Patch Camelyon</td>
+<td style="text-align: center;">patch_camelyon</td>
+<td style="text-align: center;">Classif.</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Breast</td>
+<td style="text-align: center;">96x96</td>
+<td style="text-align: center;">10x</td>
+<td style="text-align: center;">327,680</td>
+</tr>
+<tr>
+<td style="text-align: left;">TCGA CRC-MSI</td>
+<td style="text-align: center;">tcga_crc_msi</td>
+<td style="text-align: center;">Classif.</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">CRC</td>
+<td style="text-align: center;">512x512</td>
+<td style="text-align: center;">20x</td>
+<td style="text-align: center;">51,918</td>
+</tr>
+<tr>
 <td style="text-align: left;">TCGA TILS</td>
-<td style="text-align: center;">tcga-tils</td>
+<td style="text-align: center;">tcga_tils</td>
 <td style="text-align: center;">Classif.</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">Multi</td>
@@ -765,7 +765,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">TCGA Uniform</td>
-<td style="text-align: center;">tcga-unif</td>
+<td style="text-align: center;">tcga_uniform</td>
 <td style="text-align: center;">Classif.</td>
 <td style="text-align: center;">32</td>
 <td style="text-align: center;">Multi</td>
@@ -795,7 +795,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">SegPath Epithelial</td>
-<td style="text-align: center;">segp-ep</td>
+<td style="text-align: center;">segpath_epithelial</td>
 <td style="text-align: center;">Segm.</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">Multi</td>
@@ -805,7 +805,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">SegPath Lymphocytes</td>
-<td style="text-align: center;">segp-ly</td>
+<td style="text-align: center;">segpath_lymphocytes</td>
 <td style="text-align: center;">Segm.</td>
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">Multi</td>
@@ -820,7 +820,7 @@
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
-<th style="text-align: center;">Short name</th>
+<th style="text-align: center;">Benchmark name</th>
 <th style="text-align: center;">Vision arch.</th>
 <th style="text-align: center;">Params.</th>
 <th style="text-align: center;">Training method</th>
@@ -1002,7 +1002,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">ViT-B/16</td>
-<td style="text-align: center;">vitb</td>
+<td style="text-align: center;">vitbasepatch16224in21k</td>
 <td style="text-align: center;">ViT-B/16</td>
 <td style="text-align: center;">86M</td>
 <td style="text-align: center;">Imagenet</td>
@@ -1011,7 +1011,7 @@
 </tr>
 <tr>
 <td style="text-align: left;">ViT-L/16</td>
-<td style="text-align: center;">vitl</td>
+<td style="text-align: center;">vitlargepatch16224in21k</td>
 <td style="text-align: center;">ViT-L/16</td>
 <td style="text-align: center;">307M</td>
 <td style="text-align: center;">Imagenet</td>

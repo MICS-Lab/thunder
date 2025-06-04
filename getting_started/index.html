@@ -532,7 +532,8 @@
 </code></pre></div></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Without this environment variable, the package will not work. The folder should be empty and the package will create the necessary subfolders.</p>
+<p>Without this environment variable, the package will not work. The folder should be empty and the package will create the necessary subfolders. We will save datasets, foundation models, pre-computed embeddings and output files from ran tasks. Importantly, you will be able to find the output file for a task at the following location:
+<code>$THUNDER_BASE_DATA_FOLDER/outputs/res/&lt;dataset&gt;/&lt;model&gt;/&lt;task&gt;/&lt;adaptation_type&gt;/outputs.json</code></p>
 </div>
 <h2 id="cli-usage">CLI Usage</h2>
 <p>You can run the following command to see all available options,
