@@ -1910,7 +1910,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <details class="tip" open>
   <summary>output function <code>get_embeddings</code> signature.</summary>
   <ul>
-<li>src (torch.Tensor): Batch of transformed images with shape B<em>3</em>H*W.</li>
+<li>src (torch.Tensor): Batch of transformed images with shape (B, 3, H, W).</li>
 <li>pretrained_model (torch.nn.Module): Model to extract embeddings with.</li>
 <li>pooled_emb (bool):  Whether to output pooled (True) or spatial (False) embeddings.</li>
 </ul>
@@ -2016,7 +2016,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        get_embeddings (Callable): Function to extract embeddings.</span>
 
 <span class="sd">    Tip: output function `get_embeddings` signature.</span>
-<span class="sd">        * src (torch.Tensor): Batch of transformed images with shape B*3*H*W.</span>
+<span class="sd">        * src (torch.Tensor): Batch of transformed images with shape (B, 3, H, W).</span>
 <span class="sd">        * pretrained_model (torch.nn.Module): Model to extract embeddings with.</span>
 <span class="sd">        * pooled_emb (bool):  Whether to output pooled (True) or spatial (False) embeddings.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
