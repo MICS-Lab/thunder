@@ -535,6 +535,10 @@
 <p>Without this environment variable, the package will not work. The folder should be empty and the package will create the necessary subfolders. We will save datasets, foundation models, pre-computed embeddings and output files from ran tasks. Importantly, you will be able to find the output file for a task at the following location:
 <code>$THUNDER_BASE_DATA_FOLDER/outputs/res/&lt;dataset&gt;/&lt;model&gt;/&lt;task&gt;/&lt;adaptation_type&gt;/outputs.json</code></p>
 </div>
+<p>If you want to use the CONCH and MUSK models, you should install them as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="go">pip install git+https://github.com/Mahmoodlab/CONCH.git # CONCH</span>
+<span class="go">pip install git+https://github.com/lilab-stanford/MUSK.git # MUSK</span>
+</code></pre></div>
 <h2 id="cli-usage">CLI Usage</h2>
 <p>You can run the following command to see all available options,
 <div class="highlight"><pre><span></span><code><span class="go">&gt; thunder --help</span>

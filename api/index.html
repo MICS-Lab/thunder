@@ -898,7 +898,11 @@
 <span class="normal">87</span>
 <span class="normal">88</span>
 <span class="normal">89</span>
-<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">benchmark</span><span class="p">(</span>
+<span class="normal">90</span>
+<span class="normal">91</span>
+<span class="normal">92</span>
+<span class="normal">93</span>
+<span class="normal">94</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">benchmark</span><span class="p">(</span>
     <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">,</span>
     <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
@@ -941,10 +945,12 @@
     <span class="n">embedding_recomputing</span> <span class="o">=</span> <span class="s2">&quot;recomp_embs&quot;</span> <span class="k">if</span> <span class="n">recomp_embs</span> <span class="k">else</span> <span class="s2">&quot;no_recomp_embs&quot;</span>
     <span class="n">model_retraining</span> <span class="o">=</span> <span class="s2">&quot;retrain_model&quot;</span> <span class="k">if</span> <span class="n">retrain_model</span> <span class="k">else</span> <span class="s2">&quot;no_retrain_model&quot;</span>
     <span class="n">model_name</span> <span class="o">=</span> <span class="n">model</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="n">custom_name</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="k">if</span> <span class="n">model_name</span> <span class="ow">and</span> <span class="n">model_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;custom:&quot;</span><span class="p">):</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">load_custom_model_from_file</span><span class="p">(</span><span class="n">model_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">model_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">custom_name</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">name</span>
 
     <span class="c1"># Get Config</span>
     <span class="n">cfg</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">(</span>
@@ -959,6 +965,8 @@
         <span class="n">model_retraining</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span>
+
+    <span class="n">print_task_hyperparams</span><span class="p">(</span><span class="n">cfg</span><span class="p">,</span> <span class="n">custom_name</span><span class="o">=</span><span class="n">custom_name</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">is_dataset_available</span><span class="p">(</span><span class="n">dataset</span><span class="p">):</span>
         <span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_datasets</span>
