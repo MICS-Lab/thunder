@@ -11,10 +11,6 @@
         <link rel="canonical" href="https://mics-lab.github.io/thunder/get_model/">
       
       
-        <link rel="prev" href="../custom_config/">
-      
-      
-        <link rel="next" href="../api/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Using foundation models on your data - THUNDER</title>
+        <title>Get model - THUNDER</title>
       
     
     
@@ -51,6 +47,10 @@
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs5@1.13.7/css/dataTables.bootstrap5.min.css">
+    
+      <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.3.3/css/searchPanes.dataTables.min.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using foundation models on your data
+              Get model
             
           </span>
         </div>
@@ -244,23 +244,43 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../leaderboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leaderboard
     
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -273,8 +293,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
           </label>
@@ -315,7 +335,7 @@
   
   
   <span class="md-ellipsis">
-    Benchmarking a Custom Model
+    Benchmark a Custom Model
     
   </span>
   
@@ -344,37 +364,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Using foundation models on your data
-    
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -444,7 +433,7 @@
   
 
 
-  <h1>Using foundation models on your data</h1>
+  <h1>Get model</h1>
 
 <p>In addition to benchmarking, we also provide a <a href="https://mics-lab.github.io/thunder/api/#thunder.models.get_model_from_name"><code>get_model_from_name</code></a> function through our API to extract embeddings using any foundation model we support on your own data. It returns a Pytorch model callable, associated transforms (to apply to images to extract embeddings from) and a function to get embeddings from a batch of transformed images, the model callable, and the type of embeddings (pooled or spatial) to return.</p>
 <p>Below is an example if you want to get the Pytorch callable, transforms and function to extract embeddings for <code>uni2h</code>:</p>
@@ -508,6 +497,18 @@
     
     
       <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/datatables.net@1.13.7/js/jquery.dataTables.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5@1.13.7/js/dataTables.bootstrap5.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+      
+        <script src="https://cdn.datatables.net/searchpanes/2.3.3/js/dataTables.searchPanes.min.js"></script>
+      
+        <script src="../javascripts/rank-table.js"></script>
       
     
   </body>

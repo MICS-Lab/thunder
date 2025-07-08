@@ -2,10 +2,154 @@
     --md-primary-fg-color: #61449b;
     --md-primary-fg-color--light: #88bee7;
     --md-primary-fg-color--dark: #412a71;
+    --thunder-purple-700: #5433a6;
+    --thunder-purple-800: #412a71;
+    --thunder-purple-50 : #ede9f7;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
     height: 2rem;
     width: 2rem;
+}
+
+#rankTable {
+  border:1px solid #ede9f7 ;
+}
+#rankTable.table {
+  
+    width: 100%;
+    font-size: 0.60rem;   
+  }
+  
+  #rankTable.table thead th {
+    background: #5330a5;
+    color: white;
+    border:1px solid #ede9f7 ;
+
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.60rem 0.75rem;
+    font-weight: 600;
+  }
+  
+  #rankTable.table tbody td,
+  #rankTable.table tbody th {
+    border:1px solid #ede9f7 ;
+
+    vertical-align: middle;
+    padding: 0.55rem 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  
+#rankTable_filter label {
+    display: block;
+    width: 100%;
+    }
+  
+  #rankTable caption {
+    caption-side: bottom;
+    text-align: center;
+    font-size: 0.60rem;
+    padding-top: 0.5rem;
+    color: var(--bs-gray-600);
+  }
+
+
+#rankTable_filter{
+    width:100% ;      
+    float:none ;      
+    text-align:center ; 
+    padding:0;                  
+    margin-block:0.75rem;
+  }
+  
+  #rankTable_filter > label{
+    display:block;              
+    width:100%;
+    margin:0;                  
+  }
+  
+  #rankTable_filter > label{
+    position:relative;               
+  }
+  
+  #rankTable_filter input[type="search"]:hover, #rankTable_filter input[type="search"]:focus{
+    outline:none;
+    border-color:#5433a6;
+    background:#fff;
+    box-shadow:0 0 0 .18rem rgba(43,133,255,.25);
+  }
+  
+  #rankTable_filter input[type="search"]::placeholder{
+    color:#adb5bd;
+    opacity:1; 
+  }
+  
+#rankTable_filter input{
+    padding:.5rem 1rem .5rem 2.5rem;
+    border:2px solid #000000;
+    border-radius:9999px;           
+    background:#f9fafb;
+    transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    font-size:.9rem;                
+    width:100% ;    
+    max-width:100%;           
+    box-sizing:border-box;   
+    margin: 0px;
+
+    }
+    
+  #rankTable_filter > label::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:1rem;
+    translate:0 -50%;                
+    width:1rem; height:1rem;
+    background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='%23adb5bd' viewBox='0 0 16 16'><path d='M11 6a5 5 0 1 1-2-4 5 5 0 0 1 2 4z'/><path d='M15.7 14.3 11.3 9.9a6 6 0 1 0-1.4 1.4l4.4 4.4a1 1 0 0 0 1.4-1.4z'/></svg>") no-repeat center/contain;
+    pointer-events:none;             
+    opacity:.7;
+
+  }
+  
+  #rankTable_filter input[type="search"]:focus + *::before,
+  #rankTable_filter input[type="search"]:hover  + *::before{
+    opacity:1;
+  }
+
+  .dataTables_scrollBody {
+  text-align: center;
+  max-height: 72px !important;
+}
+
+/* ─── Podium-row styling ───────────────────────────────────────────── */
+.winner-gold   { background-color:#fff9db!important;}  
+.winner-silver { background-color:#edeff1!important;}   
+.winner-bronze { background-color:#fff1e6!important;}  
+
+.winner-gold   td:first-child::before { content:"🥇 "; }
+.winner-silver td:first-child::before { content:"🥈 "; }
+.winner-bronze td:first-child::before { content:"🥉 "; }
+
+.fw-semibold {
+  font-weight: 600; 
+}
+
+#rankTable_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+#rankTable_filter {
+  width: 100%; 
+  margin-bottom: 10px; 
+}
+
+
+div.dtsp-panesContainer {
+  margin: 0px !important;
 }
