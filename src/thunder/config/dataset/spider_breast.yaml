@@ -16,12 +16,10 @@ compatible_tasks:
     "adversarial_attack",
   ]
 
-# we split into train and val by WSI 
-# so we do not have a fixed number of train and val samples
-# we only have a fixed number of test samples
-nb_train_samples: None
-nb_val_samples: None
+nb_train_samples: 67581
+nb_val_samples: 13277
 nb_test_samples: 12034
+md5sum: "ed7ea620aae01ba0af628c2693640571"
 image_sizes: [[224, 224]]
 mpp: 0.5
 cancer_type: breast
