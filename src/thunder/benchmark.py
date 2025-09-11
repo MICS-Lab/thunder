@@ -269,11 +269,8 @@ def run_benchmark(cfg: DictConfig, model_cls: Callable = None) -> None:
 
     elif task_type in [
         "alignment_scoring",
-        "embedding_space_visualization",
-        "emir",
         "image_retrieval",
         "knn",
-        "knn_ensembling",
         "pre_computing_embeddings",
         "simple_shot",
     ]:
@@ -323,16 +320,13 @@ def run_benchmark(cfg: DictConfig, model_cls: Callable = None) -> None:
 
         if task_type in [
             "alignment_scoring",
-            "embedding_space_visualization",
-            "emir",
             "image_retrieval",
             "knn",
-            "knn_ensembling",
             "simple_shot",
         ]:
             # Loading embeddings and labels
             splits = ["train", "val"]
-            if task_type in ["image_retrieval", "knn", "knn_ensembling", "simple_shot"]:
+            if task_type in ["image_retrieval", "knn", "simple_shot"]:
                 splits.append("test")
             embs, labels = load_embeddings(embeddings_folder, splits)
 

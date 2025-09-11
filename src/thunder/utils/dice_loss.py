@@ -4,12 +4,12 @@ import torch.nn.functional as F
 
 # Adapted from https://medium.com/data-scientists-diary/implementation-of-dice-loss-vision-pytorch-7eef1e438f68
 def multiclass_dice_loss(
-    pred: torch.Tensor, target: torch.Tensor, mask: torch.Tensor, smooth: float = 1
+    pred: torch.Tensor, label: torch.Tensor, mask: torch.Tensor, smooth: float = 1
 ) -> torch.Tensor:
     """
     Computes Dice Loss for multi-class segmentation.
     :param pred: Tensor of predictions (B, C, H, W).
-    :param target: Ground truth labels (B, H, W).
+    :param label: Ground truth labels (B, H, W).
     :param mask: Mask to apply to pred and target.
     :param smooth: Smoothing factor.
 
@@ -19,6 +19,7 @@ def multiclass_dice_loss(
     pred = F.softmax(pred, dim=1)  # Converting logits to probabilities
     num_classes = pred.shape[1]  # Number of classes (C)
 
+    target = label.clone()
     target[~mask] = (
         num_classes  # Adding a dummy class to account for masked pixels (-1 label values)
     )

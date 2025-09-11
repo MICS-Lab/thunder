@@ -1,7 +1,7 @@
 dataset_name: ccrcc
 nb_classes: 3
 base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
-compatible_tasks: ["alignment_scoring",  "embedding_space_visualization", "emir", "image_retrieval", "knn", "knn_ensembling", "linear_probing", "pre_computing_embeddings", "simple_shot", "transformation_invariance", "adversarial_attack"]
+compatible_tasks: ["adversarial_attack", "alignment_scoring", "image_retrieval", "knn", "linear_probing", "pre_computing_embeddings", "simple_shot", "transformation_invariance"]
 nb_train_samples: 16797
 nb_val_samples: 4298
 nb_test_samples: 6074

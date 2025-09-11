@@ -661,7 +661,7 @@ def train_eval(
                 )
 
                 # Finding background-only masks
-                bg_only = np.array([l.sum().item() == 0 for l in all_label])
+                bg_only = np.array([l.sum().item() == 0 for l in all_label if len(l) > 0])
                 freq_bg_only = bg_only.sum().item() / len(bg_only)
                 no_bg_only_weight = max(
                     1.0, freq_bg_only * cfg.task.no_bg_only_weight_test

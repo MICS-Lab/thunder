@@ -1,7 +1,7 @@
 dataset_name: pannuke
 nb_classes: 6
 base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
-compatible_tasks: ["embedding_space_visualization", "pre_computing_embeddings", "segmentation"]
+compatible_tasks: ["pre_computing_embeddings", "segmentation"]
 nb_train_samples: 2656
 nb_val_samples: 2523
 nb_test_samples: 2722

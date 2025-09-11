@@ -19,6 +19,37 @@ An API and command line interface (CLI) are provided to allow users to download 
 !!!important
     **Downloading supported foundation models**: you will have to visit the Huggingface URL of supported models you wish to use in order to accept usage conditions.
 
+<details>
+<summary>List of Huggingface URLs</summary>
+
+<ul>
+  <li><a href="https://huggingface.co/MahmoodLab/UNI">UNI</a></li>
+  <li><a href="https://huggingface.co/MahmoodLab/UNI2-h">UNI2-h</a></li>
+  <li><a href="https://huggingface.co/paige-ai/Virchow">Virchow</a></li>
+  <li><a href="https://huggingface.co/paige-ai/Virchow2">Virchow2</a></li>
+  <li><a href="https://huggingface.co/bioptimus/H-optimus-0">H-optimus-0</a></li>
+  <li><a href="https://huggingface.co/bioptimus/H-optimus-1">H-optimus-1</a></li>
+  <li><a href="https://huggingface.co/MahmoodLab/CONCH">CONCH</a></li>
+  <li><a href="https://huggingface.co/MahmoodLab/TITAN">TITAN/CONCHv1.5</a></li>
+  <li><a href="https://huggingface.co/owkin/phikon">Phikon</a></li>
+  <li><a href="https://huggingface.co/owkin/phikon-v2">Phikon2</a></li>
+  <li><a href="https://huggingface.co/histai/hibou-b">Hibou-b</a></li>
+  <li><a href="https://huggingface.co/histai/hibou-L">Hibou-L</a></li>
+  <li><a href="https://huggingface.co/kaiko-ai/midnight">Midnight-12k</a></li>
+  <li><a href="https://huggingface.co/Astaxanthin/KEEP">KEEP</a></li>
+  <li><a href="https://huggingface.co/wisdomik/QuiltNet-B-32">QuiltNet-B-32</a></li>
+  <li><a href="https://huggingface.co/vinid/plip">PLIP</a></li>
+  <li><a href="https://huggingface.co/xiangjx/musk">MUSK</a></li>
+  <li><a href="https://huggingface.co/facebook/dinov2-base">DINOv2-B</a></li>
+  <li><a href="https://huggingface.co/facebook/dinov2-large">DINOv2-L</a></li>
+  <li><a href="https://huggingface.co/google/vit-base-patch16-224-in21k">ViT-B</a></li>
+  <li><a href="https://huggingface.co/google/vit-large-patch16-224-in21k">ViT-L</a></li>
+  <li><a href="https://huggingface.co/openai/clip-vit-base-patch32">CLIP-B</a></li>
+  <li><a href="https://huggingface.co/openai/clip-vit-large-patch14">CLIP-L</a></li>
+</ul>
+
+</details>
+
 ### API Usage
 When using the API you can run the following code to download datasets, models and run a benchmark:
 

@@ -34,6 +34,35 @@ An API and command line interface (CLI) are provided to allow users to download 
 > [!IMPORTANT]
 > **Downloading supported foundation models**: you will have to visit the Huggingface URL of supported models you wish to use in order to accept usage conditions.
 
+<details>
+<summary>List of Huggingface URLs</summary>
+
+* UNI: https://huggingface.co/MahmoodLab/UNI
+* UNI2-h: https://huggingface.co/MahmoodLab/UNI2-h
+* Virchow: https://huggingface.co/paige-ai/Virchow
+* Virchow2: https://huggingface.co/paige-ai/Virchow2
+* H-optimus-0: https://huggingface.co/bioptimus/H-optimus-0
+* H-optimus-1: https://huggingface.co/bioptimus/H-optimus-1
+* CONCH: https://huggingface.co/MahmoodLab/CONCH
+* TITAN/CONCHv1.5: https://huggingface.co/MahmoodLab/TITAN
+* Phikon: https://huggingface.co/owkin/phikon
+* Phikon2: https://huggingface.co/owkin/phikon-v2
+* Hibou-b: https://huggingface.co/histai/hibou-b
+* Hibou-L: https://huggingface.co/histai/hibou-L
+* Midnight-12k: https://huggingface.co/kaiko-ai/midnight
+* KEEP: https://huggingface.co/Astaxanthin/KEEP
+* QuiltNet-B-32: https://huggingface.co/wisdomik/QuiltNet-B-32
+* PLIP: https://huggingface.co/vinid/plip
+* MUSK: https://huggingface.co/xiangjx/musk
+* DINOv2-B: https://huggingface.co/facebook/dinov2-base
+* DINOv2-L: https://huggingface.co/facebook/dinov2-large
+* ViT-B: https://huggingface.co/google/vit-base-patch16-224-in21k
+* ViT-L: https://huggingface.co/google/vit-large-patch16-224-in21k
+* CLIP-B: https://huggingface.co/openai/clip-vit-base-patch32
+* CLIP-L: https://huggingface.co/openai/clip-vit-large-patch14
+
+</details>
+
 ### API Usage
 When using the API you can run the following code to download datasets, models and run a benchmark:
 
