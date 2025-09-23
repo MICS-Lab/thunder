@@ -1,0 +1,69 @@
+dataset_name: spider_colorectal
+nb_classes: 13
+base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
+compatible_tasks:
+  [
+    "alignment_scoring",
+    "image_retrieval",
+    "knn",
+    "linear_probing",
+    "pre_computing_embeddings",
+    "simple_shot",
+    "transformation_invariance",
+    "adversarial_attack",
+  ]
+
+# we split into train and val by WSI 
+# so we do not have a fixed number of train and val samples
+# we only have a fixed number of test samples
+nb_train_samples: None
+nb_val_samples: None
+nb_test_samples: None
+image_sizes: [[224, 224]]
+mpp: 0.5
+cancer_type: colorectal
+classes:
+  [
+    "Adenocarcinoma high grade",
+    "Adenocarcinoma low grade",
+    "Adenoma high grade",
+    "Adenoma low grade",
+    "Fat",
+    "Hyperplastic polyp",
+    "Inflammation",
+    "Mucus",
+    "Muscle",
+    "Necrosis",
+    "Sessile serrated lesion",
+    "Stroma healthy",
+    "Vessels",
+  ]
+class_to_id:
+  "Adenocarcinoma high grade": 0
+  "Adenocarcinoma low grade": 1
+  "Adenoma high grade": 2
+  "Adenoma low grade": 3
+  "Fat": 4
+  "Hyperplastic polyp": 5
+  "Inflammation": 6
+  "Mucus": 7
+  "Muscle": 8
+  "Necrosis": 9
+  "Sessile serrated lesion": 10
+  "Stroma healthy": 11
+  "Vessels": 12
+  
+id_to_class:
+  0: "Adenocarcinoma high grade"
+  1: "Adenocarcinoma low grade"
+  2: "Adenoma high grade"
+  3: "Adenoma low grade"
+  4: "Fat"
+  5: "Hyperplastic polyp"
+  6: "Inflammation"
+  7: "Mucus"
+  8: "Muscle"
+  9: "Necrosis"
+  10: "Sessile serrated lesion"
+  11: "Stroma healthy"
+  12: "Vessels"

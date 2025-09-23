@@ -1,0 +1,102 @@
+dataset_name: spider_colorectal
+nb_classes: 24
+base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
+compatible_tasks:
+  [
+    "alignment_scoring",
+    "image_retrieval",
+    "knn",
+    "linear_probing",
+    "pre_computing_embeddings",
+    "simple_shot",
+    "transformation_invariance",
+    "adversarial_attack",
+  ]
+
+# we split into train and val by WSI 
+# so we do not have a fixed number of train and val samples
+# we only have a fixed number of test samples
+nb_train_samples: None
+nb_val_samples: None
+nb_test_samples: None
+image_sizes: [[224, 224]]
+mpp: 0.5
+cancer_type: skin
+classes:
+  [
+    "Actinic keratosis",
+    "Apocrine glands",
+    "Basal cell carcinoma",
+    "Carcinoma in situ",
+    "Collagen",
+    "Epidermis",
+    "Fat",
+    "Follicle",
+    "Inflammation",
+    "Invasive melanoma",
+    "Kaposi’s sarcoma",
+    "Keratin",
+    "Melanoma in situ",
+    "Mercel cell carcinoma",
+    "Muscle",
+    "Necrosis",
+    "Nerves",
+    "Nevus",
+    "Sebaceous gland",
+    "Seborrheic keratosis",
+    "Solar elastosis",
+    "Squamous cell carcinoma",
+    "Vessels",
+    "Wart"
+  ]
+class_to_id:
+  "Actinic keratosis": 0
+  "Apocrine glands": 1
+  "Basal cell carcinoma": 2
+  "Carcinoma in situ": 3
+  "Collagen": 4
+  "Epidermis": 5
+  "Fat": 6
+  "Follicle": 7
+  "Inflammation": 8
+  "Invasive melanoma": 9
+  "Kaposi’s sarcoma": 10
+  "Keratin": 11
+  "Melanoma in situ": 12
+  "Mercel cell carcinoma": 13
+  "Muscle": 14
+  "Necrosis": 15
+  "Nerves": 16
+  "Nevus": 17
+  "Sebaceous gland": 18
+  "Seborrheic keratosis": 19
+  "Solar elastosis": 20
+  "Squamous cell carcinoma": 21
+  "Vessels": 22
+  "Wart": 23
+  
+id_to_class:
+  0: "Actinic keratosis"
+  1: "Apocrine glands"
+  2: "Basal cell carcinoma"
+  3: "Carcinoma in situ"
+  4: "Collagen"
+  5: "Epidermis"
+  6: "Fat"
+  7: "Follicle"
+  8: "Inflammation"
+  9: "Invasive melanoma"
+  10: "Kaposi’s sarcoma"
+  11: "Keratin"
+  12: "Melanoma in situ"
+  13: "Mercel cell carcinoma"
+  14: "Muscle"
+  15: "Necrosis"
+  16: "Nerves"
+  17: "Nevus"
+  18: "Sebaceous gland"
+  19: "Seborrheic keratosis"
+  20: "Solar elastosis"
+  21: "Squamous cell carcinoma"
+  22: "Vessels"
+  23: "Wart"

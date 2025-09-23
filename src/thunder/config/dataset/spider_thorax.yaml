@@ -1,0 +1,72 @@
+dataset_name: spider_thorax
+nb_classes: 14
+base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
+compatible_tasks:
+  [
+    "alignment_scoring",
+    "image_retrieval",
+    "knn",
+    "linear_probing",
+    "pre_computing_embeddings",
+    "simple_shot",
+    "transformation_invariance",
+    "adversarial_attack",
+  ]
+
+# we split into train and val by WSI 
+# so we do not have a fixed number of train and val samples
+# we only have a fixed number of test samples
+nb_train_samples: None
+nb_val_samples: None
+nb_test_samples: None
+image_sizes: [[224, 224]]
+mpp: 0.5
+cancer_type: skin
+classes:
+  [
+    "Alveoli",
+    "Bronchial cartilage",
+    "Bronchial glands",
+    "Chronic inflammation + fibrosis",
+    "Detritus",
+    "Fibrosis",
+    "Hemorrhage",
+    "Lymph node",
+    "Pigment",
+    "Pleura",
+    "Tumor non-small cell",
+    "Tumor small cell",
+    "Tumor soft",
+    "Vessel",
+  ]
+class_to_id:
+  Alveoli: 0
+  Bronchial cartilage: 1
+  Bronchial glands: 2
+  Chronic inflammation + fibrosis: 3
+  Detritus: 4
+  Fibrosis: 5
+  Hemorrhage: 6
+  Lymph node: 7
+  Pigment: 8
+  Pleura: 9
+  Tumor non-small cell: 10
+  Tumor small cell: 11
+  Tumor soft: 12
+  Vessel: 13
+  
+id_to_class:
+  0: "Aveoli"
+  1: "Bronchial cartilage"
+  2: "Bronchial glands"
+  3: "Chronic inflammation + fibrosis"
+  4: "Detritus"
+  5: "Fibrosis"
+  6: "Hemorrhage"
+  7: "Lymph node"
+  8: "Pigment"
+  9: "Pleura"
+  10: "Tumor non-small cell"
+  11: "Tumor small cell"
+  12: "Tumor soft"
+  13: "Vessel"
