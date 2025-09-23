@@ -64,12 +64,9 @@ def create_splits_spider_colorectal(base_folder: str, dataset_cfg: dict) -> None
 
     from ...utils.constants import UtilsConstants
     from ...utils.utils import set_seed
-    from ..data_splits import (
-        create_few_shot_training_data,
-        get_data_from_folder_recursive,
-        init_dict,
-        save_dict,
-    )
+    from ..data_splits import (check_dataset, create_few_shot_training_data,
+                               get_data_from_folder_recursive, init_dict,
+                               save_dict)
 
     # Setting the random seed
     set_seed(UtilsConstants.DEFAULT_SEED.value)
@@ -124,7 +121,11 @@ def create_splits_spider_colorectal(base_folder: str, dataset_cfg: dict) -> None
         spider_colorectal_folder, "center_crop/test", dataset_cfg
     )
 
-    # dont check dataset characteristics
+    check_dataset(
+        spider_colorectal_data_splits,
+        dataset_cfg,
+        base_folder,
+    )
 
     # Few-shot training data
     spider_colorectal_data_splits = create_few_shot_training_data(

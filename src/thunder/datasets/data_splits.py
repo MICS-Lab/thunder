@@ -40,6 +40,9 @@ def generate_splits(datasets: Union[List[str], str]) -> None:
                 "segpath_lymphocytes",
                 "mhist",
                 "spider_breast",
+                "spider_colorectal",
+                "spider_skin",
+                "spider_thorax",
             ]
         elif datasets[0] == "classification":
             datasets = [
@@ -56,6 +59,9 @@ def generate_splits(datasets: Union[List[str], str]) -> None:
                 "wilds",
                 "mhist",
                 "spider_breast",
+                "spider_colorectal",
+                "spider_skin",
+                "spider_thorax",
             ]
         elif datasets[0] == "segmentation":
             datasets = [
@@ -92,7 +98,8 @@ def generate_splits_for_dataset(dataset_name: str) -> None:
                           create_splits_segpath_lymphocytes,
                           create_splits_tcga_crc_msi, create_splits_tcga_tils,
                           create_splits_tcga_uniform, create_splits_wilds, 
-                          create_splits_spider_breast)
+                          create_splits_spider_breast, create_splits_spider_colorectal,
+                          create_splits_spider_skin, create_splits_spider_thorax)
 
     DATASET_TO_FUNCTION = {
         # Classification
@@ -109,6 +116,9 @@ def generate_splits_for_dataset(dataset_name: str) -> None:
         "tcga_uniform": create_splits_tcga_uniform,
         "wilds": create_splits_wilds,
         "spider_breast": create_splits_spider_breast,
+        "spider_colorectal": create_splits_spider_colorectal,
+        "spider_skin": create_splits_spider_skin,
+        "spider_thorax": create_splits_spider_thorax,
         # Segmentation
         "ocelot": create_splits_ocelot,
         "pannuke": create_splits_pannuke,

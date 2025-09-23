@@ -140,5 +140,11 @@ def download_dataset(dataset: str):
         download_bracs(root_folder)
     elif dataset == "spider_breast":
         download_spider_breast(root_folder)
+    elif dataset == "spider_colorectal":
+        download_spider_colorectal(root_folder)
+    elif dataset == "spider_skin":
+        download_spider_skin(root_folder)
+    elif dataset == "spider_thorax":
+        download_spider_thorax(root_folder)
     else:
         raise ValueError(f"Dataset {dataset} is not supported.")

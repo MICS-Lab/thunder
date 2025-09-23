@@ -20,3 +20,6 @@ from .tcga_tils import create_splits_tcga_tils, download_tcga_tils
 from .tcga_uniform import create_splits_tcga_uniform, download_tcga_uniform
 from .wilds import create_splits_wilds, download_wilds
 from .spider_breast import create_splits_spider_breast, download_spider_breast
+from .spider_colorectal import create_splits_spider_colorectal, download_spider_colorectal
+from .spider_skin import create_splits_spider_skin, download_spider_skin
+from .spider_thorax import create_splits_spider_thorax, download_spider_thorax

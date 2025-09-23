@@ -1,4 +1,4 @@
-dataset_name: spider_colorectal
+dataset_name: spider_skin
 nb_classes: 24
 base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
 compatible_tasks:
@@ -13,12 +13,10 @@ compatible_tasks:
     "adversarial_attack",
   ]
 
-# we split into train and val by WSI 
-# so we do not have a fixed number of train and val samples
-# we only have a fixed number of test samples
-nb_train_samples: None
-nb_val_samples: None
-nb_test_samples: None
+nb_train_samples: 102815
+nb_val_samples: 28349
+nb_test_samples: 28690
+md5sum: "d9bc664972010d28510877f8d02113a3"
 image_sizes: [[224, 224]]
 mpp: 0.5
 cancer_type: skin

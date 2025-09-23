@@ -64,12 +64,9 @@ def create_splits_spider_thorax(base_folder: str, dataset_cfg: dict) -> None:
 
     from ...utils.constants import UtilsConstants
     from ...utils.utils import set_seed
-    from ..data_splits import (
-        create_few_shot_training_data,
-        get_data_from_folder_recursive,
-        init_dict,
-        save_dict,
-    )
+    from ..data_splits import (check_dataset, create_few_shot_training_data,
+                               get_data_from_folder_recursive, init_dict,
+                               save_dict)
 
     # Setting the random seed
     set_seed(UtilsConstants.DEFAULT_SEED.value)
@@ -96,7 +93,7 @@ def create_splits_spider_thorax(base_folder: str, dataset_cfg: dict) -> None:
     # we want to assign images from a single slide to the same split
 
     slide_names = [item.split("/")[-2] for item in train_val_images]
-    unique_slide_names = list(set(slide_names))
+    unique_slide_names = sorted(list(set(slide_names)))
     val_slide_names = random.sample(
         unique_slide_names, int(0.2 * len(unique_slide_names))
     )
@@ -124,7 +121,11 @@ def create_splits_spider_thorax(base_folder: str, dataset_cfg: dict) -> None:
         spider_thorax_folder, "center_crop/test", dataset_cfg
     )
 
-    # dont check dataset characteristics
+    check_dataset(
+        spider_thorax_data_splits,
+        dataset_cfg,
+        base_folder,
+    )
 
     # Few-shot training data
     spider_thorax_data_splits = create_few_shot_training_data(spider_thorax_data_splits)
