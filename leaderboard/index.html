@@ -22,7 +22,7 @@
     
     
       
-        <title>Rank-sum Leaderboard - THUNDER</title>
+        <title>Leaderboards - THUNDER</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rank-sum Leaderboard
+              Leaderboards
             
           </span>
         </div>
@@ -270,7 +270,7 @@
   
   
   <span class="md-ellipsis">
-    Leaderboard
+    Leaderboards
     
   </span>
   
@@ -283,7 +283,7 @@
   
   
   <span class="md-ellipsis">
-    Leaderboard
+    Leaderboards
     
   </span>
   
@@ -539,6 +539,7 @@
 <h3 id="updates">Updates</h3>
 <ul>
 <li><strong>2025-09-01</strong>: Segmentation results were updated (small changes based on improved performance for all models on the <em>ocelot</em> dataset only -&gt; <a href="https://github.com/MICS-Lab/thunder/commit/5f6d6e7cdd6a1df5affed2dac47233f80ce5a205">Related commit</a>). Segmentation and global rankings do no thus match exactly (a few small differences only) Table 4 from the current version of our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a>. The paper will be updated soon.</li>
+<li><strong>2025-09-30</strong>: Four SPIDER datasets have been integrated into thunder. Results associated to them have not been integrated into this rank-sum leaderboard (only datasets presented in our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a> are aggregated in the rank-sum learderboard), but we have instead created a leaderboard dedicated to SPIDER datasets below.</li>
 </ul>
 <div class="table-responsive-sm">
   <table id="rankTable" class="table table-hover table-bordered table-sm nowrap">
@@ -587,6 +588,13 @@
 
 <hr />
 <h1 id="spider-leaderboard">🏆 Spider Leaderboard</h1>
+<p>The considered datasets are:</p>
+<ul>
+<li><em>Br</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-breast">SPIDER-Breast</a></li>
+<li><em>Co</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-colorectal">SPIDER-Colorectal</a></li>
+<li><em>Sk</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-skin">SPIDER-skin</a></li>
+<li><em>Th</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-thorax">SPIDER-thorax</a></li>
+</ul>
 <div class="table-responsive-sm">
     <table id="rankTable2" class="table table-hover table-bordered table-sm nowrap">
         <caption>Performance of founcation models on the SPIDER datasets</caption>

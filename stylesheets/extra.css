@@ -155,12 +155,12 @@
 
 /* ─── Make rankTable2 more compact ─────────────────────────────────── */
 #rankTable2.table {
-  font-size: 0.45rem;
+  font-size: 0.60rem;
 }
 
 #rankTable2.table thead th {
-  font-size: 0.45rem;
-  padding: 0.45rem 0.3rem !important;
+  font-size: 0.60rem;
+  padding: 0.60rem 0.3rem !important;
 }
 
 #rankTable2.table tbody td,
