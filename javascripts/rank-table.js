@@ -1,83 +1,184 @@
+// document$.subscribe(() => {
+//   const tables = [
+
+//     { id: '#rankTable',  rankCol: 9,  radix: 10 },
+
+//     { id: '#rankTable2', rankCol: 12,  radix: 10 }
+//   ];  
+
+//   const range = (start, end) => Array.from({ length: end - start + 1 }, (_, i) => start + i);
+
+//   tables.forEach(cfg => {
+//     const $table = $(cfg.id);
+//     if (!$table.length || $table.hasClass('dataTable')) return;
+
+//     const renderCols = range(3, cfg.rankCol); // columns [3..rankCol]
+
+//     const dt = $table.DataTable({
+//       paging:    false,
+//       info:      true,
+//       ordering:  true,
+//       searching: true,
+
+//       searchPanes: {
+//         columns: [1, 2, 3],
+//         viewTotal: true
+//       },
+
+//       dom: 'Pfrt',
+//       columnDefs: [
+//         { targets: [1, 2], visible: false, searchable: true },
+//         {
+//           targets: renderCols,
+//           render: function (data, type) {
+//             if (type === 'sort' || type === 'type') {
+//               const match = String(data ?? '').match(/\((\d+)\)/);
+//               return match ? parseInt(match[1], cfg.radix) : Infinity;
+//             }
+//             return data;
+//           }
+//         },
+//         { targets: cfg.rankCol, className: 'fw-semibold' }
+//       ],
+//       order: [[cfg.rankCol, 'asc']],
+//       language: {
+//         search: '_INPUT_',
+//         searchPlaceholder: 'Search models…'
+//       }
+//     });
+
+//     // ─── Highlight top-3 rows with podium colours ───────────────────────
+//     const paintWinners = () => {
+//       dt.rows().nodes().to$().removeClass('winner-gold winner-silver winner-bronze');
+
+//       const isDescending = dt.order()?.[0]?.[1] === 'desc';
+//       let rows = dt.rows({ order: 'applied', search: 'applied' }).indexes().toArray();
+
+//       const getRank = (rowIdx) => {
+//         const cell = dt.cell(rowIdx, cfg.rankCol).data();
+//         const match = String(cell ?? '').match(/\((\d+)\)/);
+//         return match ? parseInt(match[1], cfg.radix) : Infinity;
+//       };
+
+//       rows.sort((a, b) => {
+//         const A = getRank(a), B = getRank(b);
+//         return !isDescending ? (B - A) : (A - B);
+//       });
+
+//       const top3 = isDescending ? rows.slice(0, 3) : rows.slice(-3).reverse();
+
+//       if (top3[0] !== undefined) $(dt.row(top3[0]).node()).addClass('winner-gold');
+//       if (top3[1] !== undefined) $(dt.row(top3[1]).node()).addClass('winner-silver');
+//       if (top3[2] !== undefined) $(dt.row(top3[2]).node()).addClass('winner-bronze');
+//     };
+
+//     paintWinners();
+//     dt.on('draw', paintWinners);
+//   });
+
+//   $('.dtsp-titleRow').hide();
+// });
+
+
 document$.subscribe(() => {
-  const $table = $('#rankTable');
-  if (!$table.length || $table.hasClass('dataTable')) {
-    return; // Table not present or already initialized
-  }
+    const tables = [
 
-  const dt = $table.DataTable({
-    paging:    false,
-    info:      true,
-    ordering:  true,
-    searching: true,
+        {
+            id: '#rankTable',
+            rankCol: 9,
+            radix: 10
+        },
 
-    searchPanes: {
-      columns: [1, 2, 3], 
-      viewTotal: true
-    },
-
-    dom: 'Pfrt',
-    columnDefs: [
-      { targets: [1, 2], visible: false, searchable: true },
-      {
-        targets: [3, 4, 5, 6, 7, 8, 9],
-        render: function (data, type) {
-            if (type === 'sort' || type === 'type') {
-                const match = data.match(/\((\d+)\)/); 
-                return match ? parseInt(match[1], 10) : Infinity;
-            }
-            return data;
+        {
+            id: '#rankTable2',
+            rankCol: 12,
+            radix: 10
         }
-    },
-    {
-      targets: 9,
-      className: 'fw-semibold',
-    }    
-    ],
-    order: [[9, 'asc']],
-    language: {
-      search: '_INPUT_',
-      searchPlaceholder: 'Search models…'
-    },
-  });
+    ];
 
-  // ─── Highlight top-3 rows with podium colours ───────────────────────
-  function paintWinners() {
-    // clear any previous podium colours
-    dt.rows().nodes().to$().removeClass('winner-gold winner-silver winner-bronze');
+    const range = (start, end) => Array.from({
+        length: end - start + 1
+    }, (_, i) => start + i);
 
-    // Get the current sort direction (ascending or descending)
-    const sortOrder = dt.order();
-    const isDescending = sortOrder[0][1] === 'desc';  // Check if it's descending
+    tables.forEach(cfg => {
+        const $table = $(cfg.id);
+        if (!$table.length || $table.hasClass('dataTable')) return;
 
-    var rows = dt.rows({ order: 'applied', search: 'applied' }).indexes().toArray();
+        const renderCols = range(3, cfg.rankCol); // columns [3..rankCol]
 
-    rows = rows.sort((a, b) => {
-      const extractRank = (str) => {
-          const match = str.match(/\((\d+)\)/); // Match number inside parentheses
-          return match ? parseInt(match[1], 10) : Infinity; // Use Infinity if not found
-      };
-  
-      const valueA = extractRank(dt.cell(a, 9).data());
-      const valueB = extractRank(dt.cell(b, 9).data());
-  
-      return !isDescending ? valueB - valueA : valueA - valueB;
-  });
-    if (isDescending)
-      var top3 = rows.slice(0, 3);
-      
-    else {
-      var top3 = rows.slice(rows.length - 3, rows.length);
-      top3.reverse();
-    }
-    // Apply podium classes based on the sorted top 3 rows
-    if (top3[0] !== undefined) $(dt.row(top3[0]).node()).addClass('winner-gold');
-    if (top3[1] !== undefined) $(dt.row(top3[1]).node()).addClass('winner-silver');
-    if (top3[2] !== undefined) $(dt.row(top3[2]).node()).addClass('winner-bronze');
-  }
+        const dt = $table.DataTable({
+            paging: false,
+            info: true,
+            ordering: true,
+            searching: true,
 
-  paintWinners();
+            searchPanes: {
+                columns: [1, 2, 3],
+                viewTotal: true
+            },
 
-  dt.on('draw', paintWinners);
+            dom: 'Pfrt',
+            columnDefs: [{
+                    targets: [1, 2],
+                    visible: false,
+                    searchable: true
+                },
+                {
+                    targets: renderCols,
+                    render: function(data, type) {
+                        if (type === 'sort' || type === 'type') {
+                            const match = String(data ?? '').match(/\((\d+)\)/);
+                            return match ? parseInt(match[1], cfg.radix) : Infinity;
+                        }
+                        return data;
+                    }
+                },
+                {
+                    targets: cfg.rankCol,
+                    className: 'fw-semibold'
+                }
+            ],
+            order: [
+                [cfg.rankCol, 'asc']
+            ],
+            language: {
+                search: '_INPUT_',
+                searchPlaceholder: 'Search models…'
+            }
+        });
 
-  $('.dtsp-titleRow').hide();
+        // ─── Highlight top-3 rows with podium colours ───────────────────────
+        const paintWinners = () => {
+            dt.rows().nodes().to$().removeClass('winner-gold winner-silver winner-bronze');
+
+            const isDescending = dt.order()?.[0]?.[1] === 'desc';
+            let rows = dt.rows({
+                order: 'applied',
+                search: 'applied'
+            }).indexes().toArray();
+
+            const getRank = (rowIdx) => {
+                const cell = dt.cell(rowIdx, cfg.rankCol).data();
+                const match = String(cell ?? '').match(/\((\d+)\)/);
+                return match ? parseInt(match[1], cfg.radix) : Infinity;
+            };
+
+            rows.sort((a, b) => {
+                const A = getRank(a),
+                    B = getRank(b);
+                return !isDescending ? (B - A) : (A - B);
+            });
+
+            const top3 = isDescending ? rows.slice(0, 3) : rows.slice(-3).reverse();
+
+            if (top3[0] !== undefined) $(dt.row(top3[0]).node()).addClass('winner-gold');
+            if (top3[1] !== undefined) $(dt.row(top3[1]).node()).addClass('winner-silver');
+            if (top3[2] !== undefined) $(dt.row(top3[2]).node()).addClass('winner-bronze');
+        };
+
+        paintWinners();
+        dt.on('draw', paintWinners);
+    });
+
+    $('.dtsp-titleRow').hide();
 });

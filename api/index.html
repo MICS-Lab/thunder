@@ -869,7 +869,7 @@
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/benchmark.py</code></summary>
+              <summary>Source code in <code>thunder/benchmark.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
@@ -1125,7 +1125,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/datasets/download.py</code></summary>
+              <summary>Source code in <code>thunder/datasets/download.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1372,7 +1372,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/download.py</code></summary>
+              <summary>Source code in <code>thunder/models/download.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
 <span class="normal">110</span>
 <span class="normal">111</span>
@@ -1502,7 +1502,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/datasets/data_splits.py</code></summary>
+              <summary>Source code in <code>thunder/datasets/data_splits.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1565,7 +1565,15 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">69</span>
 <span class="normal">70</span>
 <span class="normal">71</span>
-<span class="normal">72</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates the data splits for all datasets in input list.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
@@ -1597,6 +1605,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
@@ -1612,6 +1624,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
@@ -1659,7 +1675,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
               <details class="quote">
-                <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+                <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
                 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
@@ -1743,7 +1759,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -1776,7 +1792,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
@@ -1809,7 +1825,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
@@ -1974,7 +1990,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 </details>
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">263</span>
 <span class="normal">264</span>
 <span class="normal">265</span>
