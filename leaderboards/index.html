@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rank-sum-leaderboard" class="md-skip">
+        <a href="#updates" class="md-skip">
           Skip to content
         </a>
       
@@ -265,19 +265,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Leaderboards
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -289,34 +276,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Updates
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -501,23 +460,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Updates
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -535,15 +477,15 @@
   
 
 
-<h1 id="rank-sum-leaderboard">🏆 Rank-sum Leaderboard</h1>
-<h3 id="updates">Updates</h3>
+<h1 id="updates">Updates</h1>
 <ul>
-<li><strong>2025-09-01</strong>: Segmentation results were updated (small changes based on improved performance for all models on the <em>ocelot</em> dataset only -&gt; <a href="https://github.com/MICS-Lab/thunder/commit/5f6d6e7cdd6a1df5affed2dac47233f80ce5a205">Related commit</a>). Segmentation and global rankings do no thus match exactly (a few small differences only) Table 4 from the current version of our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a>. The paper will be updated soon.</li>
-<li><strong>2025-09-30</strong>: Four SPIDER datasets have been integrated into thunder. Results associated to them have not been integrated into this rank-sum leaderboard (only datasets presented in our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a> are aggregated in the rank-sum learderboard), but we have instead created a leaderboard dedicated to SPIDER datasets below.</li>
+<li><strong>2025-09-01</strong>: <strong>[Rank-sum Leaderboard]</strong> Segmentation results were updated (small changes based on improved performance for all models on the <em>ocelot</em> dataset only -&gt; <a href="https://github.com/MICS-Lab/thunder/commit/5f6d6e7cdd6a1df5affed2dac47233f80ce5a205">Related commit</a>). Segmentation and global rankings do no thus match exactly (a few small differences only) Table 4 from the current version of our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a>. The paper will be updated soon.</li>
+<li><strong>2025-09-30</strong>: <strong>[SPIDER Leaderboard]</strong> Four SPIDER datasets have been integrated into thunder. Results associated to them have not been integrated into the rank-sum leaderboard (only datasets presented in our <a href="https://arxiv.org/abs/2507.07860">arXiv paper</a> are aggregated in the rank-sum learderboard), but we have instead created a leaderboard dedicated to SPIDER datasets below.</li>
+<li><strong>2025-10-06</strong>: <strong>[Zero-shot VLM Classification Leaderboard]</strong> A new zero-shot classification task was integrated into THUNDER. Results are presented in a dedicated leaderboard below.</li>
 </ul>
+<h1 id="rank-sum-leaderboard">🏆 Rank-sum Leaderboard</h1>
 <div class="table-responsive-sm">
-  <table id="rankTable" class="table table-hover table-bordered table-sm nowrap">
-    <caption>Lower Rank-sum = better overall performance</caption>
+  <table id="ranksumTable" class="table table-hover table-bordered table-sm nowrap">
     <thead class="align-middle text-center">
       <tr>
         <th>Model</th>
@@ -587,8 +529,8 @@
 </div>
 
 <hr />
-<h1 id="spider-leaderboard">🏆 Spider Leaderboard</h1>
-<p>The considered datasets are:</p>
+<h1 id="spider-leaderboard">🏆 SPIDER Leaderboard</h1>
+<p>F1-score on test sets of SPIDER datasets and average across datasets for the <em>knn</em> and <em>linear probing</em> tasks. The considered datasets are:</p>
 <ul>
 <li><em>Br</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-breast">SPIDER-Breast</a></li>
 <li><em>Co</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-colorectal">SPIDER-Colorectal</a></li>
@@ -596,8 +538,7 @@
 <li><em>Th</em>: <a href="https://huggingface.co/datasets/histai/SPIDER-thorax">SPIDER-thorax</a></li>
 </ul>
 <div class="table-responsive-sm">
-    <table id="rankTable2" class="table table-hover table-bordered table-sm nowrap">
-        <caption>Performance of founcation models on the SPIDER datasets</caption>
+    <table id="spiderTable" class="table table-hover table-bordered table-sm nowrap">
         <thead class="align-middle text-center">
           <tr>
             <th rowspan="2">Model</th>
@@ -626,7 +567,7 @@
           <tr><td>CONCH</td><td>Histopathology</td><td>VLM</td><td>75.1 (15)</td><td>84.5 (14)</td><td>81.7 (15)</td><td>91.1 (14)</td><td>83.1 (15)</td><td>82.1 (13)</td><td>87.9 (13)</td><td>87.3 (13)</td><td>91.0 (15)</td><td>87.1 (14)</td></tr>
           <tr><td>CONCH&nbsp;1.5</td><td>Histopathology</td><td>VLM</td><td>75.9 (14)</td><td>84.2 (15)</td><td>83.3 (12)</td><td>91.4 (10)</td><td>83.7 (14)</td><td>81.6 (14)</td><td>87.4 (15)</td><td>87.0 (15)</td><td>92.1 (14)</td><td>87.0 (15)</td></tr>
           <tr><td>KEEP</td><td>Histopathology</td><td>VLM</td><td>79.8 (9)</td><td>87.2 (8)</td><td>87.2 (9)</td><td>93.1 (4)</td><td>86.9 (9)</td><td>85.6 (11)</td><td>89.7 (9)</td><td>89.3 (10)</td><td>93.8 (10)</td><td>89.6 (10)</td></tr>
-          <tr><td>MSUK</td><td>Histopathology</td><td>VLM</td><td>77.2 (12)</td><td>85.7 (11)</td><td>82.5 (14)</td><td>91.1 (13)</td><td>84.1 (13)</td><td>80.6 (15)</td><td>87.9 (14)</td><td>87.6 (12)</td><td>93.3 (12)</td><td>87.4 (13)</td></tr>
+          <tr><td>MUSK</td><td>Histopathology</td><td>VLM</td><td>77.2 (12)</td><td>85.7 (11)</td><td>82.5 (14)</td><td>91.1 (13)</td><td>84.1 (13)</td><td>80.6 (15)</td><td>87.9 (14)</td><td>87.6 (12)</td><td>93.3 (12)</td><td>87.4 (13)</td></tr>
           <tr><td>PLIP</td><td>Histopathology</td><td>VLM</td><td>69.4 (17)</td><td>79.9 (16)</td><td>74.4 (16)</td><td>86.4 (16)</td><td>77.5 (16)</td><td>77.1 (18)</td><td>84.7 (19)</td><td>82.1 (17)</td><td>88.6 (16)</td><td>83.1 (17)</td></tr>
           <tr><td>QUILTNET</td><td>Histopathology</td><td>VLM</td><td>69.9 (16)</td><td>77.7 (19)</td><td>73.4 (17)</td><td>85.3 (17)</td><td>76.6 (17)</td><td>77.0 (19)</td><td>82.9 (21)</td><td>81.2 (20)</td><td>88.5 (18)</td><td>82.4 (19)</td></tr>
           <tr><td>DINOv2-B</td><td>Natural-image</td><td>VM</td><td>64.0 (20)</td><td>77.5 (20)</td><td>70.4 (20)</td><td>78.1 (20)</td><td>72.5 (20)</td><td>76.0 (20)</td><td>83.9 (20)</td><td>80.1 (21)</td><td>87.6 (21)</td><td>81.9 (21)</td></tr>
@@ -635,6 +576,47 @@
           <tr><td>ViT-L/16</td><td>Natural-image</td><td>VM</td><td>66.5 (18)</td><td>78.7 (18)</td><td>71.8 (18)</td><td>81.8 (18)</td><td>74.7 (18)</td><td>79.3 (16)</td><td>85.1 (17)</td><td>81.3 (18)</td><td>88.5 (17)</td><td>83.6 (16)</td></tr>
           <tr><td>CLIP-B/32</td><td>Natural-image</td><td>VLM</td><td>57.0 (23)</td><td>71.0 (23)</td><td>63.7 (23)</td><td>73.7 (23)</td><td>66.4 (23)</td><td>69.0 (23)</td><td>81.3 (23)</td><td>75.8 (23)</td><td>84.7 (23)</td><td>77.7 (23)</td></tr>
           <tr><td>CLIP-L/14</td><td>Natural-image</td><td>VLM</td><td>62.5 (22)</td><td>74.6 (22)</td><td>66.5 (22)</td><td>77.4 (21)</td><td>70.2 (22)</td><td>73.6 (22)</td><td>82.8 (22)</td><td>78.5 (22)</td><td>86.7 (22)</td><td>80.4 (22)</td></tr>
+        <tbody>
+    </table>
+</div>
+
+<hr />
+<h1 id="zero-shot-vlm-classification-leaderboard">🏆 Zero-shot VLM Classification Leaderboard</h1>
+<p>F1-score on test sets of all supported datasets and average across datasets for the <em>zero-shot classification</em> task. Only VLM models with publicly released patch-level text encoders are included.</p>
+<div class="table-responsive-sm">
+    <table id="zeroshotTable" class="table table-hover table-bordered table-sm nowrap pivot w-100" style="width:100%">
+        <thead class="align-middle text-center">
+          <tr>
+            <th>Model</th>
+            <th>Domain</th>
+            <th>Type</th>
+            <th>bach</th>
+            <th>bracs</th>
+            <th>break_his</th>
+            <th>ccrcc</th>
+            <th>crc</th>
+            <th>esca</th>
+            <th>mhist</th>
+            <th>patch_camelyon</th>
+            <th>tcga_crc_msi</th>
+            <th>tcga_tils</th>
+            <th>tcga_uniform</th>
+            <th>wilds</th>
+            <th>spider_breast</th>
+            <th>spider_colorectal</th>
+            <th>spider_skin</th>
+            <th>spider_thorax</th>
+            <th>Avg</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr><td>CONCH</td><td>Histopathology</td><td>VLM</td><td>56.1 (3)</td><td>37.9 (2)</td><td>53.6 (1)</td><td>56.9 (2)</td><td>51.8 (4)</td><td>40.1 (1)</td><td>60.8 (2)</td><td>57.8 (3)</td><td>21.6 (4)</td><td>47.4 (5)</td><td>37.9 (2)</td><td>83.2 (2)</td><td>30.7 (3)</td><td>31.4 (3)</td><td>35.1 (3)</td><td>43.0 (3)</td><td>46.6 (3)</td></tr>
+          <tr><td>KEEP</td><td>Histopathology</td><td>VLM</td><td>63.4 (1)</td><td>34.2 (3)</td><td>45.0 (3)</td><td>69.1 (1)</td><td>80.6 (1)</td><td>33.3 (2)</td><td>41.3 (7)</td><td>71.4 (1)</td><td>15.5 (6)</td><td>55.5 (2)</td><td>44.9 (1)</td><td>89.4 (1)</td><td>37.7 (1)</td><td>44.4 (1)</td><td>60.7 (1)</td><td>51.8 (2)</td><td>52.4 (1)</td></tr>
+          <tr><td>MUSK</td><td>Histopathology</td><td>VLM</td><td>62.5 (2)</td><td>38.6 (1)</td><td>52.6 (2)</td><td>50.7 (3)</td><td>57.9 (3)</td><td>25.9 (4)</td><td>63.8 (1)</td><td>53.5 (5)</td><td>22.7 (3)</td><td>50.1 (3)</td><td>32.4 (3)</td><td>71.2 (3)</td><td>36.3 (2)</td><td>36.2 (2)</td><td>48.5 (2)</td><td>55.2 (1)</td><td>47.4 (2)</td></tr>
+          <tr><td>PLIP</td><td>Histopathology</td><td>VLM</td><td>42.7 (4)</td><td>25.9 (5)</td><td>25.6 (5)</td><td>38.2 (5)</td><td>61.4 (2)</td><td>31.5 (3)</td><td>53.9 (5)</td><td>46.1 (7)</td><td>16.3 (5)</td><td>64.1 (1)</td><td>10.3 (5)</td><td>51.0 (6)</td><td>14.6 (4)</td><td>28.3 (4)</td><td>23.5 (4)</td><td>22.6 (4)</td><td>34.7 (4)</td></tr>
+          <tr><td>QUILTNET</td><td>Histopathology</td><td>VLM</td><td>30.3 (5)</td><td>29.1 (4)</td><td>37.5 (4)</td><td>24.2 (6)</td><td>44.2 (5)</td><td>14.2 (5)</td><td>57.1 (4)</td><td>65.8 (2)</td><td>50.4 (1)</td><td>47.6 (4)</td><td>12.3 (4)</td><td>44.3 (7)</td><td>13.9 (5)</td><td>25.0 (5)</td><td>18.5 (5)</td><td>19.7 (5)</td><td>33.4 (5)</td></tr>
+          <tr><td>CLIP-B/32</td><td>Natural-image</td><td>VLM</td><td>13.2 (7)</td><td>7.5 (7)</td><td>18.7 (6)</td><td>21.8 (7)</td><td>24.4 (7)</td><td>9.8 (7)</td><td>42.2 (6)</td><td>48.1 (6)</td><td>13.9 (7)</td><td>21.6 (7)</td><td>2.0 (7)</td><td>56.8 (5)</td><td>3.9 (7)</td><td>6.1 (7)</td><td>4.3 (7)</td><td>5.5 (6)</td><td>18.7 (7)</td></tr>
+          <tr><td>CLIP-L/14</td><td>Natural-image</td><td>VLM</td><td>27.1 (6)</td><td>19.2 (6)</td><td>5.8 (7)</td><td>40.6 (4)</td><td>41.1 (6)</td><td>10.4 (6)</td><td>58.0 (3)</td><td>55.6 (4)</td><td>49.4 (2)</td><td>25.4 (6)</td><td>7.4 (6)</td><td>70.2 (4)</td><td>7.3 (6)</td><td>16.0 (6)</td><td>6.6 (6)</td><td>5.4 (7)</td><td>27.8 (6)</td></tr>
         <tbody>
     </table>
 </div>

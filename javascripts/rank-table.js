@@ -2,16 +2,22 @@ document$.subscribe(() => {
     const tables = [
 
         {
-            id: '#rankTable',
+            id: '#ranksumTable',
             rankCol: 9,
             radix: 10
         },
 
         {
-            id: '#rankTable2',
+            id: '#spiderTable',
             rankCol: 12,
             radix: 10
-        }
+        },
+
+        {
+            id: '#zeroshotTable',
+            rankCol: 19,
+            radix: 10
+        },
     ];
 
     const range = (start, end) => Array.from({

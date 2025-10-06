@@ -13,27 +13,27 @@
   width: 2rem;
 }
 
-:is(#rankTable, #rankTable2) {
+:is(#ranksumTable, #spiderTable, #zeroshotTable) {
   border: 1px solid #ede9f7;
 }
 
-:is(#rankTable, #rankTable2).table {
+:is(#ranksumTable, #spiderTable, #zeroshotTable).table {
   width: 100%;
   font-size: 0.6rem;
 }
 
-:is(#rankTable, #rankTable2).table thead th {
+:is(#ranksumTable, #spiderTable, #zeroshotTable).table thead th {
   background: #5330a5;
   color: white;
   border: 1px solid #ede9f7;
   text-align: center;
   vertical-align: middle;
-  padding: 0.6rem 0.75rem;
+  padding: 0.55rem 0.75rem;
   font-weight: 600;
 }
 
-:is(#rankTable, #rankTable2).table tbody td,
-:is(#rankTable, #rankTable2).table tbody th {
+:is(#ranksumTable, #spiderTable, #zeroshotTable).table tbody td,
+:is(#ranksumTable, #spiderTable, #zeroshotTable).table tbody th {
   border: 1px solid #ede9f7;
   vertical-align: middle;
   padding: 0.55rem 0.75rem;
@@ -42,7 +42,7 @@
 }
 
 /* Captions */
-:is(#rankTable, #rankTable2) caption {
+:is(#ranksumTable, #spiderTable, #zeroshotTable) caption {
   caption-side: bottom;
   text-align: center;
   font-size: 0.6rem;
@@ -51,13 +51,13 @@
 }
 
 /* ─── DataTables wrappers (search box area) ────────────────────────── */
-:is(#rankTable_wrapper, #rankTable2_wrapper) {
+:is(#ranksumTable_wrapper, #spiderTable_wrapper, #zeroshotTable_wrapper) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-:is(#rankTable_filter, #rankTable2_filter) {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) {
   width: 100%;
   float: none;
   text-align: center;
@@ -65,7 +65,7 @@
   margin-block: 0.75rem;
 }
 
-:is(#rankTable_filter, #rankTable2_filter) > label {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) > label {
   display: block;
   width: 100%;
   margin: 0;
@@ -73,7 +73,7 @@
 }
 
 /* Search input */
-:is(#rankTable_filter, #rankTable2_filter) input[type="search"] {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"] {
   padding: 0.5rem 1rem 0.5rem 2.5rem;
   border: 2px solid #000000;
   border-radius: 9999px;
@@ -86,21 +86,21 @@
   margin: 0;
 }
 
-:is(#rankTable_filter, #rankTable2_filter) input[type="search"]:hover,
-:is(#rankTable_filter, #rankTable2_filter) input[type="search"]:focus {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:hover,
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:focus {
   outline: none;
   border-color: #5433a6;
   background: #fff;
   box-shadow: 0 0 0 0.18rem rgba(43, 133, 255, 0.25);
 }
 
-:is(#rankTable_filter, #rankTable2_filter) input[type="search"]::placeholder {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]::placeholder {
   color: #adb5bd;
   opacity: 1;
 }
 
 /* Magnifier icon inside the label */
-:is(#rankTable_filter, #rankTable2_filter) > label::before {
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) > label::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -114,10 +114,10 @@
   opacity: 0.7;
 }
 
-:is(#rankTable_filter, #rankTable2_filter)
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter)
   input[type="search"]:focus
   + *::before,
-:is(#rankTable_filter, #rankTable2_filter)
+:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter)
   input[type="search"]:hover
   + *::before {
   opacity: 1;
@@ -153,49 +153,76 @@
   font-weight: 600;
 }
 
-/* ─── Make rankTable2 more compact ─────────────────────────────────── */
-#rankTable2.table {
-  font-size: 0.60rem;
-}
-
-#rankTable2.table thead th {
-  font-size: 0.60rem;
-  padding: 0.60rem 0.3rem !important;
-}
-
-#rankTable2.table tbody td,
-#rankTable2.table tbody th {
-  padding: 0.4rem 0.3rem !important;
-  white-space: nowrap;
-}
-#rankTable2_filter input[type="search"] {
-  font-size: 0.8rem;
-  padding: 0.4rem 0.8rem 0.4rem 2.2rem;
-}
-
-#rankTable2_wrapper .dataTables_info,
-#rankTable2_wrapper .dataTables_paginate,
-#rankTable2_wrapper .dtsp-panes-container,
-#rankTable2_wrapper .dtsp-titleRow {
-  font-size: 0.8rem;
-}
-
-#rankTable2,
-#rankTable2.table thead th,
-#rankTable2.table tbody td,
-#rankTable2.table tbody th {
-  border-width: 1px;
-}
-
-#rankTable2.table thead tr:nth-child(2) > th {
-  background: #ccbeef !important;
-  color: #000000 !important;
-}
-
 div.dtsp-panesContainer {
   margin: 0px !important;
 }
 
-:is(#rankTable, #rankTable2).table {
+:is(#ranksumTable, #spiderTable, #zeroshotTable).table {
   width: auto !important;
+}
+
+/* ─── spiderTable specific ─────────────────────────────────── */
+#spiderTable.table {
+  font-size: 0.60rem;
+}
+
+#spiderTable.table thead th {
+  font-size: 0.60rem;
+  padding: 0.60rem 0.3rem !important;
+}
+
+#spiderTable.table tbody td,
+#spiderTable.table tbody th {
+  padding: 0.4rem 0.3rem !important;
+  white-space: nowrap;
+}
+#spiderTable_filter input[type="search"] {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem 0.4rem 2.2rem;
+}
+
+#spiderTable_wrapper .dataTables_info,
+#spiderTable_wrapper .dataTables_paginate,
+#spiderTable_wrapper .dtsp-panes-container,
+#spiderTable_wrapper .dtsp-titleRow {
+  font-size: 0.8rem;
+}
+
+#spiderTable,
+#spiderTable.table thead th,
+#spiderTable.table tbody td,
+#spiderTable.table tbody th {
+  border-width: 1px;
+}
+
+#spiderTable.table thead tr:nth-child(2) > th {
+  background: #ccbeef !important;
+  color: #000000 !important;
+}
+
+/* ─── zeroshotTable specific ─────────────────────────────────── */
+#zeroshotTable th,
+#zeroshotTable td {
+  width: auto !important;  
+}
+#zeroshotTable_wrapper > div.dtsp-panesContainer { width: 100% !important; }
+
+#zeroshotTable.table.dataTable.pivot {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#zeroshotTable.table.dataTable.pivot thead {
+  display: block;
+}
+
+#zeroshotTable.table.dataTable.pivot tbody {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+}
+
+#zeroshotTable.table.dataTable.pivot tr,
+#zeroshotTable.table.dataTable.pivot th,
+#zeroshotTable.table.dataTable.pivot td {
+  display: block;
 }
