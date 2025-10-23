@@ -869,7 +869,7 @@
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/benchmark.py</code></summary>
+              <summary>Source code in <code>thunder/benchmark.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
@@ -1125,7 +1125,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/datasets/download.py</code></summary>
+              <summary>Source code in <code>thunder/datasets/download.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1333,6 +1333,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>musk</li>
 <li>dinov2base</li>
 <li>dinov2large</li>
+<li>dinov3vits16pretrainlvd1689m</li>
+<li>dinov3vitb16pretrainlvd1689m</li>
+<li>dinov3vitl16pretrainlvd1689m</li>
 <li>vitbasepatch16224in21k</li>
 <li>vitlargepatch16224in21k</li>
 <li>clipvitbasepatch32</li>
@@ -1372,20 +1375,8 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/download.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
+              <summary>Source code in <code>thunder/models/download.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
 <span class="normal">124</span>
@@ -1410,7 +1401,22 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">143</span>
 <span class="normal">144</span>
 <span class="normal">145</span>
-<span class="normal">146</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Download model checkpoints from Hugging Face.</span>
 
 <span class="sd">    The list of all available models:</span>
@@ -1433,6 +1439,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * musk</span>
 <span class="sd">        * dinov2base</span>
 <span class="sd">        * dinov2large</span>
+<span class="sd">        * dinov3vits16pretrainlvd1689m</span>
+<span class="sd">        * dinov3vitb16pretrainlvd1689m</span>
+<span class="sd">        * dinov3vitl16pretrainlvd1689m</span>
 <span class="sd">        * vitbasepatch16224in21k</span>
 <span class="sd">        * vitlargepatch16224in21k</span>
 <span class="sd">        * clipvitbasepatch32</span>
@@ -1502,7 +1511,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/datasets/data_splits.py</code></summary>
+              <summary>Source code in <code>thunder/datasets/data_splits.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1675,7 +1684,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
               <details class="quote">
-                <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+                <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
                 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
@@ -1759,7 +1768,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -1792,7 +1801,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
@@ -1825,7 +1834,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
@@ -1883,6 +1892,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>musk</li>
 <li>dinov2base</li>
 <li>dinov2large</li>
+<li>dinov3vits16pretrainlvd1689m</li>
+<li>dinov3vitb16pretrainlvd1689m</li>
+<li>dinov3vitl16pretrainlvd1689m</li>
 <li>vitbasepatch16224in21k</li>
 <li>vitlargepatch16224in21k</li>
 <li>clipvitbasepatch32</li>
@@ -1990,22 +2002,8 @@ which indicates the base directory where the datasets will be downloaded.</p>
 </details>
 
             <details class="quote">
-              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">358</span>
-<span class="normal">359</span>
-<span class="normal">360</span>
-<span class="normal">361</span>
-<span class="normal">362</span>
-<span class="normal">363</span>
-<span class="normal">364</span>
-<span class="normal">365</span>
-<span class="normal">366</span>
-<span class="normal">367</span>
-<span class="normal">368</span>
-<span class="normal">369</span>
-<span class="normal">370</span>
-<span class="normal">371</span>
-<span class="normal">372</span>
+              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">372</span>
 <span class="normal">373</span>
 <span class="normal">374</span>
 <span class="normal">375</span>
@@ -2051,7 +2049,24 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">415</span>
 <span class="normal">416</span>
 <span class="normal">417</span>
-<span class="normal">418</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_model_from_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_model_from_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Loading pretrained model from input name.</span>
 
 <span class="sd">    The list of all available models:</span>
@@ -2074,6 +2089,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * musk</span>
 <span class="sd">        * dinov2base</span>
 <span class="sd">        * dinov2large</span>
+<span class="sd">        * dinov3vits16pretrainlvd1689m</span>
+<span class="sd">        * dinov3vitb16pretrainlvd1689m</span>
+<span class="sd">        * dinov3vitl16pretrainlvd1689m</span>
 <span class="sd">        * vitbasepatch16224in21k</span>
 <span class="sd">        * vitlargepatch16224in21k</span>
 <span class="sd">        * clipvitbasepatch32</span>
