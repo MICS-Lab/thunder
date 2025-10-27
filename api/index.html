@@ -869,7 +869,7 @@
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/benchmark.py</code></summary>
+              <summary>Source code in <code>src/thunder/benchmark.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
@@ -1070,6 +1070,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>patch_camelyon</li>
 <li>segpath_epithelial</li>
 <li>segpath_lymphocytes</li>
+<li>spider_breast</li>
+<li>spider_colorectal</li>
+<li>spider_skin</li>
+<li>spider_thorax</li>
 <li>tcga_crc_msi</li>
 <li>tcga_tils</li>
 <li>tcga_uniform</li>
@@ -1125,90 +1129,102 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/datasets/download.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span>
-<span class="normal">68</span>
-<span class="normal">69</span>
-<span class="normal">70</span>
-<span class="normal">71</span>
-<span class="normal">72</span>
-<span class="normal">73</span>
-<span class="normal">74</span>
-<span class="normal">75</span>
-<span class="normal">76</span>
-<span class="normal">77</span>
-<span class="normal">78</span>
-<span class="normal">79</span>
-<span class="normal">80</span>
-<span class="normal">81</span>
-<span class="normal">82</span>
-<span class="normal">83</span>
-<span class="normal">84</span>
-<span class="normal">85</span>
-<span class="normal">86</span>
-<span class="normal">87</span>
-<span class="normal">88</span>
-<span class="normal">89</span>
-<span class="normal">90</span>
-<span class="normal">91</span>
-<span class="normal">92</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+              <summary>Source code in <code>src/thunder/datasets/download.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads the benchmark datasets specified in the list of dataset names.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
@@ -1227,6 +1243,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * patch_camelyon</span>
 <span class="sd">        * segpath_epithelial</span>
 <span class="sd">        * segpath_lymphocytes</span>
+<span class="sd">        * spider_breast</span>
+<span class="sd">        * spider_colorectal</span>
+<span class="sd">        * spider_skin</span>
+<span class="sd">        * spider_thorax</span>
 <span class="sd">        * tcga_crc_msi</span>
 <span class="sd">        * tcga_tils</span>
 <span class="sd">        * tcga_uniform</span>
@@ -1253,16 +1273,20 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
@@ -1272,12 +1296,16 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
@@ -1375,7 +1403,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/models/download.py</code></summary>
+              <summary>Source code in <code>src/thunder/models/download.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">121</span>
 <span class="normal">122</span>
 <span class="normal">123</span>
@@ -1511,7 +1539,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/datasets/data_splits.py</code></summary>
+              <summary>Source code in <code>src/thunder/datasets/data_splits.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
@@ -1684,7 +1712,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
               <details class="quote">
-                <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+                <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
                 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
@@ -1768,7 +1796,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
 <span class="normal">23</span>
 <span class="normal">24</span>
@@ -1801,7 +1829,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
 <span class="normal">28</span>
 <span class="normal">29</span>
@@ -1834,7 +1862,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 
             <details class="quote">
-              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
@@ -2002,7 +2030,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 </details>
 
             <details class="quote">
-              <summary>Source code in <code>thunder/models/pretrained_models.py</code></summary>
+              <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
               <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">372</span>
 <span class="normal">373</span>
 <span class="normal">374</span>
