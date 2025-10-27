@@ -1,5 +1,6 @@
 import logging
 import os
+from pathlib import Path
 from typing import List, Union
 
 # Configure logging
@@ -168,7 +169,12 @@ def download_model(model: str) -> None:
     tag, filename = TAGS_FILENAMES[model]
     local_dir_tag = tag.split("/")[-1].replace("-v2", "2").replace("-", "").lower()
     local_dir = os.path.join(base_dir, local_dir_tag)
-    os.makedirs(local_dir, exist_ok=True)
+
+    if any(Path(local_dir).iterdir()):
+        logging.info(f"Model {model} already exists in {local_dir}. Skipping download.")
+        return
+    else:
+        os.makedirs(local_dir, exist_ok=True)
 
     try:
         logging.info(f"Downloading {filename} from {tag} to {local_dir}...")
