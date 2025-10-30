@@ -2,7 +2,13 @@ document$.subscribe(() => {
     const tables = [
 
         {
-            id: '#ranksumTable',
+            id: '#ranksumTableOriginal',
+            rankCol: 9,
+            radix: 10
+        },
+
+        {
+            id: '#ranksumTableUpToDate',
             rankCol: 9,
             radix: 10
         },

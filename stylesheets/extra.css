@@ -13,16 +13,16 @@
   width: 2rem;
 }
 
-:is(#ranksumTable, #spiderTable, #zeroshotTable) {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable) {
   border: 1px solid #ede9f7;
 }
 
-:is(#ranksumTable, #spiderTable, #zeroshotTable).table {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table {
   width: 100%;
   font-size: 0.6rem;
 }
 
-:is(#ranksumTable, #spiderTable, #zeroshotTable).table thead th {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table thead th {
   background: #5330a5;
   color: white;
   border: 1px solid #ede9f7;
@@ -32,8 +32,8 @@
   font-weight: 600;
 }
 
-:is(#ranksumTable, #spiderTable, #zeroshotTable).table tbody td,
-:is(#ranksumTable, #spiderTable, #zeroshotTable).table tbody th {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table tbody td,
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table tbody th {
   border: 1px solid #ede9f7;
   vertical-align: middle;
   padding: 0.55rem 0.75rem;
@@ -42,7 +42,7 @@
 }
 
 /* Captions */
-:is(#ranksumTable, #spiderTable, #zeroshotTable) caption {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable) caption {
   caption-side: bottom;
   text-align: center;
   font-size: 0.6rem;
@@ -51,13 +51,13 @@
 }
 
 /* ─── DataTables wrappers (search box area) ────────────────────────── */
-:is(#ranksumTable_wrapper, #spiderTable_wrapper, #zeroshotTable_wrapper) {
+:is(#ranksumTableOriginal_wrapper, #ranksumTableUpToDate_wrapper, #spiderTable_wrapper, #zeroshotTable_wrapper) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) {
   width: 100%;
   float: none;
   text-align: center;
@@ -65,7 +65,7 @@
   margin-block: 0.75rem;
 }
 
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) > label {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) > label {
   display: block;
   width: 100%;
   margin: 0;
@@ -73,7 +73,7 @@
 }
 
 /* Search input */
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"] {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"] {
   padding: 0.5rem 1rem 0.5rem 2.5rem;
   border: 2px solid #000000;
   border-radius: 9999px;
@@ -86,21 +86,21 @@
   margin: 0;
 }
 
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:hover,
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:focus {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:hover,
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:focus {
   outline: none;
   border-color: #5433a6;
   background: #fff;
   box-shadow: 0 0 0 0.18rem rgba(43, 133, 255, 0.25);
 }
 
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]::placeholder {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]::placeholder {
   color: #adb5bd;
   opacity: 1;
 }
 
 /* Magnifier icon inside the label */
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter) > label::before {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) > label::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -114,10 +114,10 @@
   opacity: 0.7;
 }
 
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter)
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter)
   input[type="search"]:focus
   + *::before,
-:is(#ranksumTable_filter, #spiderTable_filter, #zeroshotTable_filter)
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter)
   input[type="search"]:hover
   + *::before {
   opacity: 1;
@@ -157,7 +157,7 @@ div.dtsp-panesContainer {
   margin: 0px !important;
 }
 
-:is(#ranksumTable, #spiderTable, #zeroshotTable).table {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table {
   width: auto !important;
 }
 
