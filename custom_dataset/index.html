@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mics-lab.github.io/thunder/custom_config/">
+        <link rel="canonical" href="https://mics-lab.github.io/thunder/custom_dataset/">
       
       
-        <link rel="prev" href="../custom_dataset/">
+        <link rel="prev" href="../custom_model/">
       
       
-        <link rel="next" href="../get_model/">
+        <link rel="next" href="../custom_config/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overriding Configurations - THUNDER</title>
+        <title>Benchmarking on a Custom Dataset - THUNDER</title>
       
     
     
@@ -79,11 +79,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#overriding-config-parameters" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overriding Configurations
+              Benchmarking on a Custom Dataset
             
           </span>
         </div>
@@ -361,29 +356,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../custom_dataset/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Benchmarking on a Custom Dataset
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -394,20 +366,31 @@
       
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
   
   
   <span class="md-ellipsis">
-    Overriding Configurations
+    Benchmarking on a Custom Dataset
     
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
+      </a>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom_config/" class="md-nav__link">
         
   
   
@@ -418,129 +401,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overriding config parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overridable parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overridable parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frozen linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      LoRA linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adversarial attack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -616,119 +476,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overriding config parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overridable parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overridable parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frozen linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      LoRA linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adversarial attack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -746,264 +493,100 @@
   
 
 
-  <h1>Overriding Configurations</h1>
+  <h1>Benchmarking on a Custom Dataset</h1>
 
-<h2 id="overriding-config-parameters">Overriding config parameters</h2>
-<p>Default parameters are used for various aspects of the benchmark, e.g., the batch sizes, learning rates. These default parameters can be overriden using the following syntaxes for both CLI and API uses.</p>
-<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>keep<span class="w"> </span>bach<span class="w"> </span>knn<span class="w"> </span>--task.pre_comp_emb_batch_size<span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="se">\</span>
-<span class="w">                                </span>--task.k_vals<span class="w"> </span><span class="s2">&quot;[1, 2, 3]&quot;</span>
+<p>You can run thunder tasks on a custom dataset. All you will need is to prepare a <code>.yaml</code> file specifying the config of the dataset and a <code>.json</code> file defining the data splits.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A few examples of <code>.yaml</code> files describing custom datasets can be found in the <code>examples</code> folder of the repository. For examples of <code>.json</code> data split files, please check the ones automatically generated by thunder on supported datasets.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Supported formats of custom datasets:
+* <strong>Format 1</strong>: One file per patch (e.g. <code>.png</code> files). Your data split <code>.json</code> file will then contain paths to these files along with labels associated to them. This is the most common format in our already supported datasets.
+* <strong>Format 2</strong>: Following the format of <em>patch_camelyon</em>, for each split (train, val, test), one <code>.h5</code> file with a <code>x</code> key mapping to an array of input images and another <code>.h5</code> file with a <code>y</code> key mapping to an array of associated labels. Your data split <code>.json</code> file will then contain paths to these <code>.h5</code> files (images and labels).</p>
+</div>
+<p>For example, we can create a custom version of the <em>bracs</em> dataset with 3 classes instead of 7. The <code>.yaml</code> file would be as follows:</p>
+<p><div class="highlight"><pre><span></span><code>dataset_name: bracs_3classes
+nb_classes: 3
+compatible_tasks: [&quot;adversarial_attack&quot;, &quot;alignment_scoring&quot;, &quot;image_retrieval&quot;, &quot;knn&quot;, &quot;linear_probing&quot;, &quot;pre_computing_embeddings&quot;, &quot;simple_shot&quot;, &quot;zero_shot_vlm&quot;]
+nb_train_samples: 3657
+nb_val_samples: 312
+nb_test_samples: 570
+mpp: 0.25
+cancer_type: breast
+div_patches: False
+data_splits: /path/to/data/splits/file.json
+classes: [&quot;benign&quot;, &quot;atypical&quot;, &quot;malignant&quot;]
+class_to_id:
+  benign: 0
+  atypical: 1
+  malignant: 2
+id_to_class:
+  0: benign
+  1: atypical
+  2: malignant
+id_to_classname:
+  0: normal breast tissue
+  1: breast atypical lesions
+  2: breast malingnant tumor
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
-<span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="s1">&#39;hiboub&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;bach&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;knn&#39;</span><span class="p">,</span>
-                  <span class="o">**</span><span class="p">{</span><span class="s1">&#39;task.pre_comp_emb_batch_size&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;task.k_vals&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
+This was an example of a custom dataset where patches are saved as images (<strong>Format 1</strong>). If you want instead to use a custom dataset with the same format as <em>patch_camelyon</em> (<strong>Format 2</strong>), you should add the <code>h5_format: True</code> entry to your <code>.yaml</code> file.</p>
+<p>The <code>.json</code> file will have the following structure if data follows <strong>Format 1</strong>:
+<div class="highlight"><pre><span></span><code>{
+    &quot;train&quot;: {
+        &quot;images&quot;: [/path/to/im0, ..., /path/to/imN], 
+        &quot;labels&quot;: [label_im0, ..., label_imN],
+    }, 
+    &quot;val&quot;: {
+        &quot;images&quot;: [...], 
+        &quot;labels&quot;: [...],
+    }, 
+    &quot;test&quot;: {
+        &quot;images&quot;: [...], 
+        &quot;labels&quot;: [...],
+    }, 
+    &quot;train_few_shot&quot;: {
+        ...,
+    },
+}
+</code></pre></div></p>
+<p>If data follows <strong>Format 2</strong>, it will be:
+<div class="highlight"><pre><span></span><code>{
+    &quot;train&quot;: {
+        &quot;images&quot;: /path/to/train/images/file.h5, 
+        &quot;labels&quot;: /path/to/train/labels/file.h5,
+    },
+    &quot;val&quot;: {
+       &quot;images&quot;: /path/to/val/images/file.h5, 
+        &quot;labels&quot;: /path/to/val/labels/file.h5,
+    },
+    &quot;test&quot;: {
+        &quot;images&quot;: /path/to/test/images/file.h5, 
+        &quot;labels&quot;: /path/to/test/labels/file.h5,
+    }, 
+    &quot;train_few_shot&quot;: {
+        ...,
+    },
+}
+</code></pre></div></p>
+<p>In both cases, for a classification dataset, <code>labels</code> will be a list of integers (classes) and for a segmentation dataset, it will be a list of tuples <code>(/path/to/the/gt/semnatic/mask/, patch_i_min_coord, patch_i_max_coord, patch_j_min_coord, patch_j_max_coord)</code>.</p>
+<p>The <code>train_few_shot</code> entry is mapped to a dictionnary where keys are sizes of support sets ("1", "2", "4", "8", "16") and values are dictionnaries with entries <code>images</code> and <code>labels</code>, respectively mapping to the indices of images in the support set and their respective labels. For more details, please check the <a href="https://github.com/MICS-Lab/thunder/blob/main/src/thunder/datasets/data_splits.py#L259-L291">function</a> where we automatically create such support sets for supported datasets.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Importantly, you have two ways to specify paths to images (and labels in case of h5 format):
+* You <strong>do not</strong> provide a <code>base_data_folder</code> entry in your <code>.yaml</code> file and paths specified in the <code>.json</code> file will be <strong>absolute</strong> paths.
+* You provide a <code>base_data_folder</code> entry in your <code>.yaml</code> file. This should be <strong>the path to a folder containing a sub-folder named <code>dataset_name</code></strong> (e.g. here named <em>bracs_3classes</em>). The paths in your <code>.json</code> will be specified relative to this <code>base_data_folder/dataset_name</code> folder (as done for supported datasets). </p>
+</div>
+<p>With your <code>.yaml</code> file ready (e.g. <code>bracs_3classes.yaml</code>) along with the corresponding <code>.json</code> file, you can run any benchmark task on any model using the following command:</p>
+<div class="highlight"><pre><span></span><code><span class="go">thunder benchmark model_name custom:/path/to/bracs_3classes.yaml task_name</span>
 </code></pre></div>
-<h2 id="overridable-parameters">Overridable parameters</h2>
-<p>Here is a non exhaustive list of the parameters that you may want to override per task, as well as the type and a small description.</p>
-<h3 id="frozen-linear-probing">Frozen linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="lora-linear-probing">LoRA linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.lora_rank</td>
-<td>int</td>
-<td>Rank for the LoRA adapter.</td>
-</tr>
-<tr>
-<td>adaptation.lora_alpha</td>
-<td>int</td>
-<td>Alpha parameter for LoRA.</td>
-</tr>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="adversarial-attack">Adversarial attack</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.attack_batch_size</td>
-<td>int</td>
-<td>Batch size for the attacks.</td>
-</tr>
-<tr>
-<td>task.nb_attack_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-<tr>
-<td>task.attack.eps</td>
-<td>float</td>
-<td>Radius of the norm ball.</td>
-</tr>
-<tr>
-<td>task.attack.alpha</td>
-<td>float</td>
-<td>Step size per PGD iteration.</td>
-</tr>
-<tr>
-<td>task.attack.n_steps</td>
-<td>int</td>
-<td>Number of PGD iterations.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="alignment-scoring">Alignment scoring</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="image-retrieval">Image retrieval</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="k-nn">K-nn</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="precomputing-embeddings">Precomputing embeddings</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="simple-shot">Simple shot</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="transformation-invariance">Transformation invariance</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.transformation_invariance_batch_size</td>
-<td>int</td>
-<td>Batch size for the transformations.</td>
-</tr>
-<tr>
-<td>task.nb_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-</tbody>
-</table>
+<p>or through the API:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">benchmark</span><span class="p">(</span><span class="s2">&quot;uni2h&quot;</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;custom:/path/to/bracs_3classes.yaml&quot;</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="s2">&quot;linear_probing&quot;</span><span class="p">)</span>
+</code></pre></div>
 
 
 

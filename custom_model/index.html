@@ -14,7 +14,7 @@
         <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../custom_config/">
+        <link rel="next" href="../custom_dataset/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -367,6 +367,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../custom_dataset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benchmarking on a Custom Dataset
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../custom_config/" class="md-nav__link">
         
   
@@ -526,7 +549,7 @@
         <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;x_norm_patchtokens&#39;</span><span class="p">]</span>
 </code></pre></div>
 <p>With this file ready, you can run any benchmark task using the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="go">thunder benchmark custom:my_model.py db_name task_name</span>
+<div class="highlight"><pre><span></span><code><span class="go">thunder benchmark custom:/path/to/my_model.py db_name task_name</span>
 </code></pre></div>
 <p>or through the API:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
