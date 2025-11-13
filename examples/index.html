@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mics-lab.github.io/thunder/custom_config/">
+        <link rel="canonical" href="https://mics-lab.github.io/thunder/examples/">
       
       
-        <link rel="prev" href="../custom_dataset/">
+        <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../get_model/">
+        <link rel="next" href="../custom_model/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overriding Configurations - THUNDER</title>
+        <title>Examples - THUNDER</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overriding-config-parameters" class="md-skip">
+        <a href="#examples" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overriding Configurations
+              Examples
             
           </span>
         </div>
@@ -338,10 +338,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Examples
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -352,6 +374,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-view-benchmark-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. View Benchmark Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. View Benchmark Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-download-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Download Datasets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Download Datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-generate-data-splits" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Generate Data Splits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Generate Data Splits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-download-pretrained-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Download Pretrained Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Download Pretrained Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,30 +545,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overriding Configurations
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../custom_config/" class="md-nav__link">
         
   
   
@@ -441,129 +559,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overriding config parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overridable parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overridable parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frozen linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      LoRA linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adversarial attack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -638,6 +633,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -646,100 +643,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
+  <a href="#1-view-benchmark-help" class="md-nav__link">
     <span class="md-ellipsis">
-      Overriding config parameters
+      1. View Benchmark Help
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="1. View Benchmark Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
+  <a href="#2-download-datasets" class="md-nav__link">
     <span class="md-ellipsis">
-      Overridable parameters
+      2. Download Datasets
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overridable parameters">
+    <nav class="md-nav" aria-label="2. Download Datasets">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
+  <a href="#cli_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Frozen linear probing
+      CLI
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-generate-data-splits" class="md-nav__link">
     <span class="md-ellipsis">
-      LoRA linear probing
+      3. Generate Data Splits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Generate Data Splits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLI
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-download-pretrained-models" class="md-nav__link">
     <span class="md-ellipsis">
-      Adversarial attack
+      4. Download Pretrained Models
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="4. Download Pretrained Models">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
+  <a href="#cli_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
+      CLI
     </span>
   </a>
   
@@ -769,264 +757,150 @@
   
 
 
-  <h1>Overriding Configurations</h1>
+<h1 id="examples">Examples</h1>
+<p>The general command format for running a benchmark is:
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>&lt;MODEL&gt;<span class="w"> </span>&lt;DATASET&gt;<span class="w"> </span>&lt;TASK&gt;<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</code></pre></div></p>
+<p>In the following examples, we illustrate how to use THUNDER through both the <strong>command-line interface (CLI)</strong> and the <strong>Python API</strong>.
+As example, we will use <strong>Hoptimus1</strong> as the model, <strong>MHIST</strong> as the classification dataset, and <strong>PanNuke</strong> for segmentation.</p>
+<hr />
+<h2 id="1-view-benchmark-help">1. View Benchmark Help</h2>
+<h3 id="cli"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>--help
+</code></pre></div>
+<hr />
+<h2 id="2-download-datasets">2. Download Datasets</h2>
+<h3 id="cli_1"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>download-datasets<span class="w"> </span>mhist<span class="w"> </span>pannuke
+</code></pre></div>
+<hr />
+<h2 id="3-generate-data-splits">3. Generate Data Splits</h2>
+<h3 id="cli_2"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>generate-data-splits<span class="w"> </span>pannuke<span class="w"> </span>mhist
+</code></pre></div>
+<hr />
+<h2 id="4-download-pretrained-models">4. Download Pretrained Models</h2>
+<h3 id="cli_3"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>download-models<span class="w"> </span>hoptimus1
+</code></pre></div>
+<hr />
+<h1 id="benchmarking-examples">Benchmarking Examples</h1>
+<p>Below are examples for multiple tasks using the <strong>Hoptimus1</strong> model.</p>
+<hr />
+<h2 id="pre-computing-embeddings">Pre-computing Embeddings</h2>
+<h3 id="cli_4"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>pre_computing_embeddings
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>pannuke<span class="w"> </span>pre_computing_embeddings
+</code></pre></div>
+<h3 id="api"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
-<h2 id="overriding-config-parameters">Overriding config parameters</h2>
-<p>Default parameters are used for various aspects of the benchmark, e.g., the batch sizes, learning rates. These default parameters can be overriden using the following syntaxes for both CLI and API uses.</p>
-<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>keep<span class="w"> </span>bach<span class="w"> </span>knn<span class="w"> </span>--task.pre_comp_emb_batch_size<span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="se">\</span>
-<span class="w">                                </span>--task.k_vals<span class="w"> </span><span class="s2">&quot;[1, 2, 3]&quot;</span>
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;pre_computing_embeddings&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;pre_computing_embeddings&quot;</span><span class="p">,</span>
+<span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
-<span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="s1">&#39;hiboub&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;bach&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;knn&#39;</span><span class="p">,</span>
-                  <span class="o">**</span><span class="p">{</span><span class="s1">&#39;task.pre_comp_emb_batch_size&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;task.k_vals&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
+<hr />
+<h2 id="6-k-nn-classification">6. K-NN Classification</h2>
+<h3 id="cli_5"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>knn
 </code></pre></div>
-<h2 id="overridable-parameters">Overridable parameters</h2>
-<p>Here is a non exhaustive list of the parameters that you may want to override per task, as well as the type and a small description.</p>
-<h3 id="frozen-linear-probing">Frozen linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="lora-linear-probing">LoRA linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.lora_rank</td>
-<td>int</td>
-<td>Rank for the LoRA adapter.</td>
-</tr>
-<tr>
-<td>adaptation.lora_alpha</td>
-<td>int</td>
-<td>Alpha parameter for LoRA.</td>
-</tr>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="adversarial-attack">Adversarial attack</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.attack_batch_size</td>
-<td>int</td>
-<td>Batch size for the attacks.</td>
-</tr>
-<tr>
-<td>task.nb_attack_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-<tr>
-<td>task.attack.eps</td>
-<td>float</td>
-<td>Radius of the norm ball.</td>
-</tr>
-<tr>
-<td>task.attack.alpha</td>
-<td>float</td>
-<td>Step size per PGD iteration.</td>
-</tr>
-<tr>
-<td>task.attack.n_steps</td>
-<td>int</td>
-<td>Number of PGD iterations.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="alignment-scoring">Alignment scoring</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="image-retrieval">Image retrieval</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="k-nn">K-nn</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="precomputing-embeddings">Precomputing embeddings</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="simple-shot">Simple shot</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="transformation-invariance">Transformation invariance</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.transformation_invariance_batch_size</td>
-<td>int</td>
-<td>Batch size for the transformations.</td>
-</tr>
-<tr>
-<td>task.nb_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="api_1"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;knn&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="7-linear-probing">7. Linear Probing</h2>
+<p>Using pre-loaded embeddings.</p>
+<h3 id="cli_6"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>linear_probing<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading
+</code></pre></div>
+<h3 id="api_2"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;linear_probing&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="8-segmentation-pannuke">8. Segmentation (PanNuke)</h2>
+<h3 id="cli_7"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>pannuke<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading
+</code></pre></div>
+<h3 id="api_3"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;segmentation&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="9-simpleshot-classification">9. SimpleShot Classification</h2>
+<h3 id="cli_8"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>simple_shot<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading
+</code></pre></div>
+<h3 id="api_4"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;simple_shot&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="10-transformation-invariance">10. Transformation Invariance</h2>
+<h3 id="cli_9"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>transformation_invariance
+</code></pre></div>
+<h3 id="api_5"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;transformation_invariance&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h2 id="11-adversarial-attack-robustness">11. Adversarial Attack Robustness</h2>
+<h3 id="cli_10"><strong>CLI</strong></h3>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span class="w"> </span>mhist<span class="w"> </span>adversarial_attack
+</code></pre></div>
+<h3 id="api_6"><strong>API</strong></h3>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
+
+<span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;adversarial_attack&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<hr />
+<h1 id="12-results-summary">12. Results Summary</h1>
+<h3 id="cli_11"><strong>CLI</strong></h3>
+<p>To display all collected benchmark results, simply run the command below after your experiments have finished.</p>
+<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>results-summary
+</code></pre></div>
 
 
 
