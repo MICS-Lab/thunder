@@ -99,11 +99,17 @@ document$.subscribe(() => {
                 return !isDescending ? (B - A) : (A - B);
             });
 
-            const top3 = isDescending ? rows.slice(0, 3) : rows.slice(-3).reverse();
-
-            if (top3[0] !== undefined) $(dt.row(top3[0]).node()).addClass('winner-gold');
-            if (top3[1] !== undefined) $(dt.row(top3[1]).node()).addClass('winner-silver');
-            if (top3[2] !== undefined) $(dt.row(top3[2]).node()).addClass('winner-bronze');
+            const prepRows = isDescending ? rows : rows.reverse();
+            const colorClasses = ['winner-gold', 'winner-silver', 'winner-bronze'];
+            let currentId = 0;
+            let topId = 0;
+            while (topId < 3) {
+                $(dt.row(prepRows[currentId]).node()).addClass(colorClasses[topId]);
+                if (getRank(prepRows[currentId]) != getRank(prepRows[currentId+1])) {
+                    topId += 1;
+                }
+                currentId += 1;
+              }
         };
 
         paintWinners();
