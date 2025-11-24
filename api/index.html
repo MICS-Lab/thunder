@@ -1435,7 +1435,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>virchow</li>
 <li>virchow2</li>
 <li>hoptimus0</li>
+<li>h0mini</li>
 <li>hoptimus1</li>
+<li>provgigapath</li>
 <li>conch</li>
 <li>titan</li>
 <li>phikon</li>
@@ -1443,6 +1445,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>hiboub</li>
 <li>hiboul</li>
 <li>midnight</li>
+<li>kaiko_vits8</li>
+<li>kaiko_vits16</li>
+<li>kaiko_vitb8</li>
+<li>kaiko_vitb16</li>
 <li>keep</li>
 <li>quiltb32</li>
 <li>plip</li>
@@ -1532,7 +1538,13 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">181</span>
 <span class="normal">182</span>
 <span class="normal">183</span>
-<span class="normal">184</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Download model checkpoints from Hugging Face.</span>
 
 <span class="sd">    The list of all available models:</span>
@@ -1541,7 +1553,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * virchow</span>
 <span class="sd">        * virchow2</span>
 <span class="sd">        * hoptimus0</span>
+<span class="sd">        * h0mini</span>
 <span class="sd">        * hoptimus1</span>
+<span class="sd">        * provgigapath</span>
 <span class="sd">        * conch</span>
 <span class="sd">        * titan</span>
 <span class="sd">        * phikon</span>
@@ -1549,6 +1563,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * hiboub</span>
 <span class="sd">        * hiboul</span>
 <span class="sd">        * midnight</span>
+<span class="sd">        * kaiko_vits8</span>
+<span class="sd">        * kaiko_vits16</span>
+<span class="sd">        * kaiko_vitb8</span>
+<span class="sd">        * kaiko_vitb16</span>
 <span class="sd">        * keep</span>
 <span class="sd">        * quiltb32</span>
 <span class="sd">        * plip</span>
