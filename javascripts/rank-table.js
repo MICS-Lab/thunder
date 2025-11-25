@@ -103,7 +103,8 @@ document$.subscribe(() => {
             const colorClasses = ['winner-gold', 'winner-silver', 'winner-bronze'];
             let currentId = 0;
             let topId = 0;
-            while (topId < 3) {
+            top_rows_length = prepRows.length < 3 ? prepRows.length : 3
+            while (topId < top_rows_length) {
                 $(dt.row(prepRows[currentId]).node()).addClass(colorClasses[topId]);
                 if (getRank(prepRows[currentId]) != getRank(prepRows[currentId+1])) {
                     topId += 1;
