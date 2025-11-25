@@ -101,16 +101,28 @@ document$.subscribe(() => {
 
             const prepRows = isDescending ? rows : rows.reverse();
             const colorClasses = ['winner-gold', 'winner-silver', 'winner-bronze'];
+
             let currentId = 0;
             let topId = 0;
-            top_rows_length = prepRows.length < 3 ? prepRows.length : 3
-            while (topId < top_rows_length) {
-                $(dt.row(prepRows[currentId]).node()).addClass(colorClasses[topId]);
-                if (getRank(prepRows[currentId]) != getRank(prepRows[currentId+1])) {
+            const maxTopGroups = Math.min(prepRows.length, colorClasses.length);
+
+            while (currentId < prepRows.length && topId < maxTopGroups) {
+                const rowIdx = prepRows[currentId];
+                $(dt.row(rowIdx).node()).addClass(colorClasses[topId]);
+
+                const nextRowIdx = prepRows[currentId + 1];
+
+                if (nextRowIdx == null) {
+                    break;
+                }
+
+                if (getRank(rowIdx) !== getRank(nextRowIdx)) {
                     topId += 1;
                 }
+
                 currentId += 1;
-              }
+            }
+
         };
 
         paintWinners();
