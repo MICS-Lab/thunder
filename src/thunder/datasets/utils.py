@@ -5,8 +5,10 @@ def download_from_url(url: str, filename: str):
     import requests
     import tqdm
 
+    # User-Agent header is required by some servers (e.g., Zenodo) to allow downloads
+    headers = {"User-Agent": "thunder-bench (https://github.com/MICS-Lab/thunder)"}
     with open(filename, "wb") as f:
-        with requests.get(url, stream=True) as r:
+        with requests.get(url, stream=True, headers=headers) as r:
             r.raise_for_status()
             total = int(r.headers.get("content-length", 0))
 
