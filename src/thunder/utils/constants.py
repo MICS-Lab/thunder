@@ -9,6 +9,7 @@ class ModelConstants(Enum):
         "hoptimus0",
         "h0mini",
         "hoptimus1",
+        "genbio-pathfm",
         "kaiko_vits8",
         "kaiko_vits16",
         "kaiko_vitb8",

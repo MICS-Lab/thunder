@@ -1,0 +1,6 @@
+model_name: genbio-pathfm
+type: safetensors
+vlm: false
+emb_dim: 4608
+ckpt_path: ${oc.env:THUNDER_BASE_DATA_FOLDER}/pretrained_ckpts/genbiopathfm/model.pth
+hf_tag: hf-hub:genbio-ai/genbio-pathfm

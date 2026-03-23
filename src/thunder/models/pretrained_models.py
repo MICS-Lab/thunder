@@ -126,6 +126,8 @@ def get_model(model_cfg: dict, device: str):
             model, transform = get_titan(model_cfg.ckpt_path)
         elif model_cfg.model_name == "midnight":
             model, transform = get_midnight(model_cfg.ckpt_path)
+        elif model_cfg.model_name == "genbio-pathfm":
+            model, transform = get_genbio_pathfm(model_cfg.ckpt_path)
         else:
             model, transform, tokenizer = get_from_safetensors(
                 model_cfg.ckpt_path, use_fast="dinov3" in model_cfg.model_name
@@ -366,6 +368,8 @@ def get_model(model_cfg: dict, device: str):
                     emb = pretrained_model.trunk(src, return_all_tokens=True)[:, 1:]
                 elif model_cfg.model_name == "openmidnight":
                     emb = pretrained_model.get_intermediate_layers(src)[0]
+                elif model_cfg.model_name == "genbio-pathfm":
+                    emb = pretrained_model.forward_with_patches(src)[1]
                 else:
                     emb = pretrained_model.forward_features(src)[:, 1:]
 
@@ -394,6 +398,7 @@ def get_model_from_name(model_name: str, device: str):
         * hoptimus0
         * h0mini
         * hoptimus1
+        * genbio-pathfm
         * provgigapath
         * conch
         * titan
@@ -756,3 +761,30 @@ def get_titan(ckpt_path: str):
     model, transform = titan.return_conch()
 
     return model, transform
+
+
+def get_genbio_pathfm(ckpt_path: str):
+    """
+    Adapted from:
+    - https://github.com/genbio-ai/genbio-pathfm
+
+    :param ckpt_path: path to the stored checkpoint.
+    """
+    from torchvision import transforms
+    from ..utils.genbio_pathfm import GenBioPathFMInference
+
+    # Model    
+    model = GenBioPathFMInference(ckpt_path, device="cpu")
+
+    # Transform
+    transform = transforms.Compose([
+        transforms.Resize((224,224)),  
+        transforms.ToTensor(),
+        transforms.Normalize(
+            mean=(0.697, 0.575, 0.728), 
+            std=(0.188, 0.240, 0.187)
+        ),
+    ])
+
+    return model, transform
+

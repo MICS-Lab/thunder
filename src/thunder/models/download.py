@@ -38,6 +38,10 @@ TAGS_FILENAMES = {
         "bioptimus/H-optimus-1",
         "pytorch_model.bin",
     ),  # H-optimus 1 (https://huggingface.co/bioptimus/H-optimus-1)
+    "genbio-pathfm": (
+        "genbio-ai/genbio-pathfm",
+        "model.pth",
+    ),  # GenBio-PathFM (https://huggingface.co/genbio-ai/genbio-pathfm)
     "provgigapath": (
         "prov-gigapath/prov-gigapath",
         "pytorch_model.bin",
@@ -156,6 +160,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * hoptimus0
         * h0mini
         * hoptimus1
+        * genbio-pathfm
         * provgigapath
         * conch
         * titan
