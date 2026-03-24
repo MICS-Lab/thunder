@@ -770,11 +770,17 @@ def get_genbio_pathfm(ckpt_path: str):
 
     :param ckpt_path: path to the stored checkpoint.
     """
+    try:
+        from genbio_pathfm.model import GenBio_PathFM_Inference
+    except ImportError:
+        raise ImportError(
+            "In order to use GenBio-PathFM, please run the following: 'pip install git+https://github.com/genbio-ai/genbio-pathfm.git'"
+        )
+
     from torchvision import transforms
-    from ..utils.genbio_pathfm import GenBioPathFMInference
 
     # Model    
-    model = GenBioPathFMInference(ckpt_path, device="cpu")
+    model = GenBio_PathFM_Inference(ckpt_path, device="cpu")
 
     # Transform
     transform = transforms.Compose([
