@@ -3,8 +3,8 @@ nb_classes: 9
 base_data_folder: ${oc.env:THUNDER_BASE_DATA_FOLDER}/datasets/
 compatible_tasks: ["adversarial_attack", "alignment_scoring", "image_retrieval", "knn", "linear_probing", "pre_computing_embeddings", "simple_shot", "transformation_invariance", "zero_shot_vlm"]
 nb_train_samples: 630000
-nb_val_samples: 540000
-nb_test_samples: 20000
+nb_val_samples: 20000
+nb_test_samples: 54000
 md5sum: "2a238a6340b693cd2b10d15f6afa2053"
 image_sizes: [[256, 256]]
 mpp: 0.5
