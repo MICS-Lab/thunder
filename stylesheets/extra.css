@@ -57,7 +57,7 @@
   align-items: center;
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_wrapper, #zeroshotTable_filter) {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) {
   width: 100%;
   float: none;
   text-align: center;
