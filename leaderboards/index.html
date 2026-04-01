@@ -350,6 +350,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#per-dataset-linear-probing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏆 Per-dataset linear probing performance
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -634,6 +643,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#per-dataset-linear-probing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏆 Per-dataset linear probing performance
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -875,6 +893,57 @@
           <tr><td>QUILTNET</td><td>Histopathology</td><td>VLM</td><td>30.3 (5)</td><td>29.1 (4)</td><td>37.5 (4)</td><td>24.2 (6)</td><td>44.2 (5)</td><td>14.2 (5)</td><td>57.1 (4)</td><td>65.8 (2)</td><td>50.4 (1)</td><td>47.6 (4)</td><td>12.3 (4)</td><td>44.3 (7)</td><td>13.9 (5)</td><td>25.0 (5)</td><td>18.5 (5)</td><td>19.7 (5)</td><td>33.4 (5)</td></tr>
           <tr><td>CLIP-B/32</td><td>Natural-image</td><td>VLM</td><td>13.2 (7)</td><td>7.5 (7)</td><td>18.7 (6)</td><td>21.8 (7)</td><td>24.4 (7)</td><td>9.8 (7)</td><td>42.2 (6)</td><td>48.1 (6)</td><td>13.9 (7)</td><td>21.6 (7)</td><td>2.0 (7)</td><td>56.8 (5)</td><td>3.9 (7)</td><td>6.1 (7)</td><td>4.3 (7)</td><td>5.5 (6)</td><td>18.7 (7)</td></tr>
           <tr><td>CLIP-L/14</td><td>Natural-image</td><td>VLM</td><td>27.1 (6)</td><td>19.2 (6)</td><td>5.8 (7)</td><td>40.6 (4)</td><td>41.1 (6)</td><td>10.4 (6)</td><td>58.0 (3)</td><td>55.6 (4)</td><td>49.4 (2)</td><td>25.4 (6)</td><td>7.4 (6)</td><td>70.2 (4)</td><td>7.3 (6)</td><td>16.0 (6)</td><td>6.6 (6)</td><td>5.4 (7)</td><td>27.8 (6)</td></tr>
+        <tbody>
+    </table>
+</div>
+
+<hr />
+<h2 id="per-dataset-linear-probing-performance">🏆 Per-dataset linear probing performance</h2>
+<div class="table-responsive-sm">
+    <table id="perDatasetLinearTable" class="table table-hover table-bordered table-sm nowrap w-100">
+        <thead class="align-middle text-center">
+          <tr>
+            <th rowspan="2">Model</th>
+            <th rowspan="2">Domain</th>
+            <th rowspan="2">Type</th>
+            <th colspan="17">Linear probing performance (F1-score) &uarr;</th>
+          </tr>
+          <tr>
+            <th>bach <th>bracs</th><th>break-h</th><th>ccrcc</th><th>crc</th><th>esca</th><th>mhist</th><th>pcam</th><th>tc-crc</th><th>tc-tils</th><th>tc-unif</th><th>wilds</th><th>spi-br</th><th>spi-co</th><th>spi-sk</th><th>spi-th</th><th>Avg</th>
+          </tr>
+      </thead>
+        <tbody>
+          <tr><td>HIBOU-B</td><td>Histopathology</td><td>VM</td><td>65.6<br>(19)</td><td>61.7<br>(8)</td><td>59.6<br>(24)</td><td>84.3<br>(15)</td><td>93.9<br>(7)</td><td>77.5<br>(15)</td><td>76.5<br>(29)</td><td>93.4<br>(6)</td><td>66.2<br>(10)</td><td>89.6<br>(10)</td><td>70.2<br>(17)</td><td>97.1<br>(10)</td><td>86.6<br>(4)</td><td>90.7<br>(2)</td><td>91.1<br>(8)</td><td>94.5<br>(3)</td><td>81.2<br>(15)</td></tr>
+          <tr><td>HIBOU-L</td><td>Histopathology</td><td>VM</td><td>76.5<br>(7)</td><td>62.7<br>(5)</td><td>69.4<br>(12)</td><td>88.4<br>(10)</td><td>93.0<br>(13)</td><td>77.5<br>(15)</td><td>81.3<br>(13)</td><td>93.3<br>(7)</td><td>68.1<br>(2)</td><td>90.3<br>(6)</td><td>75.2<br>(13)</td><td>98.1<br>(5)</td><td>88.0<br>(1)</td><td>89.8<br>(8)</td><td>93.3<br>(1)</td><td>94.1<br>(5)</td><td>83.7<br>(6)</td></tr>
+          <tr><td>H-OPT-0</td><td>Histopathology</td><td>VM</td><td>69.7<br>(14)</td><td>61.1<br>(10)</td><td>66.0<br>(17)</td><td>90.8<br>(5)</td><td>93.5<br>(10)</td><td>83.5<br>(8)</td><td>82.8<br>(4)</td><td>93.0<br>(9)</td><td>67.3<br>(5)</td><td>91.0<br>(2)</td><td>79.3<br>(4)</td><td>98.7<br>(2)</td><td>87.2<br>(2)</td><td>89.9<br>(7)</td><td>91.9<br>(5)</td><td>94.4<br>(4)</td><td>83.8<br>(5)</td></tr>
+          <tr><td>H0-mini</td><td>Histopathology</td><td>VM</td><td>71.3<br>(11)</td><td>60.7<br>(11)</td><td>69.0<br>(13)</td><td>90.2<br>(7)</td><td>95.8<br>(1)</td><td>84.4<br>(6)</td><td>79.9<br>(17)</td><td>94.3<br>(2)</td><td>66.5<br>(8)</td><td>91.7<br>(1)</td><td>78.2<br>(8)</td><td>98.2<br>(4)</td><td>86.0<br>(7)</td><td>90.2<br>(6)</td><td>90.4<br>(11)</td><td>93.4<br>(10)</td><td>83.8<br>(5)</td></tr>
+          <tr><td>H-OPT-1</td><td>Histopathology</td><td>VM</td><td>72.5<br>(10)</td><td>64.3<br>(2)</td><td>76.0<br>(8)</td><td>91.7<br>(4)</td><td>94.6<br>(4)</td><td>87.1<br>(2)</td><td>82.0<br>(9)</td><td>93.3<br>(7)</td><td>67.9<br>(4)</td><td>91.0<br>(2)</td><td>81.0<br>(3)</td><td>98.2<br>(4)</td><td>86.1<br>(6)</td><td>90.3<br>(5)</td><td>92.3<br>(3)</td><td>93.6<br>(9)</td><td>85.1<br>(2)</td></tr>
+          <tr><td>KAIKO-S</td><td>Histopathology</td><td>VM</td><td>72.6<br>(9)</td><td>61.5<br>(9)</td><td>69.4<br>(12)</td><td>84.9<br>(14)</td><td>92.3<br>(16)</td><td>76.8<br>(17)</td><td>81.4<br>(12)</td><td>90.4<br>(16)</td><td>62.6<br>(18)</td><td>90.1<br>(8)</td><td>75.7<br>(11)</td><td>95.9<br>(14)</td><td>83.1<br>(13)</td><td>88.4<br>(12)</td><td>88.6<br>(13)</td><td>93.1<br>(12)</td><td>81.7<br>(13)</td></tr>
+          <tr><td>KAIKO-B</td><td>Histopathology</td><td>VM</td><td>69.6<br>(15)</td><td>59.4<br>(14)</td><td>67.2<br>(15)</td><td>81.7<br>(17)</td><td>94.5<br>(5)</td><td>78.5<br>(14)</td><td>78.3<br>(24)</td><td>90.4<br>(16)</td><td>67.0<br>(6)</td><td>90.2<br>(7)</td><td>79.1<br>(5)</td><td>95.6<br>(16)</td><td>81.9<br>(15)</td><td>88.5<br>(11)</td><td>87.4<br>(16)</td><td>93.3<br>(11)</td><td>81.4<br>(14)</td></tr>
+          <tr><td>MIDNIGHT</td><td>Histopathology</td><td>VM</td><td>87.9<br>(1)</td><td>63.8<br>(3)</td><td>56.7<br>(25)</td><td>90.8<br>(5)</td><td>95.6<br>(2)</td><td>86.2<br>(4)</td><td>80.2<br>(15)</td><td>93.5<br>(5)</td><td>65.6<br>(12)</td><td>91.0<br>(2)</td><td>85.2<br>(1)</td><td>98.3<br>(3)</td><td>86.1<br>(6)</td><td>89.6<br>(10)</td><td>91.0<br>(9)</td><td>94.4<br>(4)</td><td>84.7<br>(4)</td></tr>
+          <tr><td>O-Midnight</td><td>Histopathology</td><td>VM</td><td>84.6<br>(3)</td><td>59.4<br>(14)</td><td>77.3<br>(7)</td><td>92.0<br>(3)</td><td>94.2<br>(6)</td><td>79.8<br>(13)</td><td>81.8<br>(10)</td><td>93.2<br>(8)</td><td>66.3<br>(9)</td><td>91.0<br>(2)</td><td>82.8<br>(2)</td><td>96.5<br>(12)</td><td>84.5<br>(12)</td><td>88.3<br>(13)</td><td>90.5<br>(10)</td><td>93.7<br>(8)</td><td>84.7<br>(4)</td></tr>
+          <tr><td>PHIKON</td><td>Histopathology</td><td>VM</td><td>69.3<br>(16)</td><td>56.9<br>(16)</td><td>60.0<br>(23)</td><td>89.8<br>(8)</td><td>92.1<br>(17)</td><td>76.7<br>(18)</td><td>78.1<br>(25)</td><td>90.9<br>(13)</td><td>63.1<br>(17)</td><td>90.1<br>(8)</td><td>76.6<br>(10)</td><td>97.8<br>(6)</td><td>84.9<br>(11)</td><td>88.5<br>(11)</td><td>87.9<br>(14)</td><td>92.4<br>(13)</td><td>80.9<br>(17)</td></tr>
+          <tr><td>PHIKON2</td><td>Histopathology</td><td>VM</td><td>64.7<br>(20)</td><td>58.2<br>(15)</td><td>53.0<br>(27)</td><td>76.7<br>(25)</td><td>92.0<br>(18)</td><td>77.3<br>(16)</td><td>79.2<br>(21)</td><td>90.8<br>(14)</td><td>61.1<br>(20)</td><td>91.0<br>(2)</td><td>77.7<br>(9)</td><td>95.8<br>(15)</td><td>86.0<br>(7)</td><td>89.7<br>(9)</td><td>87.2<br>(18)</td><td>94.7<br>(2)</td><td>79.7<br>(18)</td></tr>
+          <tr><td>GIGAPATH</td><td>Histopathology</td><td>VM</td><td>70.7<br>(12)</td><td>62.7<br>(5)</td><td>65.4<br>(19)</td><td>88.1<br>(11)</td><td>94.7<br>(3)</td><td>81.7<br>(11)</td><td>81.7<br>(11)</td><td>93.5<br>(5)</td><td>68.0<br>(3)</td><td>89.1<br>(12)</td><td>74.4<br>(15)</td><td>94.8<br>(17)</td><td>85.5<br>(10)</td><td>90.3<br>(5)</td><td>91.3<br>(6)</td><td>93.8<br>(7)</td><td>82.9<br>(9)</td></tr>
+          <tr><td>UNI</td><td>Histopathology</td><td>VM</td><td>73.0<br>(8)</td><td>59.4<br>(14)</td><td>70.8<br>(11)</td><td>90.7<br>(6)</td><td>93.1<br>(12)</td><td>83.4<br>(9)</td><td>82.4<br>(7)</td><td>93.8<br>(3)</td><td>65.9<br>(11)</td><td>90.1<br>(8)</td><td>75.3<br>(12)</td><td>97.2<br>(9)</td><td>85.7<br>(8)</td><td>90.4<br>(4)</td><td>91.2<br>(7)</td><td>93.9<br>(6)</td><td>83.5<br>(7)</td></tr>
+          <tr><td>UNI2-H</td><td>Histopathology</td><td>VM</td><td>84.7<br>(2)</td><td>65.4<br>(1)</td><td>78.4<br>(4)</td><td>89.5<br>(9)</td><td>93.9<br>(7)</td><td>86.4<br>(3)</td><td>78.6<br>(22)</td><td>95.0<br>(1)</td><td>66.9<br>(7)</td><td>90.4<br>(5)</td><td>78.8<br>(6)</td><td>98.9<br>(1)</td><td>86.7<br>(3)</td><td>90.5<br>(3)</td><td>92.5<br>(2)</td><td>95.1<br>(1)</td><td>85.7<br>(1)</td></tr>
+          <tr><td>VIRCHOW</td><td>Histopathology</td><td>VM</td><td>66.2<br>(18)</td><td>59.8<br>(13)</td><td>62.7<br>(21)</td><td>91.7<br>(4)</td><td>93.7<br>(9)</td><td>84.3<br>(7)</td><td>82.3<br>(8)</td><td>93.6<br>(4)</td><td>65.5<br>(13)</td><td>90.7<br>(4)</td><td>74.8<br>(14)</td><td>97.6<br>(7)</td><td>86.2<br>(5)</td><td>90.2<br>(6)</td><td>91.3<br>(6)</td><td>94.7<br>(2)</td><td>82.8<br>(10)</td></tr>
+          <tr><td>VIRCHOW2</td><td>Histopathology</td><td>VM</td><td>76.5<br>(7)</td><td>62.4<br>(6)</td><td>72.5<br>(10)</td><td>93.6<br>(1)</td><td>93.0<br>(13)</td><td>88.9<br>(1)</td><td>83.6<br>(2)</td><td>92.8<br>(10)</td><td>69.6<br>(1)</td><td>90.9<br>(3)</td><td>78.4<br>(7)</td><td>90.0<br>(26)</td><td>87.2<br>(2)</td><td>90.8<br>(1)</td><td>92.0<br>(4)</td><td>93.9<br>(6)</td><td>84.8<br>(3)</td></tr>
+          <tr><td>CONCH</td><td>Histopathology</td><td>VLM</td><td>84.4<br>(4)</td><td>60.0<br>(12)</td><td>68.8<br>(14)</td><td>88.1<br>(11)</td><td>93.4<br>(11)</td><td>80.1<br>(12)</td><td>79.7<br>(19)</td><td>90.6<br>(15)</td><td>64.4<br>(15)</td><td>88.1<br>(13)</td><td>68.0<br>(19)</td><td>97.2<br>(9)</td><td>82.1<br>(14)</td><td>87.9<br>(14)</td><td>87.3<br>(17)</td><td>91.0<br>(15)</td><td>81.9<br>(12)</td></tr>
+          <tr><td>CONCH&nbsp;1.5</td><td>Histopathology</td><td>VLM</td><td>76.8<br>(6)</td><td>62.4<br>(6)</td><td>75.3<br>(9)</td><td>87.4<br>(12)</td><td>93.8<br>(8)</td><td>82.7<br>(10)</td><td>81.2<br>(14)</td><td>91.4<br>(12)</td><td>62.3<br>(19)</td><td>89.9<br>(9)</td><td>69.4<br>(18)</td><td>96.7<br>(11)</td><td>81.6<br>(16)</td><td>87.4<br>(15)</td><td>87.0<br>(19)</td><td>92.1<br>(14)</td><td>82.4<br>(11)</td></tr>
+          <tr><td>KEEP</td><td>Histopathology</td><td>VLM</td><td>77.0<br>(5)</td><td>62.2<br>(7)</td><td>65.9<br>(18)</td><td>93.2<br>(2)</td><td>94.7<br>(3)</td><td>85.8<br>(5)</td><td>76.8<br>(28)</td><td>92.6<br>(11)</td><td>64.9<br>(14)</td><td>89.9<br>(9)</td><td>72.7<br>(16)</td><td>97.4<br>(8)</td><td>85.6<br>(9)</td><td>89.7<br>(9)</td><td>89.3<br>(12)</td><td>93.8<br>(7)</td><td>83.2<br>(8)</td></tr>
+          <tr><td>MUSK</td><td>Histopathology</td><td>VLM</td><td>69.9<br>(13)</td><td>63.3<br>(4)</td><td>77.6<br>(6)</td><td>85.3<br>(13)</td><td>91.1<br>(21)</td><td>76.4<br>(19)</td><td>80.0<br>(16)</td><td>89.4<br>(17)</td><td>63.2<br>(16)</td><td>89.4<br>(11)</td><td>66.0<br>(20)</td><td>96.0<br>(13)</td><td>80.6<br>(17)</td><td>87.9<br>(14)</td><td>87.6<br>(15)</td><td>93.3<br>(11)</td><td>81.1<br>(16)</td></tr>
+          <tr><td>PLIP</td><td>Histopathology</td><td>VLM</td><td>63.9<br>(22)</td><td>56.5<br>(18)</td><td>47.2<br>(28)</td><td>76.9<br>(24)</td><td>88.2<br>(27)</td><td>65.7<br>(27)</td><td>78.5<br>(23)</td><td>87.9<br>(20)</td><td>56.0<br>(28)</td><td>87.2<br>(15)</td><td>54.9<br>(24)</td><td>89.0<br>(27)</td><td>77.1<br>(21)</td><td>84.7<br>(21)</td><td>82.1<br>(21)</td><td>88.6<br>(18)</td><td>74.0<br>(26)</td></tr>
+          <tr><td>QUILTNET</td><td>Histopathology</td><td>VLM</td><td>58.4<br>(25)</td><td>55.9<br>(20)</td><td>62.4<br>(22)</td><td>65.5<br>(28)</td><td>92.5<br>(15)</td><td>61.5<br>(29)</td><td>73.5<br>(30)</td><td>87.4<br>(21)</td><td>59.6<br>(21)</td><td>87.0<br>(16)</td><td>54.1<br>(26)</td><td>94.7<br>(18)</td><td>77.0<br>(22)</td><td>82.9<br>(23)</td><td>81.2<br>(25)</td><td>88.5<br>(19)</td><td>73.9<br>(27)</td></tr>
+          <tr><td>DINOv2-B</td><td>Natural-image</td><td>VM</td><td>64.4<br>(21)</td><td>52.9<br>(24)</td><td>77.8<br>(5)</td><td>79.7<br>(21)</td><td>90.3<br>(24)</td><td>73.8<br>(21)</td><td>82.6<br>(6)</td><td>86.3<br>(24)</td><td>58.6<br>(24)</td><td>85.9<br>(19)</td><td>54.4<br>(25)</td><td>90.7<br>(24)</td><td>76.0<br>(24)</td><td>83.9<br>(22)</td><td>80.1<br>(26)</td><td>87.6<br>(23)</td><td>76.6<br>(23)</td></tr>
+          <tr><td>DINOv2-L</td><td>Natural-image</td><td>VM</td><td>68.9<br>(17)</td><td>50.6<br>(26)</td><td>78.5<br>(3)</td><td>81.4<br>(19)</td><td>90.7<br>(22)</td><td>72.1<br>(24)</td><td>82.3<br>(8)</td><td>87.2<br>(22)</td><td>59.3<br>(22)</td><td>85.9<br>(19)</td><td>56.2<br>(22)</td><td>90.3<br>(25)</td><td>74.0<br>(26)</td><td>85.3<br>(17)</td><td>82.1<br>(21)</td><td>87.7<br>(22)</td><td>77.0<br>(22)</td></tr>
+          <tr><td>ViT-B</td><td>Natural-image</td><td>VM</td><td>57.0<br>(27)</td><td>56.6<br>(17)</td><td>64.5<br>(20)</td><td>79.1<br>(22)</td><td>90.6<br>(23)</td><td>62.7<br>(28)</td><td>77.6<br>(26)</td><td>84.6<br>(27)</td><td>59.1<br>(23)</td><td>85.8<br>(20)</td><td>53.4<br>(28)</td><td>91.3<br>(23)</td><td>78.2<br>(20)</td><td>84.7<br>(21)</td><td>81.2<br>(25)</td><td>87.9<br>(21)</td><td>74.7<br>(25)</td></tr>
+          <tr><td>ViT-L</td><td>Natural-image</td><td>VM</td><td>56.9<br>(28)</td><td>54.8<br>(22)</td><td>66.3<br>(16)</td><td>77.1<br>(23)</td><td>92.8<br>(14)</td><td>67.9<br>(25)</td><td>79.8<br>(18)</td><td>85.7<br>(25)</td><td>56.8<br>(27)</td><td>87.5<br>(14)</td><td>55.9<br>(23)</td><td>92.6<br>(22)</td><td>79.3<br>(18)</td><td>85.1<br>(18)</td><td>81.3<br>(24)</td><td>88.5<br>(19)</td><td>75.5<br>(24)</td></tr>
+          <tr><td>CLIP-B</td><td>Natural-image</td><td>VLM</td><td>51.1<br>(30)</td><td>52.4<br>(25)</td><td>40.0<br>(29)</td><td>73.7<br>(27)</td><td>87.3<br>(28)</td><td>61.0<br>(30)</td><td>77.5<br>(27)</td><td>82.7<br>(28)</td><td>49.0<br>(31)</td><td>83.8<br>(22)</td><td>47.9<br>(29)</td><td>83.5<br>(28)</td><td>69.0<br>(28)</td><td>81.3<br>(25)</td><td>75.8<br>(28)</td><td>84.7<br>(25)</td><td>68.8<br>(29)</td></tr>
+          <tr><td>CLIP-L</td><td>Natural-image</td><td>VLM</td><td>63.5<br>(23)</td><td>56.4<br>(19)</td><td>54.5<br>(26)</td><td>75.9<br>(26)</td><td>88.3<br>(26)</td><td>67.6<br>(26)</td><td>79.6<br>(20)</td><td>85.6<br>(26)</td><td>52.0<br>(30)</td><td>85.0<br>(21)</td><td>54.1<br>(26)</td><td>93.2<br>(21)</td><td>73.6<br>(27)</td><td>82.8<br>(24)</td><td>78.5<br>(27)</td><td>86.7<br>(24)</td><td>73.6<br>(28)</td></tr>
+          <tr><td>DINOv3-B</td><td>Natural-image</td><td>VM</td><td>60.3<br>(24)</td><td>55.4<br>(21)</td><td>81.8<br>(2)</td><td>80.7<br>(20)</td><td>89.5<br>(25)</td><td>72.9<br>(22)</td><td>82.7<br>(5)</td><td>88.0<br>(19)</td><td>57.2<br>(26)</td><td>86.7<br>(17)</td><td>56.2<br>(22)</td><td>93.6<br>(20)</td><td>76.5<br>(23)</td><td>84.8<br>(20)</td><td>81.6<br>(23)</td><td>90.0<br>(17)</td><td>77.4<br>(20)</td></tr>
+          <tr><td>DINOv3-L</td><td>Natural-image</td><td>VM</td><td>57.9<br>(26)</td><td>54.6<br>(23)</td><td>77.3<br>(7)</td><td>82.5<br>(16)</td><td>91.5<br>(19)</td><td>76.0<br>(20)</td><td>84.1<br>(1)</td><td>88.8<br>(18)</td><td>55.5<br>(29)</td><td>87.0<br>(16)</td><td>59.3<br>(21)</td><td>94.8<br>(17)</td><td>78.3<br>(19)</td><td>86.3<br>(16)</td><td>82.5<br>(20)</td><td>90.1<br>(16)</td><td>77.9<br>(19)</td></tr>
+          <tr><td>DINOv3-S</td><td>Natural-image</td><td>VM</td><td>56.4<br>(29)</td><td>56.5<br>(18)</td><td>82.9<br>(1)</td><td>81.6<br>(18)</td><td>91.4<br>(20)</td><td>72.6<br>(23)</td><td>82.9<br>(3)</td><td>86.5<br>(23)</td><td>57.7<br>(25)</td><td>86.3<br>(18)</td><td>53.9<br>(27)</td><td>94.1<br>(19)</td><td>75.0<br>(25)</td><td>85.0<br>(19)</td><td>81.8<br>(22)</td><td>88.2<br>(20)</td><td>77.1<br>(21)</td></tr>
         <tbody>
     </table>
 </div>

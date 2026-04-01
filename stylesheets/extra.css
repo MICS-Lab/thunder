@@ -13,16 +13,16 @@
   width: 2rem;
 }
 
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable) {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable) {
   border: 1px solid #ede9f7;
 }
 
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table {
   width: 100%;
   font-size: 0.6rem;
 }
 
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table thead th {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table thead th {
   background: #5330a5;
   color: white;
   border: 1px solid #ede9f7;
@@ -32,8 +32,8 @@
   font-weight: 600;
 }
 
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table tbody td,
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table tbody th {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table tbody td,
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table tbody th {
   border: 1px solid #ede9f7;
   vertical-align: middle;
   padding: 0.55rem 0.75rem;
@@ -42,7 +42,7 @@
 }
 
 /* Captions */
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable) caption {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable) caption {
   caption-side: bottom;
   text-align: center;
   font-size: 0.6rem;
@@ -51,13 +51,13 @@
 }
 
 /* ─── DataTables wrappers (search box area) ────────────────────────── */
-:is(#ranksumTableOriginal_wrapper, #ranksumTableUpToDate_wrapper, #spiderTable_wrapper, #zeroshotTable_wrapper) {
+:is(#ranksumTableOriginal_wrapper, #ranksumTableUpToDate_wrapper, #spiderTable_wrapper, #perDatasetLinearTable_wrapper, #zeroshotTable_wrapper) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_wrapper, #zeroshotTable_filter) {
   width: 100%;
   float: none;
   text-align: center;
@@ -65,7 +65,7 @@
   margin-block: 0.75rem;
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) > label {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) > label {
   display: block;
   width: 100%;
   margin: 0;
@@ -73,7 +73,7 @@
 }
 
 /* Search input */
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"] {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) input[type="search"] {
   padding: 0.5rem 1rem 0.5rem 2.5rem;
   border: 2px solid #000000;
   border-radius: 9999px;
@@ -86,21 +86,21 @@
   margin: 0;
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:hover,
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]:focus {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) input[type="search"]:hover,
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) input[type="search"]:focus {
   outline: none;
   border-color: #5433a6;
   background: #fff;
   box-shadow: 0 0 0 0.18rem rgba(43, 133, 255, 0.25);
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) input[type="search"]::placeholder {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) input[type="search"]::placeholder {
   color: #adb5bd;
   opacity: 1;
 }
 
 /* Magnifier icon inside the label */
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter) > label::before {
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter) > label::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -114,10 +114,10 @@
   opacity: 0.7;
 }
 
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter)
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter)
   input[type="search"]:focus
   + *::before,
-:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #zeroshotTable_filter)
+:is(#ranksumTableOriginal_filter, #ranksumTableUpToDate_filter, #spiderTable_filter, #perDatasetLinearTable_filter, #zeroshotTable_filter)
   input[type="search"]:hover
   + *::before {
   opacity: 1;
@@ -157,7 +157,7 @@ div.dtsp-panesContainer {
   margin: 0px !important;
 }
 
-:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #zeroshotTable).table {
+:is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table {
   width: auto !important;
 }
 
@@ -196,6 +196,45 @@ div.dtsp-panesContainer {
 }
 
 #spiderTable.table thead tr:nth-child(2) > th {
+  background: #ccbeef !important;
+  color: #000000 !important;
+}
+
+/* ─── perDatasetLinearTable specific ─────────────────────────────────── */
+#perDatasetLinearTable.table {
+  font-size: 0.37rem;
+}
+
+#perDatasetLinearTable.table thead th {
+  font-size: 0.33rem;
+  padding: 0.50rem 0.3rem !important;
+}
+
+#perDatasetLinearTable.table tbody td,
+#perDatasetLinearTable.table tbody th {
+  padding: 0.37rem 0.3rem !important;
+  white-space: nowrap;
+}
+#perDatasetLinearTable_filter input[type="search"] {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem 0.4rem 2.2rem;
+}
+
+#perDatasetLinearTable_wrapper .dataTables_info,
+#perDatasetLinearTable_wrapper .dataTables_paginate,
+#perDatasetLinearTable_wrapper .dtsp-panes-container,
+#perDatasetLinearTable_wrapper .dtsp-titleRow {
+  font-size: 0.8rem;
+}
+
+#perDatasetLinearTable,
+#perDatasetLinearTable.table thead th,
+#perDatasetLinearTable.table tbody td,
+#perDatasetLinearTable.table tbody th {
+  border-width: 1px;
+}
+
+#perDatasetLinearTable.table thead tr:nth-child(2) > th {
   background: #ccbeef !important;
   color: #000000 !important;
 }

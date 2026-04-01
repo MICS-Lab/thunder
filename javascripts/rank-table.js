@@ -20,6 +20,12 @@ document$.subscribe(() => {
         },
 
         {
+            id: '#perDatasetLinearTable',
+            rankCol: 19,
+            radix: 10
+        },
+
+        {
             id: '#zeroshotTable',
             rankCol: 19,
             radix: 10
