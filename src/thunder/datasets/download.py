@@ -27,6 +27,7 @@ def download_datasets(datasets: Union[List[str], str], make_splits: bool = False
         * spider_colorectal
         * spider_skin
         * spider_thorax
+        * starc9
         * tcga_crc_msi
         * tcga_tils
         * tcga_uniform
@@ -65,6 +66,7 @@ def download_datasets(datasets: Union[List[str], str], make_splits: bool = False
                 "spider_colorectal",
                 "spider_skin",
                 "spider_thorax",
+                "starc9",
                 "tcga_crc_msi",
                 "tcga_tils",
                 "tcga_uniform",
@@ -84,6 +86,7 @@ def download_datasets(datasets: Union[List[str], str], make_splits: bool = False
                 "spider_colorectal",
                 "spider_skin",
                 "spider_thorax",
+                "starc9",
                 "tcga_crc_msi",
                 "tcga_tils",
                 "tcga_uniform",
@@ -160,5 +163,7 @@ def download_dataset(dataset: str):
         download_spider_skin(root_folder)
     elif dataset == "spider_thorax":
         download_spider_thorax(root_folder)
+    elif dataset == "starc9":
+        download_starc9(root_folder)
     else:
         raise ValueError(f"Dataset {dataset} is not supported.")
