@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mics-lab.github.io/thunder/get_model/">
+        <link rel="canonical" href="https://mics-lab.github.io/thunder/data_loading/">
       
       
-        <link rel="prev" href="../custom_config/">
+        <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../api/">
+        <link rel="next" href="../examples/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Using foundation models on your data - THUNDER</title>
+        <title>Data Loading (Linear Probing & Segmentation) - THUNDER</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Using foundation models on your data
+              Data Loading (Linear Probing & Segmentation)
             
           </span>
         </div>
@@ -333,10 +333,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../data_loading/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -347,6 +354,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -448,17 +456,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../get_model/" class="md-nav__link">
         
   
   
@@ -469,7 +470,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -539,18 +539,15 @@
   
 
 
-  <h1>Using foundation models on your data</h1>
+  <h1>Data Loading (Linear Probing & Segmentation)</h1>
 
-<p>In addition to benchmarking, we also provide a <a href="https://mics-lab.github.io/thunder/api/#thunder.models.get_model_from_name"><code>get_model_from_name</code></a> function through our API to extract embeddings using any foundation model we support on your own data. It returns a Pytorch model callable, associated transforms (to apply to images to extract embeddings from) and a function to get embeddings from a batch of transformed images, the model callable, and the type of embeddings (pooled or spatial) to return.</p>
-<p>Below is an example if you want to get the Pytorch callable, transforms and function to extract embeddings for <code>uni2h</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_model_from_name</span>
-
-<span class="n">model</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">get_embeddings</span> <span class="o">=</span> <span class="n">get_model_from_name</span><span class="p">(</span><span class="s2">&quot;uni2h&quot;</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cuda&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>You can then extract the embedding of a PIL image <code>im</code>  as follows:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pooled_emb</span> <span class="o">=</span> <span class="n">get_embeddings</span><span class="p">(</span><span class="n">transform</span><span class="p">(</span><span class="n">im</span><span class="p">),</span> <span class="n">model</span><span class="p">,</span> <span class="n">pooled_emb</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">spatial_emb</span> <span class="o">=</span> <span class="n">get_embeddings</span><span class="p">(</span><span class="n">transform</span><span class="p">(</span><span class="n">im</span><span class="p">),</span> <span class="n">model</span><span class="p">,</span> <span class="n">pooled_emb</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</code></pre></div>
+<p>The <code>online_loading</code>, <code>image_pre_loading</code> and <code>embedding_pre_loading</code> settings are only related to the <code>linear_probing</code> and <code>segmentation</code> tasks (only tasks involving some training -- either linear probe or segmentation decoder), and should not have an impact on the final performance. We provide this <code>--loading-mode</code> flag to give more flexibility to the user in terms of the data loading:</p>
+<ul>
+<li><code>online_loading</code>: batch images are loaded online during training and you perform encoder forward passes.</li>
+<li><code>image_pre_loading</code>: all images are first loaded into RAM and you also perform encoder forward passes.</li>
+<li><code>embedding_pre_loading</code>: pre-computed embeddings are loaded and no forward pass with the encoder is performed.</li>
+</ul>
+<p><code>online_loading</code> and <code>image_pre_loading</code> might be needed in special cases, e.g. if you want to do some LoRA adaptation of the encoder. However, if your goal is to do standard linear probing evaluation, we would suggest to first pre-compute embeddings (e.g. <code>thunder benchmark h0mini patch_camelyon pre_computing_embeddings</code>), before to run <code>linear_probing</code> with <code>--loading-mode=embedding_pre_loading</code> (e.g. <code>thunder benchmark h0mini patch_camelyon linear_probing --loading-mode=embedding_pre_loading</code>) to speed up your experiments.</p>
 
 
 
