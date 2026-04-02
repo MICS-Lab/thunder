@@ -545,7 +545,7 @@
 <ul>
 <li><code>online_loading</code>: batch images are loaded online during training and you perform encoder forward passes.</li>
 <li><code>image_pre_loading</code>: all images are first loaded into RAM and you also perform encoder forward passes.</li>
-<li><code>embedding_pre_loading</code>: pre-computed embeddings are loaded and no forward pass with the encoder is performed.</li>
+<li><code>embedding_pre_loading</code>: pre-computed embeddings are loaded and no forward pass with the encoder is performed. <strong>Requires to first have pre-computed embeddings with the <code>pre_computing_embeddings</code> task.</strong></li>
 </ul>
 <p><code>online_loading</code> and <code>image_pre_loading</code> might be needed in special cases, e.g. if you want to do some LoRA adaptation of the encoder. However, if your goal is to do standard linear probing evaluation, we would suggest to first pre-compute embeddings (e.g. <code>thunder benchmark h0mini patch_camelyon pre_computing_embeddings</code>), before to run <code>linear_probing</code> with <code>--loading-mode=embedding_pre_loading</code> (e.g. <code>thunder benchmark h0mini patch_camelyon linear_probing --loading-mode=embedding_pre_loading</code>) to speed up your experiments.</p>
 
