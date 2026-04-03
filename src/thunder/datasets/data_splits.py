@@ -39,6 +39,7 @@ def generate_splits(datasets: Union[List[str], str]) -> None:
                 "spider_colorectal",
                 "spider_skin",
                 "spider_thorax",
+                "starc9",
             ]
         elif datasets[0] == "classification":
             datasets = [
@@ -58,6 +59,7 @@ def generate_splits(datasets: Union[List[str], str]) -> None:
                 "spider_colorectal",
                 "spider_skin",
                 "spider_thorax",
+                "starc9",
             ]
         elif datasets[0] == "segmentation":
             datasets = [
@@ -104,6 +106,7 @@ def generate_splits_for_dataset(dataset_name: str) -> None:
         create_splits_spider_colorectal,
         create_splits_spider_skin,
         create_splits_spider_thorax,
+        create_splits_starc9,
         create_splits_tcga_crc_msi,
         create_splits_tcga_tils,
         create_splits_tcga_uniform,
@@ -128,6 +131,7 @@ def generate_splits_for_dataset(dataset_name: str) -> None:
         "spider_colorectal": create_splits_spider_colorectal,
         "spider_skin": create_splits_spider_skin,
         "spider_thorax": create_splits_spider_thorax,
+        "starc9": create_splits_starc9,
         # Segmentation
         "ocelot": create_splits_ocelot,
         "pannuke": create_splits_pannuke,

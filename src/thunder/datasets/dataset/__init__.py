@@ -25,6 +25,7 @@ from .spider_colorectal import (
 )
 from .spider_skin import create_splits_spider_skin, download_spider_skin
 from .spider_thorax import create_splits_spider_thorax, download_spider_thorax
+from .starc9 import create_splits_starc9, download_starc9
 from .tcga_crc_msi import create_splits_tcga_crc_msi, download_tcga_crc_msi
 from .tcga_tils import create_splits_tcga_tils, download_tcga_tils
 from .tcga_uniform import create_splits_tcga_uniform, download_tcga_uniform

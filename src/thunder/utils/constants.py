@@ -61,6 +61,7 @@ class DatasetConstants(Enum):
         "spider_colorectal",
         "spider_skin",
         "spider_thorax",
+        "starc9",
         "tcga_crc_msi",
         "tcga_tils",
         "tcga_uniform",
