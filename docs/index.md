@@ -114,6 +114,7 @@ pip install . # install the package
 ## Supported foundation models
 |Name                    |Benchmark name                | Vision arch. | Params. | Training method                           | VLM | Pathology |
 | :--------------------- | :--------------------------: | :----------: | :-----: | :---------------------------------------: | :-: | :-------: |
+|GenBio&minus;PathFM     | genbio-pathfm                | ViT-G/16     | 1.1B    | DINOv3 + JEPA                             |     |x          |
 |GIGAPATH                | provgigapath                 | ViT-G/14     | 1.1B    | DINOv2                                    |     |x          |
 |HIBOU-B                 | hiboub                       | ViT-B/14     | 86M     | DINOv2                                    |     |x          |
 |HIBOU-L                 | hiboul                       | ViT-L/14     | 307M    | DINOv2                                    |     |x          |

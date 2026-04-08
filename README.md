@@ -28,6 +28,7 @@ We introduce **THUNDER**, a comprehensive benchmark designed to rigorously compa
 
 ## News
 
+* **2026-04-08**: GenBio-PathFM is now supported in THUNDER. Its downstream performance was integrated into the [up-to-date rank-sum leaderboard](https://mics-lab.github.io/thunder/leaderboards/#up-to-date-rank-sum-leaderboard) and the [SPIDER leaderboard](https://mics-lab.github.io/thunder/leaderboards/#spider-leaderboard).
 * **2025-12-07**: OpenMidnight is now supported in THUNDER. Its downstream performance was integrated into the [up-to-date rank-sum leaderboard](https://mics-lab.github.io/thunder/leaderboards/#up-to-date-rank-sum-leaderboard) and the [SPIDER leaderboard](https://mics-lab.github.io/thunder/leaderboards/#spider-leaderboard).
 * **2025-11-21**: As requested (https://github.com/MICS-Lab/thunder/issues/6), H0-mini is now supported in THUNDER. Its downstream performance was integrated into the [up-to-date rank-sum leaderboard](https://mics-lab.github.io/thunder/leaderboards/#up-to-date-rank-sum-leaderboard) and the [SPIDER leaderboard](https://mics-lab.github.io/thunder/leaderboards/#spider-leaderboard).
 * **2025-11-14**: GIGAPATH and KAIKO-ViT model variants (S/8, S/16, B/8, B/16) are now supported in THUNDER. The downstream performance of GIGAPATH, KAIKO-S/16 and KAIKO-B/16 were integrated into the [up-to-date rank-sum leaderboard](https://mics-lab.github.io/thunder/leaderboards/#up-to-date-rank-sum-leaderboard) and the [SPIDER leaderboard](https://mics-lab.github.io/thunder/leaderboards/#spider-leaderboard).
