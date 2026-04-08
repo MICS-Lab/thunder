@@ -1181,6 +1181,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>spider_colorectal</li>
 <li>spider_skin</li>
 <li>spider_thorax</li>
+<li>starc9</li>
 <li>tcga_crc_msi</li>
 <li>tcga_tils</li>
 <li>tcga_uniform</li>
@@ -1333,7 +1334,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">100</span>
 <span class="normal">101</span>
 <span class="normal">102</span>
-<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads the benchmark datasets specified in the list of dataset names.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
@@ -1356,6 +1360,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * spider_colorectal</span>
 <span class="sd">        * spider_skin</span>
 <span class="sd">        * spider_thorax</span>
+<span class="sd">        * starc9</span>
 <span class="sd">        * tcga_crc_msi</span>
 <span class="sd">        * tcga_tils</span>
 <span class="sd">        * tcga_uniform</span>
@@ -1394,6 +1399,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
@@ -1413,6 +1419,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
@@ -1745,7 +1752,9 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">73</span>
 <span class="normal">74</span>
 <span class="normal">75</span>
-<span class="normal">76</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates the data splits for all datasets in input list.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
@@ -1781,6 +1790,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
@@ -1800,6 +1810,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
                 <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
                 <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
             <span class="p">]</span>
         <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
