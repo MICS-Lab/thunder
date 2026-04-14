@@ -23,6 +23,7 @@ nav:
   - Leaderboards: leaderboards.md
   - Tutorials:
     - Getting Started: getting_started.md
+    - Guidelines to benchmark an exisiting (reproducing our results) or new model: guidelines.md
     - Data Loading (Linear Probing & Segmentation): data_loading.md
     - Examples: examples.md
     - Benchmarking a Custom Model: custom_model.md
