@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://mics-lab.github.io/thunder/custom_config/">
+        <link rel="canonical" href="https://mics-lab.github.io/thunder/guidelines/">
       
       
-        <link rel="prev" href="../custom_dataset/">
+        <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../get_model/">
+        <link rel="next" href="../data_loading/">
       
       
       <link rel="icon" href="../logo.svg">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Overriding Configurations - THUNDER</title>
+        <title>Guidelines to benchmark an exisiting (reproducing our results) or new model - THUNDER</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overriding-config-parameters" class="md-skip">
+        <a href="#hyperparameters" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overriding Configurations
+              Guidelines to benchmark an exisiting (reproducing our results) or new model
             
           </span>
         </div>
@@ -338,10 +338,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../guidelines/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Guidelines to benchmark an exisiting (reproducing our results) or new model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -352,6 +372,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hyperparameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hyperparameters
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -453,30 +500,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Overriding Configurations
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../custom_config/" class="md-nav__link">
         
   
   
@@ -487,129 +514,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overriding config parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overridable parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overridable parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frozen linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      LoRA linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adversarial attack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -692,107 +596,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overriding-config-parameters" class="md-nav__link">
+  <a href="#hyperparameters" class="md-nav__link">
     <span class="md-ellipsis">
-      Overriding config parameters
+      Hyperparameters
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overridable-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overridable parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overridable parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#frozen-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frozen linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lora-linear-probing" class="md-nav__link">
-    <span class="md-ellipsis">
-      LoRA linear probing
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#adversarial-attack" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adversarial attack
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#alignment-scoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alignment scoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#image-retrieval" class="md-nav__link">
-    <span class="md-ellipsis">
-      Image retrieval
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#k-nn" class="md-nav__link">
-    <span class="md-ellipsis">
-      K-nn
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#precomputing-embeddings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Precomputing embeddings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simple-shot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simple shot
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#transformation-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transformation invariance
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -815,264 +623,36 @@
   
 
 
-  <h1>Overriding Configurations</h1>
+  <h1>Guidelines to benchmark an exisiting (reproducing our results) or new model</h1>
 
-<h2 id="overriding-config-parameters">Overriding config parameters</h2>
-<p>Default parameters are used for various aspects of the benchmark, e.g., the batch sizes, learning rates. These default parameters can be overriden using the following syntaxes for both CLI and API uses.</p>
-<div class="highlight"><pre><span></span><code>thunder<span class="w"> </span>benchmark<span class="w"> </span>keep<span class="w"> </span>bach<span class="w"> </span>knn<span class="w"> </span>--task.pre_comp_emb_batch_size<span class="w"> </span><span class="m">123</span><span class="w"> </span><span class="se">\</span>
-<span class="w">                                </span>--task.k_vals<span class="w"> </span><span class="s2">&quot;[1, 2, 3]&quot;</span>
-</code></pre></div>
+<h2 id="hyperparameters">Hyperparameters</h2>
+<p>You should keep all thunder default hyperparameters for all tasks and datasets, except for the <code>segpath_epithelial</code> and <code>segpath_lymphocytes</code> datasets (<code>segmentation</code> task) for which you must override the number of epochs to <code>9</code> and <code>21</code> respectively (because of the size of the datasets). See <a href="https://mics-lab.github.io/thunder/custom_config/">this tutorial</a> for more details about how to override the default configuration.</p>
+<p><strong>CLI</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Evaluating hiboub on segpath_epithelial</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_epithelial<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">9</span>
+
+<span class="c1"># Evaluating hiboub on segpath_lymphocytes</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_lymphocytes<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">21</span>
+</code></pre></div></p>
+<p><strong>API</strong>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
-<span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="s1">&#39;hiboub&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;bach&#39;</span><span class="p">,</span>
-                  <span class="s1">&#39;knn&#39;</span><span class="p">,</span>
-                  <span class="o">**</span><span class="p">{</span><span class="s1">&#39;task.pre_comp_emb_batch_size&#39;</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="s1">&#39;task.k_vals&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
-</code></pre></div>
-<h2 id="overridable-parameters">Overridable parameters</h2>
-<p>Here is a non exhaustive list of the parameters that you may want to override per task, as well as the type and a small description.</p>
-<h3 id="frozen-linear-probing">Frozen linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="lora-linear-probing">LoRA linear probing</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>adaptation.lora_rank</td>
-<td>int</td>
-<td>Rank for the LoRA adapter.</td>
-</tr>
-<tr>
-<td>adaptation.lora_alpha</td>
-<td>int</td>
-<td>Alpha parameter for LoRA.</td>
-</tr>
-<tr>
-<td>adaptation.batch_size</td>
-<td>int</td>
-<td>Batch size used for training.</td>
-</tr>
-<tr>
-<td>adaptation.num_workers</td>
-<td>int</td>
-<td>Number of workers for the data loader.</td>
-</tr>
-<tr>
-<td>adaptation.lr</td>
-<td>list[int]</td>
-<td>List of learning rates used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.weight_decay</td>
-<td>list[int]</td>
-<td>List of weight decays used for the grid search.</td>
-</tr>
-<tr>
-<td>adaptation.epochs</td>
-<td>int</td>
-<td>Number of training epochs.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="adversarial-attack">Adversarial attack</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.attack_batch_size</td>
-<td>int</td>
-<td>Batch size for the attacks.</td>
-</tr>
-<tr>
-<td>task.nb_attack_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-<tr>
-<td>task.attack.eps</td>
-<td>float</td>
-<td>Radius of the norm ball.</td>
-</tr>
-<tr>
-<td>task.attack.alpha</td>
-<td>float</td>
-<td>Step size per PGD iteration.</td>
-</tr>
-<tr>
-<td>task.attack.n_steps</td>
-<td>int</td>
-<td>Number of PGD iterations.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="alignment-scoring">Alignment scoring</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="image-retrieval">Image retrieval</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="k-nn">K-nn</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-<tr>
-<td>task.k_vals</td>
-<td>list[int]</td>
-<td>Values of k to use.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="precomputing-embeddings">Precomputing embeddings</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="simple-shot">Simple shot</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.pre_comp_emb_batch_size</td>
-<td>int</td>
-<td>Batch size for precomputing the embeddings.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="transformation-invariance">Transformation invariance</h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>task.transformation_invariance_batch_size</td>
-<td>int</td>
-<td>Batch size for the transformations.</td>
-</tr>
-<tr>
-<td>task.nb_images</td>
-<td>int</td>
-<td>Number of images to use.</td>
-</tr>
-</tbody>
-</table>
+
+<span class="c1"># Evaluating hiboub on segpath_epithelial</span>
+<span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hiboub&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;segmentation&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+    <span class="o">**</span><span class="p">{</span><span class="s2">&quot;adaptation.epochs&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">})</span>
+
+<span class="c1"># Evaluating hiboub on segpath_lymphocytes</span>
+<span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span>
+    <span class="s2">&quot;hiboub&quot;</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;segmentation&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+     <span class="o">**</span><span class="p">{</span><span class="s2">&quot;adaptation.epochs&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">})</span>
+</code></pre></div></p>
 
 
 
