@@ -359,6 +359,8 @@ def eval_probe(
     if model_cls is not None:
         OmegaConf.set_struct(cfg, False)
         cfg.pretrained_model = {"emb_dim": model_cls.emb_dim}
+        if hasattr(model_cls, "emb_dim_seg"):
+            cfg.pretrained_model.update({"emb_dim_seg": model_cls.emb_dim_seg})
 
     # Task-specific model
     if task_type == "linear_probing":
