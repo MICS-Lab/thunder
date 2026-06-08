@@ -24,8 +24,8 @@ We introduce **THUNDER**, a comprehensive benchmark designed to rigorously compa
 
 &#9889; **Paper**: [THUNDER: Tile-level Histopathology image UNDERstanding benchmark](https://arxiv.org/abs/2507.07860)\
 &#9889; **Homepage/Documentation**: [THUNDER docs](https://mics-lab.github.io/thunder/)\
-&#9889; **Examples**: [THUNDER examples](https://mics-lab.github.io/thunder/examples/)
-&#9889; **Reproduce results**: [THUNDER reproduction guidelines](https://mics-lab.github.io/thunder/guidelines/)
+&#9889; **Examples**: [THUNDER examples](https://mics-lab.github.io/thunder/examples/)\
+&#9889; **Reproduce results**: [THUNDER reproduction guidelines](https://mics-lab.github.io/thunder/guidelines/)\
 &#9889; **Leaderboards**: [THUNDER leaderboards](https://mics-lab.github.io/thunder/leaderboards/)
 
 ## News
