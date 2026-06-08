@@ -6,10 +6,10 @@ You should keep all thunder default hyperparameters for all tasks and datasets, 
 **CLI**
 ```bash
 # Evaluating hiboub on segpath_epithelial
-thunder benchmark hiboub segpath_epithelial segmentation --loading-mode=embedding_pre_loading --adaptation.epochs=9
+thunder benchmark hiboub segpath_epithelial segmentation --loading-mode=embedding_pre_loading --adaptation.epochs 9
 
 # Evaluating hiboub on segpath_lymphocytes
-thunder benchmark hiboub segpath_lymphocytes segmentation --loading-mode=embedding_pre_loading --adaptation.epochs=21
+thunder benchmark hiboub segpath_lymphocytes segmentation --loading-mode=embedding_pre_loading --adaptation.epochs 21
 ```
 
 **API**
