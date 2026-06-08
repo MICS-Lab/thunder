@@ -24,6 +24,8 @@ We introduce **THUNDER**, a comprehensive benchmark designed to rigorously compa
 
 &#9889; **Paper**: [THUNDER: Tile-level Histopathology image UNDERstanding benchmark](https://arxiv.org/abs/2507.07860)\
 &#9889; **Homepage/Documentation**: [THUNDER docs](https://mics-lab.github.io/thunder/)\
+&#9889; **Examples**: [THUNDER examples](https://mics-lab.github.io/thunder/examples/)
+&#9889; **Reproduce results**: [THUNDER reproduction guidelines](https://mics-lab.github.io/thunder/guidelines/)
 &#9889; **Leaderboards**: [THUNDER leaderboards](https://mics-lab.github.io/thunder/leaderboards/)
 
 ## News
@@ -105,6 +107,22 @@ In order to reproduce the above example you can run the following command:
 ```console
 thunder benchmark phikon break_his knn
 ```
+
+### Reproducing the leaderboard results (SLURM)
+
+To reproduce our [leaderboard](https://mics-lab.github.io/thunder/leaderboards/) results for a given model across all datasets and tasks, we provide a SLURM array script:
+
+```console
+sbatch scripts/benchmark_all_tasks.sh <model_name>
+```
+
+It also works with a custom model by passing a `custom:` path to your model file:
+
+```console
+sbatch scripts/benchmark_all_tasks.sh custom:/path/to/your/model.py
+```
+
+Once all array tasks finish, gather the outputs with `thunder results-summary`; the reproduced leaderboard scores are the `benchmark_*` rows of the resulting table. The script is a generic SLURM template, you will likely need to adapt the `#SBATCH` header at the top of the file to your cluster before it will run. The segmentation datasets need a GPU with at least 32 GB of VRAM. See the [guidelines](https://mics-lab.github.io/thunder/guidelines/) for details.
 
 ### Extracting embeddings with any supported foundation model (API Usage)
 We also provide a [`get_model_from_name`](https://mics-lab.github.io/thunder/api/#thunder.models.get_model_from_name) function through our API to extract embeddings using any foundation model we support on your own data. Below is an example if you want to get the Pytorch callable, transforms and function to extract embeddings for `uni2h`:

@@ -1,6 +1,8 @@
 import logging
 import os
 
+import pandas as pd
+
 METRICS = [
     "accuracy",
     "balanced_accuracy",
@@ -21,6 +23,49 @@ TASK2CATS = {
 }
 
 VAL_TYPES = ["metric_score", "ci_low", "ci_high"]
+
+# Datasets used for benchmark means
+CLS_DATASETS = [
+    "bach",
+    "bracs",
+    "break_his",
+    "ccrcc",
+    "crc",
+    "esca",
+    "mhist",
+    "patch_camelyon",
+    "spider_breast",
+    "spider_colorectal",
+    "spider_skin",
+    "spider_thorax",
+    "wilds",
+    "tcga_crc_msi",
+    "tcga_tils",
+    "tcga_uniform",
+]
+
+SEG_DATASETS = [
+    "pannuke",
+    "ocelot",
+    "segpath_epithelial",
+    "segpath_lymphocytes",
+]
+
+# Benchmark definitions: name -> (task, datasets, setting, list of metrics)
+# Metrics and settings chosen to match the THUNDER leaderboards: https://mics-lab.github.io/thunder/leaderboards/
+BENCHMARKS = {
+    "benchmark_linear_probing": ("linear_probing", CLS_DATASETS, "", ["f1"]),
+    "benchmark_calibration": ("linear_probing", CLS_DATASETS, "", ["ECE"]),
+    "benchmark_knn": ("knn", CLS_DATASETS, "", ["f1"]),
+    "benchmark_simple_shot": ("simple_shot", CLS_DATASETS, "16", ["f1"]),
+    "benchmark_adversarial_attack": (
+        "adversarial_attack",
+        CLS_DATASETS,
+        "drop",
+        ["f1"],
+    ),
+    "benchmark_segmentation": ("segmentation", SEG_DATASETS, "", ["f1"]),
+}
 
 
 def extract_value_from_large_json(
@@ -99,10 +144,69 @@ def extract_value_from_large_json(
     return values_dict
 
 
+def compute_benchmarks(df):
+    """
+    Compute aggregated benchmark mean rows, one set per model.
+
+    For a given model, a benchmark mean is only computed when results are
+    available for ALL datasets of the corresponding task, and only for
+    adaptation=frozen. Any model/task missing one or more datasets is skipped
+    rather than averaged over a partial set.
+
+    The resulting benchmark rows are intended to match the numbers reported in
+    the THUNDER leaderboards: https://mics-lab.github.io/thunder/leaderboards/
+
+    :param df: DataFrame of per-dataset results.
+    :return: DataFrame of aggregated benchmark rows.
+    """
+
+    bench_rows = []
+
+    # Only consider frozen adaptation everywhere.
+    frozen = df[df["adaptation"] == "frozen"]
+
+    for model in sorted(frozen["model"].unique()):
+        model_df = frozen[frozen["model"] == model]
+
+        for bench_name, (task, datasets, setting, metrics) in BENCHMARKS.items():
+            sub = model_df[
+                (model_df["task"] == task) & (model_df["setting"] == setting)
+            ]
+
+            for metric in metrics:
+                metric_sub = sub[sub["metric"] == metric]
+
+                # Datasets present for this (task, setting, metric)
+                present = set(metric_sub["dataset"].unique())
+                required = set(datasets)
+
+                # Only compute if ALL required datasets are available.
+                if not required.issubset(present):
+                    continue
+
+                # Restrict to required datasets and average.
+                metric_sub = metric_sub[metric_sub["dataset"].isin(datasets)]
+                mean_score = round(metric_sub["metric_score"].mean(), 1)
+
+                bench_rows.append(
+                    {
+                        "dataset": bench_name,
+                        "model": model,
+                        "task": task,
+                        "adaptation": "frozen",
+                        "metric": metric,
+                        "metric_score": mean_score,
+                        "ci_low": None,
+                        "ci_high": None,
+                        "setting": setting,
+                    }
+                )
+
+    return pd.DataFrame(bench_rows)
+
+
 def gather_results():
     import glob
-
-    import pandas as pd
 
     logging.info("Gathering results...")
     results_dir = os.path.join(os.environ["THUNDER_BASE_DATA_FOLDER"], "outputs", "res")
@@ -151,9 +255,16 @@ def gather_results():
                     res.append(metric_dict)
 
     df = pd.DataFrame(res)
+
+    # Compute benchmark mean rows and prepend them to the top of the CSV.
+    bench_df = compute_benchmarks(df)
+    if not bench_df.empty:
+        df = pd.concat([bench_df, df], ignore_index=True)
+
     df.to_csv(os.path.join(results_dir, "results.csv"), index=False)
     logging.info(f"Saved at: {os.path.join(results_dir, 'results.csv')}")
     logging.info(
         "The setting column corresponds to: (i) Adversarial/Clean/Drop for adversarial_attack, (ii) nb shots for simple_shot, (iii) k for image_retrieval. "
         "'metric_score' is the metric value for the considered test set, 'ci_low' and 'ci_high' are lower and upper bounds of 95% bootstrap confidence interval."
+        "Rows with dataset starting by 'benchmark_' are aggregated means intended to reproduce the results reported in the THUNDER leaderboards: https://mics-lab.github.io/thunder/leaderboards/"
     )
