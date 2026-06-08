@@ -761,10 +761,10 @@
 <p>You should keep all thunder default hyperparameters for all tasks and datasets, except for the <code>segpath_epithelial</code> and <code>segpath_lymphocytes</code> datasets (<code>segmentation</code> task) for which you must override the number of epochs to <code>9</code> and <code>21</code> respectively (because of the size of the datasets). See <a href="https://mics-lab.github.io/thunder/custom_config/">this tutorial</a> for more details about how to override the default configuration.</p>
 <p><strong>CLI</strong>
 <div class="highlight"><pre><span></span><code><span class="c1"># Evaluating hiboub on segpath_epithelial</span>
-thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_epithelial<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">9</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_epithelial<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="w"> </span><span class="m">9</span>
 
 <span class="c1"># Evaluating hiboub on segpath_lymphocytes</span>
-thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_lymphocytes<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">21</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_lymphocytes<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="w"> </span><span class="m">21</span>
 </code></pre></div></p>
 <p><strong>API</strong>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
