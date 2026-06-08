@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mics-lab.github.io/thunder/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/api/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/custom_config/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/custom_dataset/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/custom_model/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/data_loading/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/examples/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/get_model/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/getting_started/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/guidelines/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
     <url>
          <loc>https://mics-lab.github.io/thunder/leaderboards/</loc>
-         <lastmod>2026-06-04</lastmod>
+         <lastmod>2026-06-08</lastmod>
     </url>
 </urlset>

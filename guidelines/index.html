@@ -433,6 +433,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reproducing-leaderboard-results-on-a-slurm-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducing leaderboard results on a SLURM cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducing leaderboard results on a SLURM cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-without-internet-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running without internet access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -679,6 +707,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reproducing-leaderboard-results-on-a-slurm-cluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproducing leaderboard results on a SLURM cluster
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducing leaderboard results on a SLURM cluster">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#running-without-internet-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running without internet access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -705,10 +761,10 @@
 <p>You should keep all thunder default hyperparameters for all tasks and datasets, except for the <code>segpath_epithelial</code> and <code>segpath_lymphocytes</code> datasets (<code>segmentation</code> task) for which you must override the number of epochs to <code>9</code> and <code>21</code> respectively (because of the size of the datasets). See <a href="https://mics-lab.github.io/thunder/custom_config/">this tutorial</a> for more details about how to override the default configuration.</p>
 <p><strong>CLI</strong>
 <div class="highlight"><pre><span></span><code><span class="c1"># Evaluating hiboub on segpath_epithelial</span>
-thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_epithelial<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="w"> </span><span class="m">9</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_epithelial<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">9</span>
 
 <span class="c1"># Evaluating hiboub on segpath_lymphocytes</span>
-thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_lymphocytes<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="w"> </span><span class="m">21</span>
+thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span class="w"> </span>segpath_lymphocytes<span class="w"> </span>segmentation<span class="w"> </span>--loading-mode<span class="o">=</span>embedding_pre_loading<span class="w"> </span>--adaptation.epochs<span class="o">=</span><span class="m">21</span>
 </code></pre></div></p>
 <p><strong>API</strong>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">thunder</span>
@@ -729,6 +785,28 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hiboub<span clas
     <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
      <span class="o">**</span><span class="p">{</span><span class="s2">&quot;adaptation.epochs&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">})</span>
 </code></pre></div></p>
+<h2 id="reproducing-leaderboard-results-on-a-slurm-cluster">Reproducing leaderboard results on a SLURM cluster</h2>
+<p>To reproduce the <a href="https://mics-lab.github.io/thunder/leaderboards/">THUNDER leaderboards</a> for a given model, we provide a SLURM array script at <code>scripts/benchmark_all_tasks.sh</code>. It evaluates a single model across all benchmark datasets and their associated tasks, launching one array task per dataset.</p>
+<div class="highlight"><pre><span></span><code><span class="go">sbatch scripts/benchmark_all_tasks.sh &lt;model_name&gt;</span>
+</code></pre></div>
+<p>The script also accepts a custom model, by passing a <code>custom:</code> path to your model definition file (see <a href="https://mics-lab.github.io/thunder/custom_model/">Benchmarking a Custom Model</a>):</p>
+<div class="highlight"><pre><span></span><code><span class="go">sbatch scripts/benchmark_all_tasks.sh custom:/path/to/your/model.py</span>
+</code></pre></div>
+<blockquote>
+<p><strong>GPU memory</strong>: the segmentation datasets (array indices 16–19) require a GPU with <strong>at least 32 GB of VRAM</strong>. The classification datasets fit on smaller GPUs.</p>
+</blockquote>
+<p>Once all array tasks have completed, gather the per-run outputs into a single results table:</p>
+<div class="highlight"><pre><span></span><code><span class="go">thunder results-summary</span>
+</code></pre></div>
+<p>The reproduced leaderboard scores are the rows whose <code>dataset</code> column starts with <code>benchmark_</code>. These rows are the aggregated means intended to match the values reported in the <a href="https://mics-lab.github.io/thunder/leaderboards/">THUNDER leaderboards</a>.</p>
+<blockquote>
+<p><strong>Note</strong>: all results reported in the <a href="https://mics-lab.github.io/thunder/leaderboards/">THUNDER leaderboards</a> were produced using V100 GPUs. Running on different hardware may lead to small numerical differences.</p>
+</blockquote>
+<h3 id="running-without-internet-access">Running without internet access</h3>
+<p>On compute nodes without internet access, all models and datasets must be downloaded beforehand from a node that does have connectivity, using the <code>thunder download-models &lt;model&gt;</code> command. You should then force offline mode by uncommenting the following lines in the script:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HUB_OFFLINE</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">TRANSFORMERS_OFFLINE</span><span class="o">=</span><span class="m">1</span>
+</code></pre></div>
 
 
 
