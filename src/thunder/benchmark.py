@@ -1,3 +1,4 @@
+import os
 from typing import Callable
 
 from omegaconf import DictConfig
@@ -39,11 +40,9 @@ def benchmark(
     from omegaconf import OmegaConf
 
     from .datasets.utils import is_dataset_available
-    from .models.utils import (
-        is_model_available,
-        load_custom_dataset_from_file,
-        load_custom_model_from_file,
-    )
+    from .models.utils import (is_model_available,
+                               load_custom_dataset_from_file,
+                               load_custom_model_from_file)
     from .utils.config import get_config
     from .utils.utils import print_task_hyperparams
 
@@ -127,7 +126,8 @@ def run_benchmark(cfg: DictConfig, model_cls: Callable = None) -> None:
     from .tasks.alignment_scoring import alignment_scoring
     from .tasks.image_retrieval import image_retrieval
     from .tasks.knn_classification import knn
-    from .tasks.pre_computing_patch_embeddings import pre_computing_patch_embeddings
+    from .tasks.pre_computing_patch_embeddings import \
+        pre_computing_patch_embeddings
     from .tasks.simple_shot import simple_shot
     from .tasks.train_eval_probe import eval_probe, train_probe
     from .tasks.transformation_invariance import transformation_invariance
@@ -451,6 +451,7 @@ def run_benchmark(cfg: DictConfig, model_cls: Callable = None) -> None:
             res_folder,
             model_cls,
         )
-
     # Saving config
     save_config(res_folder, OmegaConf.to_container(cfg, resolve=True))
+
+    wandb.finish()
