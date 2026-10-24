@@ -7,8 +7,8 @@ logging.basicConfig(
 )
 
 # Models
-# Importantly, you will have to visit the Huggingface URL of all models to accept
-# usage conditions to be able to download their associated checkpoints.
+# Some models require accepting their usage conditions on Hugging Face
+# before downloading their checkpoints.
 TAGS_FILENAMES = {
     "uni": (
         "MahmoodLab/uni",
@@ -90,6 +90,10 @@ TAGS_FILENAMES = {
         "kaiko-ai/midnight",
         "model.safetensors",
     ),  # Midnight-12k (https://huggingface.co/kaiko-ai/midnight)
+    "openmidnight11_spectra": (
+        "medarc/OpenMidnight-1.1-SPECTRA",
+        "model.safetensors",
+    ),  # OpenMidnight-1.1-SPECTRA (https://huggingface.co/medarc/OpenMidnight-1.1-SPECTRA)
     "openmidnight": (
         "SophontAI/OpenMidnight",
         "teacher_checkpoint_load.pt",
@@ -170,6 +174,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * hiboul
         * midnight
         * openmidnight
+        * openmidnight11_spectra
         * kaiko_vits8
         * kaiko_vits16
         * kaiko_vitb8
@@ -262,7 +267,7 @@ def download_model(model: str) -> None:
                 ]
                 if local_dir_tag != "plip":
                     extra_files.extend(["merges.txt", "vocab.json"])
-            elif local_dir_tag == "midnight":
+            elif local_dir_tag in ["midnight", "openmidnight1.1spectra"]:
                 extra_files = ["config.json"]
             elif local_dir_tag == "titan":
                 extra_files = [

@@ -54,7 +54,7 @@ To learn more about how to use `thunder`, please visit our [documentation](https
 An API and command line interface (CLI) are provided to allow users to download datasets, models, and run benchmarks. The API is designed to be user-friendly and allows for easy integration into existing workflows. The CLI provides a convenient way to access the same functionality from the command line.
 
 > [!IMPORTANT]
-> **Downloading supported foundation models**: you will have to visit the Huggingface URL of supported models you wish to use in order to accept usage conditions.
+> **Downloading supported foundation models**: some models require accepting their usage conditions on Hugging Face before downloading.
 
 <details>
 <summary>List of Huggingface URLs</summary>
@@ -65,6 +65,7 @@ An API and command line interface (CLI) are provided to allow users to download 
 * Virchow2: https://huggingface.co/paige-ai/Virchow2
 * H-optimus-0: https://huggingface.co/bioptimus/H-optimus-0
 * H-optimus-1: https://huggingface.co/bioptimus/H-optimus-1
+* OpenMidnight-1.1-SPECTRA: https://huggingface.co/medarc/OpenMidnight-1.1-SPECTRA
 * GenBio-PathFM: https://huggingface.co/genbio-ai/genbio-pathfm
 * CONCH: https://huggingface.co/MahmoodLab/CONCH
 * TITAN/CONCHv1.5: https://huggingface.co/MahmoodLab/TITAN
