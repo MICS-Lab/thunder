@@ -90,6 +90,10 @@ TAGS_FILENAMES = {
         "kaiko-ai/midnight",
         "model.safetensors",
     ),  # Midnight-12k (https://huggingface.co/kaiko-ai/midnight)
+    "openmidnight11": (
+        "medarc/OpenMidnight-1.1",
+        "model.safetensors",
+    ),  # OpenMidnight-1.1 (https://huggingface.co/medarc/OpenMidnight-1.1)
     "openmidnight": (
         "SophontAI/OpenMidnight",
         "teacher_checkpoint_load.pt",
@@ -170,6 +174,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * hiboul
         * midnight
         * openmidnight
+        * openmidnight11
         * kaiko_vits8
         * kaiko_vits16
         * kaiko_vitb8
@@ -262,7 +267,7 @@ def download_model(model: str) -> None:
                 ]
                 if local_dir_tag != "plip":
                     extra_files.extend(["merges.txt", "vocab.json"])
-            elif local_dir_tag == "midnight":
+            elif local_dir_tag in ["midnight", "openmidnight1.1"]:
                 extra_files = ["config.json"]
             elif local_dir_tag == "titan":
                 extra_files = [
