@@ -1,0 +1,9 @@
+model_name: hoptimus0_spectra
+type: timm
+vlm: false
+emb_dim: 1536
+emb_dim_seg: 1536
+ckpt_path: ${oc.env:THUNDER_BASE_DATA_FOLDER}/pretrained_ckpts/hoptimus0spectra/model.safetensors
+hf_tag: hf-hub:medarc/H-optimus-0-SPECTRA
+
+timm_kwargs: {}
