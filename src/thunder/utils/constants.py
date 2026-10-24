@@ -15,6 +15,7 @@ class ModelConstants(Enum):
         "kaiko_vitb8",
         "kaiko_vitb16",
         "midnight",
+        "midnight12k_spectra",
         "openmidnight",
         "phikon",
         "phikon2",
