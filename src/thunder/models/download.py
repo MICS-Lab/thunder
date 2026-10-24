@@ -7,8 +7,8 @@ logging.basicConfig(
 )
 
 # Models
-# Importantly, you will have to visit the Huggingface URL of all models to accept
-# usage conditions to be able to download their associated checkpoints.
+# Some models require accepting their usage conditions on Hugging Face
+# before downloading their checkpoints.
 TAGS_FILENAMES = {
     "uni": (
         "MahmoodLab/uni",
@@ -18,6 +18,10 @@ TAGS_FILENAMES = {
         "MahmoodLab/UNI2-h",
         "pytorch_model.bin",
     ),  # UNI2-h (https://huggingface.co/MahmoodLab/UNI2-h)
+    "virchow_spectra": (
+        "medarc/Virchow-SPECTRA",
+        "model.safetensors",
+    ),  # Virchow-SPECTRA (https://huggingface.co/medarc/Virchow-SPECTRA)
     "virchow": (
         "paige-ai/Virchow",
         "pytorch_model.bin",
@@ -156,6 +160,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * uni
         * uni2h
         * virchow
+        * virchow_spectra
         * virchow2
         * hoptimus0
         * h0mini
@@ -262,7 +267,7 @@ def download_model(model: str) -> None:
                 ]
                 if local_dir_tag != "plip":
                     extra_files.extend(["merges.txt", "vocab.json"])
-            elif local_dir_tag == "midnight":
+            elif local_dir_tag in ["midnight", "virchowspectra"]:
                 extra_files = ["config.json"]
             elif local_dir_tag == "titan":
                 extra_files = [

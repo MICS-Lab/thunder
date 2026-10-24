@@ -1,0 +1,12 @@
+model_name: virchow_spectra
+type: timm
+vlm: false
+emb_dim: 2560
+emb_dim_seg: 1280
+ckpt_path: ${oc.env:THUNDER_BASE_DATA_FOLDER}/pretrained_ckpts/virchowspectra/model.safetensors
+hf_tag: hf-hub:medarc/Virchow-SPECTRA
+
+timm_kwargs:
+  mlp_layer: SwiGLUPacked
+  act_layer: SiLU
+  global_pool: ""

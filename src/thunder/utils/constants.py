@@ -21,6 +21,7 @@ class ModelConstants(Enum):
         "uni",
         "uni2h",
         "virchow",
+        "virchow_spectra",
         "virchow2",
         "provgigapath",
         # Histo-image-language models
