@@ -16,6 +16,7 @@ class ModelConstants(Enum):
         "kaiko_vitb16",
         "midnight",
         "openmidnight",
+        "openmidnight11",
         "phikon",
         "phikon2",
         "uni",

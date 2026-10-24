@@ -1,0 +1,9 @@
+model_name: openmidnight11
+type: timm
+vlm: false
+emb_dim: 1536
+emb_dim_seg: 1536
+ckpt_path: ${oc.env:THUNDER_BASE_DATA_FOLDER}/pretrained_ckpts/openmidnight1.1/model.safetensors
+hf_tag: hf-hub:medarc/OpenMidnight-1.1
+
+timm_kwargs: {}
