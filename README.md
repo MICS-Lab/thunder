@@ -54,7 +54,7 @@ To learn more about how to use `thunder`, please visit our [documentation](https
 An API and command line interface (CLI) are provided to allow users to download datasets, models, and run benchmarks. The API is designed to be user-friendly and allows for easy integration into existing workflows. The CLI provides a convenient way to access the same functionality from the command line.
 
 > [!IMPORTANT]
-> **Downloading supported foundation models**: some models require accepting their usage conditions on Hugging Face before downloading.
+> **Downloading supported foundation models**: you will have to visit the Huggingface URL of supported models you wish to use in order to accept usage conditions.
 
 <details>
 <summary>List of Huggingface URLs</summary>

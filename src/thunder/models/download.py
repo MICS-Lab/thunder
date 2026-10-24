@@ -7,8 +7,8 @@ logging.basicConfig(
 )
 
 # Models
-# Some models require accepting their usage conditions on Hugging Face
-# before downloading their checkpoints.
+# Importantly, you will have to visit the Huggingface URL of all models to accept
+# usage conditions to be able to download their associated checkpoints.
 TAGS_FILENAMES = {
     "uni": (
         "MahmoodLab/uni",
