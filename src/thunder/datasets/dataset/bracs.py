@@ -9,7 +9,7 @@ def download_bracs(root_folder: str):
         "-r",
         "--directory-prefix",
         f"{root_folder}",
-        f"ftp://histoimage.na.icar.cnr.it/BRACS_RoI/",
+        f"ftp://utente_reader:ICAR-CNR@histoimage.na.icar.cnr.it/BRACS_RoI/",
     ]
     # Execute the command
     try:
