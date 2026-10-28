@@ -1,9 +1,11 @@
+import json
 from abc import ABC, abstractmethod
 from pathlib import Path
 
 import timm
 import torch
 from omegaconf import DictConfig, OmegaConf
+from safetensors.torch import load_file
 from timm.data import resolve_data_config
 from timm.data.transforms_factory import create_transform
 from transformers import AutoImageProcessor, AutoModel, AutoTokenizer
@@ -327,12 +329,12 @@ def get_model(model_cfg: dict, device: str):
 
             return emb
 
-    elif model_cfg.model_name in ["h0mini", "virchow", "virchow2"]:
+    elif model_cfg.model_name in ["h0mini", "virchow", "virchow2", "virchow_spectra"]:
 
         def extract_embedding(src, pretrained_model, task_type):
             out = pretrained_model(src)
             class_token = out[:, 0]
-            if model_cfg.model_name == "virchow":
+            if model_cfg.model_name in ["virchow", "virchow_spectra"]:
                 patch_tokens = out[:, 1:]
             elif model_cfg.model_name == "virchow2":
                 patch_tokens = out[
@@ -394,6 +396,7 @@ def get_model_from_name(model_name: str, device: str):
         * uni
         * uni2h
         * virchow
+        * virchow_spectra
         * virchow2
         * hoptimus0
         * h0mini
@@ -470,16 +473,28 @@ def get_from_timm(hf_tag: str, timm_kwargs: dict, ckpt_path: str, device: str):
 
     :param hf_tag: Huggingface model tag.
     :param timm_kargs: dictionary of timm arguments.
-    :ckpt_path: path to the stored checkpoint.
+    :param ckpt_path: path to the stored checkpoint. Timm safetensors require
+        an adjacent config.json.
     :param device: device to use (cpu, cuda).
     """
 
     # Model
-    model = timm.create_model(hf_tag, pretrained=False, **timm_kwargs)
-    model.load_state_dict(
-        torch.load(ckpt_path, weights_only=True, map_location=torch.device(device)),
-        strict=True,
-    )
+    if Path(ckpt_path).suffix == ".safetensors":
+        # Read the downloaded timm configuration so loading also works offline.
+        config = json.loads(Path(ckpt_path).with_name("config.json").read_text())
+        model = timm.create_model(
+            config["architecture"],
+            pretrained=False,
+            pretrained_cfg=config["pretrained_cfg"],
+            **(config["model_args"] | timm_kwargs),
+        )
+        model.load_state_dict(load_file(ckpt_path, device=device), strict=True)
+    else:
+        model = timm.create_model(hf_tag, pretrained=False, **timm_kwargs)
+        model.load_state_dict(
+            torch.load(ckpt_path, weights_only=True, map_location=torch.device(device)),
+            strict=True,
+        )
 
     # Transform
     transform = create_transform(
