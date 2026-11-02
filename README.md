@@ -65,6 +65,7 @@ An API and command line interface (CLI) are provided to allow users to download 
 * Virchow2: https://huggingface.co/paige-ai/Virchow2
 * H-optimus-0: https://huggingface.co/bioptimus/H-optimus-0
 * H-optimus-1: https://huggingface.co/bioptimus/H-optimus-1
+* OpenMidnight-1.1: https://huggingface.co/medarc/OpenMidnight-1.1
 * OpenMidnight-1.1-SPECTRA: https://huggingface.co/medarc/OpenMidnight-1.1-SPECTRA
 * H-optimus-0-SPECTRA: https://huggingface.co/medarc/H-optimus-0-SPECTRA
 * Virchow-SPECTRA: https://huggingface.co/medarc/Virchow-SPECTRA
