@@ -27,8 +27,10 @@ jobs:
           enable-cache: false
       - name: Install dependencies
         run: uv pip install ".[dev]"
-      - name: Loggin wandb
-        shell: bash
-        run: wandb login "$(printf '%*s' 40 '' | tr ' ' 'X')"
       - name: Run tests
-        run: pytest
+        env:
+          TMPDIR: ${{ runner.temp }}/thunder-tmp
+          WANDB_MODE: offline
+        run: |
+          mkdir -p "$TMPDIR"
+          pytest

@@ -66,6 +66,7 @@ An API and command line interface (CLI) are provided to allow users to download 
 * H-optimus-0: https://huggingface.co/bioptimus/H-optimus-0
 * H-optimus-1: https://huggingface.co/bioptimus/H-optimus-1
 * Virchow-SPECTRA: https://huggingface.co/medarc/Virchow-SPECTRA
+* Midnight-12k-SPECTRA: https://huggingface.co/medarc/Midnight-12k-SPECTRA
 * GenBio-PathFM: https://huggingface.co/genbio-ai/genbio-pathfm
 * CONCH: https://huggingface.co/MahmoodLab/CONCH
 * TITAN/CONCHv1.5: https://huggingface.co/MahmoodLab/TITAN
