@@ -377,7 +377,11 @@ def get_model(model_cfg: dict, device: str):
 
                     if model_cfg.model_name == "uni2h":
                         nb_reg = 8
-                    elif model_cfg.model_name in ["hoptimus0", "hoptimus1"]:
+                    elif model_cfg.model_name in [
+                        "hoptimus0",
+                        "hoptimus1",
+                        "hoptimus0_spectra",
+                    ]:
                         nb_reg = 4
                     else:
                         nb_reg = 0
@@ -399,6 +403,7 @@ def get_model_from_name(model_name: str, device: str):
         * virchow_spectra
         * virchow2
         * hoptimus0
+        * hoptimus0_spectra
         * h0mini
         * hoptimus1
         * genbio-pathfm

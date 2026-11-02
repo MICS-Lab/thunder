@@ -30,6 +30,10 @@ TAGS_FILENAMES = {
         "paige-ai/Virchow2",
         "pytorch_model.bin",
     ),  # Virchow2 (https://huggingface.co/paige-ai/Virchow2)
+    "hoptimus0_spectra": (
+        "medarc/H-optimus-0-SPECTRA",
+        "model.safetensors",
+    ),  # H-optimus-0-SPECTRA (https://huggingface.co/medarc/H-optimus-0-SPECTRA)
     "hoptimus0": (
         "bioptimus/H-optimus-0",
         "pytorch_model.bin",
@@ -167,6 +171,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * virchow_spectra
         * virchow2
         * hoptimus0
+        * hoptimus0_spectra
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -272,7 +277,7 @@ def download_model(model: str) -> None:
                 ]
                 if local_dir_tag != "plip":
                     extra_files.extend(["merges.txt", "vocab.json"])
-            elif local_dir_tag in ["midnight", "midnight12kspectra", "virchowspectra"]:
+            elif local_dir_tag in ["midnight", "hoptimus0spectra", "midnight12kspectra", "virchowspectra"]:
                 extra_files = ["config.json"]
             elif local_dir_tag == "titan":
                 extra_files = [
