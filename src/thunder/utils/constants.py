@@ -18,6 +18,7 @@ class ModelConstants(Enum):
         "midnight",
         "midnight12k_spectra",
         "openmidnight",
+        "openmidnight11_spectra",
         "phikon",
         "phikon2",
         "uni",

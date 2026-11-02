@@ -380,6 +380,7 @@ def get_model(model_cfg: dict, device: str):
                     elif model_cfg.model_name in [
                         "hoptimus0",
                         "hoptimus1",
+                        "openmidnight11_spectra",
                         "hoptimus0_spectra",
                     ]:
                         nb_reg = 4
@@ -417,6 +418,7 @@ def get_model_from_name(model_name: str, device: str):
         * midnight
         * midnight12k_spectra
         * openmidnight
+        * openmidnight11_spectra
         * kaiko_vits8
         * kaiko_vits16
         * kaiko_vitb8
