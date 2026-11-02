@@ -498,7 +498,7 @@ def get_from_timm(hf_tag: str, timm_kwargs: dict, ckpt_path: str, device: str):
             pretrained_cfg=config["pretrained_cfg"],
             **(config["model_args"] | timm_kwargs),
         )
-        model.load_state_dict(load_file(ckpt_path, device=device), strict=True)
+        model.load_state_dict(load_file(ckpt_path, device=str(device)), strict=True)
     else:
         model = timm.create_model(hf_tag, pretrained=False, **timm_kwargs)
         model.load_state_dict(
