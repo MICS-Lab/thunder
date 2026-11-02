@@ -126,7 +126,7 @@ def get_model(model_cfg: dict, device: str):
             model, transform, tokenizer = get_keep(model_cfg.ckpt_path)
         elif model_cfg.model_name == "titan":
             model, transform = get_titan(model_cfg.ckpt_path)
-        elif model_cfg.model_name == "midnight":
+        elif model_cfg.model_name in ["midnight", "midnight12k_spectra"]:
             model, transform = get_midnight(model_cfg.ckpt_path)
         elif model_cfg.model_name == "genbio-pathfm":
             model, transform = get_genbio_pathfm(model_cfg.ckpt_path)
@@ -329,12 +329,12 @@ def get_model(model_cfg: dict, device: str):
 
             return emb
 
-    elif model_cfg.model_name in ["h0mini", "virchow", "virchow2"]:
+    elif model_cfg.model_name in ["h0mini", "virchow", "virchow2", "virchow_spectra"]:
 
         def extract_embedding(src, pretrained_model, task_type):
             out = pretrained_model(src)
             class_token = out[:, 0]
-            if model_cfg.model_name == "virchow":
+            if model_cfg.model_name in ["virchow", "virchow_spectra"]:
                 patch_tokens = out[:, 1:]
             elif model_cfg.model_name == "virchow2":
                 patch_tokens = out[
@@ -348,7 +348,7 @@ def get_model(model_cfg: dict, device: str):
             else:
                 return patch_tokens
 
-    elif model_cfg.model_name == "midnight":
+    elif model_cfg.model_name in ["midnight", "midnight12k_spectra"]:
 
         def extract_embedding(src, pretrained_model, task_type):
             out = pretrained_model(src).last_hidden_state
@@ -381,6 +381,7 @@ def get_model(model_cfg: dict, device: str):
                         "hoptimus0",
                         "hoptimus1",
                         "openmidnight11_spectra",
+                        "hoptimus0_spectra",
                     ]:
                         nb_reg = 4
                     else:
@@ -400,8 +401,10 @@ def get_model_from_name(model_name: str, device: str):
         * uni
         * uni2h
         * virchow
+        * virchow_spectra
         * virchow2
         * hoptimus0
+        * hoptimus0_spectra
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -413,6 +416,7 @@ def get_model_from_name(model_name: str, device: str):
         * hiboub
         * hiboul
         * midnight
+        * midnight12k_spectra
         * openmidnight
         * openmidnight11_spectra
         * kaiko_vits8

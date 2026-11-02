@@ -7,6 +7,7 @@ class ModelConstants(Enum):
         "hiboub",
         "hiboul",
         "hoptimus0",
+        "hoptimus0_spectra",
         "h0mini",
         "hoptimus1",
         "genbio-pathfm",
@@ -15,6 +16,7 @@ class ModelConstants(Enum):
         "kaiko_vitb8",
         "kaiko_vitb16",
         "midnight",
+        "midnight12k_spectra",
         "openmidnight",
         "openmidnight11_spectra",
         "phikon",
@@ -22,6 +24,7 @@ class ModelConstants(Enum):
         "uni",
         "uni2h",
         "virchow",
+        "virchow_spectra",
         "virchow2",
         "provgigapath",
         # Histo-image-language models

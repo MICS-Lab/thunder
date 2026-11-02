@@ -18,6 +18,10 @@ TAGS_FILENAMES = {
         "MahmoodLab/UNI2-h",
         "pytorch_model.bin",
     ),  # UNI2-h (https://huggingface.co/MahmoodLab/UNI2-h)
+    "virchow_spectra": (
+        "medarc/Virchow-SPECTRA",
+        "model.safetensors",
+    ),  # Virchow-SPECTRA (https://huggingface.co/medarc/Virchow-SPECTRA)
     "virchow": (
         "paige-ai/Virchow",
         "pytorch_model.bin",
@@ -26,6 +30,10 @@ TAGS_FILENAMES = {
         "paige-ai/Virchow2",
         "pytorch_model.bin",
     ),  # Virchow2 (https://huggingface.co/paige-ai/Virchow2)
+    "hoptimus0_spectra": (
+        "medarc/H-optimus-0-SPECTRA",
+        "model.safetensors",
+    ),  # H-optimus-0-SPECTRA (https://huggingface.co/medarc/H-optimus-0-SPECTRA)
     "hoptimus0": (
         "bioptimus/H-optimus-0",
         "pytorch_model.bin",
@@ -86,6 +94,10 @@ TAGS_FILENAMES = {
         "histai/hibou-L",
         "model.safetensors",
     ),  # Hibou-L (https://huggingface.co/histai/hibou-L)
+    "midnight12k_spectra": (
+        "medarc/Midnight-12k-SPECTRA",
+        "model.safetensors",
+    ),  # Midnight-12k-SPECTRA (https://huggingface.co/medarc/Midnight-12k-SPECTRA)
     "midnight": (
         "kaiko-ai/midnight",
         "model.safetensors",
@@ -160,8 +172,10 @@ def download_models(models: Union[List[str], str]) -> None:
         * uni
         * uni2h
         * virchow
+        * virchow_spectra
         * virchow2
         * hoptimus0
+        * hoptimus0_spectra
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -173,6 +187,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * hiboub
         * hiboul
         * midnight
+        * midnight12k_spectra
         * openmidnight
         * openmidnight11_spectra
         * kaiko_vits8
@@ -267,7 +282,13 @@ def download_model(model: str) -> None:
                 ]
                 if local_dir_tag != "plip":
                     extra_files.extend(["merges.txt", "vocab.json"])
-            elif local_dir_tag in ["midnight", "openmidnight1.1spectra"]:
+            elif local_dir_tag in [
+                "midnight",
+                "openmidnight1.1spectra",
+                "hoptimus0spectra", 
+                "midnight12kspectra", 
+                "virchowspectra"
+            ]:
                 extra_files = ["config.json"]
             elif local_dir_tag == "titan":
                 extra_files = [
