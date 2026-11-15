@@ -39,6 +39,9 @@ def get_model_lora_names(
         elif model_name == "conch":
             block_name = "visual.trunk.blocks"
             qkv_name = "attn.qkv"
+        elif model_name == "mettle15":
+            block_name = "backbone.blocks"
+            qkv_name = "attn.qkv"
         else:
             raise NotImplementedError(
                 f"LoRA not implemented for {model_name} and {model_type} model type."

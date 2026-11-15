@@ -1,0 +1,6 @@
+model_name: mettle15
+type: safetensors
+vlm: false
+emb_dim: 1536
+ckpt_path: ${oc.env:THUNDER_BASE_DATA_FOLDER}/pretrained_ckpts/mettle1.5/
+hf_tag: hf-hub:slideflow-labs/mettle-1.5

@@ -1,0 +1,2 @@
+[console_scripts]
+thunder = thunder.main:app

@@ -34,6 +34,10 @@ TAGS_FILENAMES = {
         "medarc/H-optimus-0-SPECTRA",
         "model.safetensors",
     ),  # H-optimus-0-SPECTRA (https://huggingface.co/medarc/H-optimus-0-SPECTRA)
+    "mettle15": (
+        "slideflow-labs/mettle-1.5",
+        "model.safetensors",
+    ),  # METTLE 1.5 (https://huggingface.co/slideflow-labs/mettle-1.5)
     "hoptimus0": (
         "bioptimus/H-optimus-0",
         "pytorch_model.bin",
@@ -180,6 +184,7 @@ def download_models(models: Union[List[str], str]) -> None:
         * virchow2
         * hoptimus0
         * hoptimus0_spectra
+        * mettle15
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -296,6 +301,13 @@ def download_model(model: str) -> None:
                 "virchowspectra",
             ]:
                 extra_files = ["config.json"]
+            elif local_dir_tag == "mettle1.5":
+                extra_files = [
+                    "config.json",
+                    "preprocessor_config.json",
+                    "configuration_mettle.py",
+                    "modeling_mettle.py",
+                ]
             elif local_dir_tag == "titan":
                 extra_files = [
                     "text_transformer.py",
