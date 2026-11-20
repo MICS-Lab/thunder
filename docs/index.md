@@ -119,6 +119,7 @@ pip install . # install the package
 |HIBOU-B                 | hiboub                       | ViT-B/14     | 86M     | DINOv2                                    |     |x          |
 |HIBOU-L                 | hiboul                       | ViT-L/14     | 307M    | DINOv2                                    |     |x          |
 |H&minus;OPTIMUS&minus;0 | hoptimus0                    | ViT-G/14     | 1.1B    | DINOv2                                    |     |x          |
+|METTLE 1.5              | mettle15                     | ViT-G/14     | 1.1B    | Fine-tuning (base: H&minus;OPTIMUS&minus;0) |     |x          |
 |H0-mini                 | h0mini                       | ViT-B/14     | 86M     | DINOv2 (teacher: H&minus;OPTIMUS&minus;0) |     |x          |
 |H&minus;OPTIMUS&minus;1 | hoptimus1                    | ViT-G/14     | 1.1B    | DINOv2                                    |     |x          |
 |KAIKO-S/8               | kaiko_vits8                  | ViT-S/8      | 22M     | DINO                                      |     |x          |

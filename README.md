@@ -68,6 +68,7 @@ An API and command line interface (CLI) are provided to allow users to download 
 * OpenMidnight-1.1: https://huggingface.co/medarc/OpenMidnight-1.1
 * OpenMidnight-1.1-SPECTRA: https://huggingface.co/medarc/OpenMidnight-1.1-SPECTRA
 * H-optimus-0-SPECTRA: https://huggingface.co/medarc/H-optimus-0-SPECTRA
+* METTLE 1.5: https://huggingface.co/slideflow-labs/mettle-1.5
 * Virchow-SPECTRA: https://huggingface.co/medarc/Virchow-SPECTRA
 * Midnight-12k-SPECTRA: https://huggingface.co/medarc/Midnight-12k-SPECTRA
 * GenBio-PathFM: https://huggingface.co/genbio-ai/genbio-pathfm

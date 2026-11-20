@@ -130,6 +130,8 @@ def get_model(model_cfg: dict, device: str):
             model, transform = get_midnight(model_cfg.ckpt_path)
         elif model_cfg.model_name == "genbio-pathfm":
             model, transform = get_genbio_pathfm(model_cfg.ckpt_path)
+        elif model_cfg.model_name == "mettle15":
+            model, transform = get_mettle(model_cfg.ckpt_path)
         else:
             model, transform, tokenizer = get_from_safetensors(
                 model_cfg.ckpt_path, use_fast="dinov3" in model_cfg.model_name
@@ -348,6 +350,17 @@ def get_model(model_cfg: dict, device: str):
             else:
                 return patch_tokens
 
+    elif model_cfg.model_name == "mettle15":
+
+        def extract_embedding(src, pretrained_model, task_type="linear_probing"):
+            out = pretrained_model(src)
+            if task_type != "segmentation":
+                # Refined CLS embedding (the model's default feature view).
+                return out.pooler_output
+            else:
+                # Spatial patch tokens, ignoring CLS and the 4 register tokens.
+                return out.last_hidden_state[:, 5:]
+
     elif model_cfg.model_name in ["midnight", "midnight12k_spectra"]:
 
         def extract_embedding(src, pretrained_model, task_type):
@@ -406,6 +419,7 @@ def get_model_from_name(model_name: str, device: str):
         * virchow2
         * hoptimus0
         * hoptimus0_spectra
+        * mettle15
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -819,3 +833,31 @@ def get_genbio_pathfm(ckpt_path: str):
 
     return model, transform
 
+
+def get_mettle(ckpt_path: str):
+    """
+    Adapted from:
+    - https://huggingface.co/slideflow-labs/mettle-1.5
+
+    :param ckpt_path: path to the folder with the stored checkpoint and model code.
+    """
+    from torchvision import transforms
+
+    # Model
+    model = AutoModel.from_pretrained(ckpt_path, trust_remote_code=True)
+
+    # Transform (as specified in the model's preprocessor_config.json)
+    transform = transforms.Compose(
+        [
+            transforms.Resize(
+                (224, 224), interpolation=transforms.InterpolationMode.BICUBIC
+            ),
+            transforms.ToTensor(),
+            transforms.Normalize(
+                mean=(0.707223, 0.578729, 0.703617),
+                std=(0.211883, 0.230117, 0.177517),
+            ),
+        ]
+    )
+
+    return model, transform
