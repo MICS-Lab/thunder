@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -27,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -889,7 +889,7 @@
 
 
 <h3 id="thunder.benchmark.benchmark" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">loading_mode</span><span class="o">=</span><span class="s1">&#39;online_loading&#39;</span><span class="p">,</span> <span class="n">lora</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ckpt_save_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">online_wandb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">recomp_embs</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">retrain_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+            <code class="highlight language-python"><span class="n">thunder</span><span class="o">.</span><span class="n">benchmark</span><span class="o">.</span><span class="n">benchmark</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">loading_mode</span><span class="o">=</span><span class="s1">'online_loading'</span><span class="p">,</span> <span class="n">lora</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ckpt_save_all</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">online_wandb</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">recomp_embs</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">retrain_model</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h3>
 
@@ -903,7 +903,7 @@
   <summary>where options are</summary>
   <ul>
 <li>dataset: <em>bach</em>, <em>bracs</em>, <em>break_his</em>, <em>ccrcc</em>, <em>crc</em>, <em>esca</em>, <em>mhist</em>, <em>ocelot</em>, <em>pannuke</em>, <em>patch_camelyon</em>, <em>segpath_epithelial</em>, <em>segpath_lymphocytes</em>, <em>tcga_crc_msi</em>, <em>tcga_tils</em>, <em>tcga_uniform</em>, <em>wilds</em></li>
-<li>model: <em>hiboub</em>, <em>hiboul</em>, <em>hoptimus0</em>, <em>hoptimus1</em>, <em>genbio-pathfm</em>, <em>midnight</em>, <em>phikon</em>, <em>phikon2</em>, <em>uni</em>, <em>uni2h</em>, <em>virchow</em>, <em>virchow2</em>, <em>conch</em>, <em>titan</em>, <em>keep</em>, <em>musk</em>, <em>plip</em>, <em>quiltnetb32</em>, <em>dinov2base</em>, <em>dinov2large</em>, <em>vitbasepatch16224in21k</em>, <em>vitlargepatch16224in21k</em>, <em>clipvitbasepatch32</em>, <em>clipvitlargepatch14</em></li>
+<li>model: <em>hiboub</em>, <em>hiboul</em>, <em>hoptimus0</em>, <em>hoptimus1</em>, <em>genbio-pathfm</em>, <em>openmidnight11</em>, <em>openmidnight11_spectra</em>, <em>hoptimus0_spectra</em>, <em>midnight12k_spectra</em>, <em>virchow_spectra</em>, <em>midnight</em>, <em>phikon</em>, <em>phikon2</em>, <em>uni</em>, <em>uni2h</em>, <em>virchow</em>, <em>virchow2</em>, <em>conch</em>, <em>titan</em>, <em>keep</em>, <em>musk</em>, <em>plip</em>, <em>quiltnetb32</em>, <em>dinov2base</em>, <em>dinov2large</em>, <em>vitbasepatch16224in21k</em>, <em>vitlargepatch16224in21k</em>, <em>clipvitbasepatch32</em>, <em>clipvitlargepatch14</em></li>
 <li>task: <em>adversarial_attack</em>, <em>alignment_scoring</em>, <em>image_retrieval</em>, <em>knn</em>, <em>linear_probing</em>, <em>pre_computing_embeddings</em>, <em>segmentation</em>, <em>simple_shot</em>, <em>transformation_invariance</em>, <em>zero_shot_vlm</em></li>
 <li>loading_mode: <em>online_loading</em>, <em>image_pre_loading</em>, <em>embedding_pre_loading</em></li>
 </ul>
@@ -1172,7 +1172,7 @@
     <span class="n">model</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Callable</span><span class="p">,</span>
     <span class="n">dataset</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">task</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-    <span class="n">loading_mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;online_loading&quot;</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"online_loading"</span><span class="p">,</span>
     <span class="n">lora</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">ckpt_save_all</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="n">online_wandb</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -1180,12 +1180,12 @@
     <span class="n">retrain_model</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
 <span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Runs a benchmark for a pretrained model on a dataset with a task-specific approach.</span>
 
 <span class="sd">    where options are:</span>
 <span class="sd">        - dataset: *bach*, *bracs*, *break_his*, *ccrcc*, *crc*, *esca*, *mhist*, *ocelot*, *pannuke*, *patch_camelyon*, *segpath_epithelial*, *segpath_lymphocytes*, *tcga_crc_msi*, *tcga_tils*, *tcga_uniform*, *wilds*</span>
-<span class="sd">        - model: *hiboub*, *hiboul*, *hoptimus0*, *hoptimus1*, *genbio-pathfm*, *midnight*, *phikon*, *phikon2*, *uni*, *uni2h*, *virchow*, *virchow2*, *conch*, *titan*, *keep*, *musk*, *plip*, *quiltnetb32*, *dinov2base*, *dinov2large*, *vitbasepatch16224in21k*, *vitlargepatch16224in21k*, *clipvitbasepatch32*, *clipvitlargepatch14*</span>
+<span class="sd">        - model: *hiboub*, *hiboul*, *hoptimus0*, *hoptimus1*, *genbio-pathfm*, *openmidnight11*, *openmidnight11_spectra*, *hoptimus0_spectra*, *midnight12k_spectra*, *virchow_spectra*, *midnight*, *phikon*, *phikon2*, *uni*, *uni2h*, *virchow*, *virchow2*, *conch*, *titan*, *keep*, *musk*, *plip*, *quiltnetb32*, *dinov2base*, *dinov2large*, *vitbasepatch16224in21k*, *vitlargepatch16224in21k*, *clipvitbasepatch32*, *clipvitlargepatch14*</span>
 <span class="sd">        - task: *adversarial_attack*, *alignment_scoring*, *image_retrieval*, *knn*, *linear_probing*, *pre_computing_embeddings*, *segmentation*, *simple_shot*, *transformation_invariance*, *zero_shot_vlm*</span>
 <span class="sd">        - loading_mode: *online_loading*, *image_pre_loading*, *embedding_pre_loading*</span>
 
@@ -1199,7 +1199,7 @@
 <span class="sd">        online_wandb (bool): Whether to use online mode for Weights &amp; Biases (wandb) logging. Default is False which means offline mode.</span>
 <span class="sd">        recomp_embs (bool): Whether to recompute embeddings if already saved.</span>
 <span class="sd">        retrain_model (bool): Whether to retrain model if already trained and saved ckpts.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">hydra</span><span class="w"> </span><span class="kn">import</span> <span class="n">compose</span><span class="p">,</span> <span class="n">initialize</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">omegaconf</span><span class="w"> </span><span class="kn">import</span> <span class="n">OmegaConf</span>
 
@@ -1210,24 +1210,24 @@
     <span class="kn">from</span><span class="w"> </span><span class="nn">.utils.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_config</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">.utils.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">print_task_hyperparams</span>
 
-    <span class="n">wandb_mode</span> <span class="o">=</span> <span class="s2">&quot;online&quot;</span> <span class="k">if</span> <span class="n">online_wandb</span> <span class="k">else</span> <span class="s2">&quot;offline&quot;</span>
-    <span class="n">adaptation_type</span> <span class="o">=</span> <span class="s2">&quot;lora&quot;</span> <span class="k">if</span> <span class="n">lora</span> <span class="k">else</span> <span class="s2">&quot;frozen&quot;</span>
-    <span class="n">ckpt_saving</span> <span class="o">=</span> <span class="s2">&quot;save_ckpts_all_epochs&quot;</span> <span class="k">if</span> <span class="n">ckpt_save_all</span> <span class="k">else</span> <span class="s2">&quot;save_best_ckpt_only&quot;</span>
-    <span class="n">embedding_recomputing</span> <span class="o">=</span> <span class="s2">&quot;recomp_embs&quot;</span> <span class="k">if</span> <span class="n">recomp_embs</span> <span class="k">else</span> <span class="s2">&quot;no_recomp_embs&quot;</span>
-    <span class="n">model_retraining</span> <span class="o">=</span> <span class="s2">&quot;retrain_model&quot;</span> <span class="k">if</span> <span class="n">retrain_model</span> <span class="k">else</span> <span class="s2">&quot;no_retrain_model&quot;</span>
+    <span class="n">wandb_mode</span> <span class="o">=</span> <span class="s2">"online"</span> <span class="k">if</span> <span class="n">online_wandb</span> <span class="k">else</span> <span class="s2">"offline"</span>
+    <span class="n">adaptation_type</span> <span class="o">=</span> <span class="s2">"lora"</span> <span class="k">if</span> <span class="n">lora</span> <span class="k">else</span> <span class="s2">"frozen"</span>
+    <span class="n">ckpt_saving</span> <span class="o">=</span> <span class="s2">"save_ckpts_all_epochs"</span> <span class="k">if</span> <span class="n">ckpt_save_all</span> <span class="k">else</span> <span class="s2">"save_best_ckpt_only"</span>
+    <span class="n">embedding_recomputing</span> <span class="o">=</span> <span class="s2">"recomp_embs"</span> <span class="k">if</span> <span class="n">recomp_embs</span> <span class="k">else</span> <span class="s2">"no_recomp_embs"</span>
+    <span class="n">model_retraining</span> <span class="o">=</span> <span class="s2">"retrain_model"</span> <span class="k">if</span> <span class="n">retrain_model</span> <span class="k">else</span> <span class="s2">"no_retrain_model"</span>
     <span class="n">model_name</span> <span class="o">=</span> <span class="n">model</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
     <span class="n">custom_name</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;custom:&quot;</span><span class="p">):</span>
-        <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">load_custom_dataset_from_file</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"custom:"</span><span class="p">):</span>
+        <span class="n">dataset_cfg</span> <span class="o">=</span> <span class="n">load_custom_dataset_from_file</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">":"</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">dataset</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">if</span> <span class="n">model_name</span> <span class="ow">and</span> <span class="n">model_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;custom:&quot;</span><span class="p">):</span>
-        <span class="n">model</span> <span class="o">=</span> <span class="n">load_custom_model_from_file</span><span class="p">(</span><span class="n">model_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">model_name</span> <span class="ow">and</span> <span class="n">model_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"custom:"</span><span class="p">):</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">load_custom_model_from_file</span><span class="p">(</span><span class="n">model_name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">":"</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
         <span class="n">model_name</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="n">custom_name</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">name</span>
 
-    <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">model</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">):</span>
         <span class="n">custom_name</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">name</span>
 
     <span class="c1"># Get Config</span>
@@ -1465,7 +1465,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">104</span>
 <span class="normal">105</span>
 <span class="normal">106</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">],</span> <span class="n">make_splits</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Downloads the benchmark datasets specified in the list of dataset names.</span>
+<span class="w">    </span><span class="sd">"""Downloads the benchmark datasets specified in the list of dataset names.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
 <span class="sd">    which indicates the base directory where the datasets will be downloaded.</span>
@@ -1496,68 +1496,68 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">    Args:</span>
 <span class="sd">        datasets (List[str] or str): A dataset name string or a List of dataset names to download or one of the following aliases: `all`, `classification`, `segmentation`.</span>
 <span class="sd">        make_splits (bool): Whether to generate data splits for the datasets. Defaults to False.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="kn">from</span><span class="w"> </span><span class="nn">.data_splits</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_splits</span>
 
-    <span class="k">if</span> <span class="s2">&quot;THUNDER_BASE_DATA_FOLDER&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="k">if</span> <span class="s2">"THUNDER_BASE_DATA_FOLDER"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">EnvironmentError</span><span class="p">(</span>
-            <span class="s2">&quot;Please set base data directory of thunder using `export THUNDER_BASE_DATA_FOLDER=/base/data/directory`&quot;</span>
+            <span class="s2">"Please set base data directory of thunder using `export THUNDER_BASE_DATA_FOLDER=/base/data/directory`"</span>
         <span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">datasets</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"all"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">"bach"</span><span class="p">,</span>
+                <span class="s2">"bracs"</span><span class="p">,</span>
+                <span class="s2">"break_his"</span><span class="p">,</span>
+                <span class="s2">"ccrcc"</span><span class="p">,</span>
+                <span class="s2">"crc"</span><span class="p">,</span>
+                <span class="s2">"esca"</span><span class="p">,</span>
+                <span class="s2">"mhist"</span><span class="p">,</span>
+                <span class="s2">"ocelot"</span><span class="p">,</span>
+                <span class="s2">"pannuke"</span><span class="p">,</span>
+                <span class="s2">"patch_camelyon"</span><span class="p">,</span>
+                <span class="s2">"segpath_epithelial"</span><span class="p">,</span>
+                <span class="s2">"segpath_lymphocytes"</span><span class="p">,</span>
+                <span class="s2">"spider_breast"</span><span class="p">,</span>
+                <span class="s2">"spider_colorectal"</span><span class="p">,</span>
+                <span class="s2">"spider_skin"</span><span class="p">,</span>
+                <span class="s2">"spider_thorax"</span><span class="p">,</span>
+                <span class="s2">"starc9"</span><span class="p">,</span>
+                <span class="s2">"tcga_crc_msi"</span><span class="p">,</span>
+                <span class="s2">"tcga_tils"</span><span class="p">,</span>
+                <span class="s2">"tcga_uniform"</span><span class="p">,</span>
+                <span class="s2">"wilds"</span><span class="p">,</span>
             <span class="p">]</span>
-        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"classification"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
+                <span class="s2">"bach"</span><span class="p">,</span>
+                <span class="s2">"bracs"</span><span class="p">,</span>
+                <span class="s2">"break_his"</span><span class="p">,</span>
+                <span class="s2">"ccrcc"</span><span class="p">,</span>
+                <span class="s2">"crc"</span><span class="p">,</span>
+                <span class="s2">"esca"</span><span class="p">,</span>
+                <span class="s2">"mhist"</span><span class="p">,</span>
+                <span class="s2">"patch_camelyon"</span><span class="p">,</span>
+                <span class="s2">"spider_breast"</span><span class="p">,</span>
+                <span class="s2">"spider_colorectal"</span><span class="p">,</span>
+                <span class="s2">"spider_skin"</span><span class="p">,</span>
+                <span class="s2">"spider_thorax"</span><span class="p">,</span>
+                <span class="s2">"starc9"</span><span class="p">,</span>
+                <span class="s2">"tcga_crc_msi"</span><span class="p">,</span>
+                <span class="s2">"tcga_tils"</span><span class="p">,</span>
+                <span class="s2">"tcga_uniform"</span><span class="p">,</span>
+                <span class="s2">"wilds"</span><span class="p">,</span>
             <span class="p">]</span>
-        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"segmentation"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+                <span class="s2">"ocelot"</span><span class="p">,</span>
+                <span class="s2">"pannuke"</span><span class="p">,</span>
+                <span class="s2">"segpath_epithelial"</span><span class="p">,</span>
+                <span class="s2">"segpath_lymphocytes"</span><span class="p">,</span>
             <span class="p">]</span>
 
     <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
@@ -1590,8 +1590,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>uni</li>
 <li>uni2h</li>
 <li>virchow</li>
+<li>virchow_spectra</li>
 <li>virchow2</li>
 <li>hoptimus0</li>
+<li>hoptimus0_spectra</li>
 <li>h0mini</li>
 <li>hoptimus1</li>
 <li>genbio-pathfm</li>
@@ -1603,7 +1605,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>hiboub</li>
 <li>hiboul</li>
 <li>midnight</li>
+<li>midnight12k_spectra</li>
 <li>openmidnight</li>
+<li>openmidnight11</li>
+<li>openmidnight11_spectra</li>
 <li>kaiko_vits8</li>
 <li>kaiko_vits16</li>
 <li>kaiko_vitb8</li>
@@ -1657,27 +1662,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src/thunder/models/download.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">152</span>
-<span class="normal">153</span>
-<span class="normal">154</span>
-<span class="normal">155</span>
-<span class="normal">156</span>
-<span class="normal">157</span>
-<span class="normal">158</span>
-<span class="normal">159</span>
-<span class="normal">160</span>
-<span class="normal">161</span>
-<span class="normal">162</span>
-<span class="normal">163</span>
-<span class="normal">164</span>
-<span class="normal">165</span>
-<span class="normal">166</span>
-<span class="normal">167</span>
-<span class="normal">168</span>
-<span class="normal">169</span>
-<span class="normal">170</span>
-<span class="normal">171</span>
-<span class="normal">172</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">172</span>
 <span class="normal">173</span>
 <span class="normal">174</span>
 <span class="normal">175</span>
@@ -1705,15 +1690,42 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">197</span>
 <span class="normal">198</span>
 <span class="normal">199</span>
-<span class="normal">200</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Download model checkpoints from Hugging Face.</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">download_models</span><span class="p">(</span><span class="n">models</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">"""Download model checkpoints from Hugging Face.</span>
 
 <span class="sd">    The list of all available models:</span>
 <span class="sd">        * uni</span>
 <span class="sd">        * uni2h</span>
 <span class="sd">        * virchow</span>
+<span class="sd">        * virchow_spectra</span>
 <span class="sd">        * virchow2</span>
 <span class="sd">        * hoptimus0</span>
+<span class="sd">        * hoptimus0_spectra</span>
 <span class="sd">        * h0mini</span>
 <span class="sd">        * hoptimus1</span>
 <span class="sd">        * genbio-pathfm</span>
@@ -1725,7 +1737,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * hiboub</span>
 <span class="sd">        * hiboul</span>
 <span class="sd">        * midnight</span>
+<span class="sd">        * midnight12k_spectra</span>
 <span class="sd">        * openmidnight</span>
+<span class="sd">        * openmidnight11</span>
+<span class="sd">        * openmidnight11_spectra</span>
 <span class="sd">        * kaiko_vits8</span>
 <span class="sd">        * kaiko_vits16</span>
 <span class="sd">        * kaiko_vitb8</span>
@@ -1746,13 +1761,13 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
 <span class="sd">    Args:</span>
 <span class="sd">        models (List[str] or str): a list of model names or single a model name str.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">models</span><span class="p">]</span>
 
     <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">models</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">model</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">TAGS_FILENAMES</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> is not available.&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Model </span><span class="si">{</span><span class="n">model</span><span class="si">}</span><span class="s2"> is not available."</span><span class="p">)</span>
         <span class="n">download_model</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -1882,73 +1897,73 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">76</span>
 <span class="normal">77</span>
 <span class="normal">78</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">generate_splits</span><span class="p">(</span><span class="n">datasets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generates the data splits for all datasets in input list.</span>
+<span class="w">    </span><span class="sd">"""Generates the data splits for all datasets in input list.</span>
 
 <span class="sd">    This function requires the `$THUNDER_BASE_DATA_FOLDER` environment variable to be set,</span>
 <span class="sd">    which indicates the base directory where the datasets will be downloaded.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        datasets (List[str]): List of dataset names to generate splits for or one of the following aliases: `all`, `classification`, `segmentation`.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span><span class="n">datasets</span><span class="p">]</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;all&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"all"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
+                <span class="s2">"bach"</span><span class="p">,</span>
+                <span class="s2">"bracs"</span><span class="p">,</span>
+                <span class="s2">"break_his"</span><span class="p">,</span>
+                <span class="s2">"ccrcc"</span><span class="p">,</span>
+                <span class="s2">"crc"</span><span class="p">,</span>
+                <span class="s2">"esca"</span><span class="p">,</span>
+                <span class="s2">"patch_camelyon"</span><span class="p">,</span>
+                <span class="s2">"tcga_crc_msi"</span><span class="p">,</span>
+                <span class="s2">"tcga_tils"</span><span class="p">,</span>
+                <span class="s2">"tcga_uniform"</span><span class="p">,</span>
+                <span class="s2">"wilds"</span><span class="p">,</span>
+                <span class="s2">"ocelot"</span><span class="p">,</span>
+                <span class="s2">"pannuke"</span><span class="p">,</span>
+                <span class="s2">"segpath_epithelial"</span><span class="p">,</span>
+                <span class="s2">"segpath_lymphocytes"</span><span class="p">,</span>
+                <span class="s2">"mhist"</span><span class="p">,</span>
+                <span class="s2">"spider_breast"</span><span class="p">,</span>
+                <span class="s2">"spider_colorectal"</span><span class="p">,</span>
+                <span class="s2">"spider_skin"</span><span class="p">,</span>
+                <span class="s2">"spider_thorax"</span><span class="p">,</span>
+                <span class="s2">"starc9"</span><span class="p">,</span>
             <span class="p">]</span>
-        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;classification&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"classification"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;bach&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;bracs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;break_his&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;crc&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;esca&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;patch_camelyon&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_crc_msi&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_tils&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;tcga_uniform&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;wilds&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_breast&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_colorectal&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_skin&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;spider_thorax&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;starc9&quot;</span><span class="p">,</span>
+                <span class="s2">"bach"</span><span class="p">,</span>
+                <span class="s2">"bracs"</span><span class="p">,</span>
+                <span class="s2">"break_his"</span><span class="p">,</span>
+                <span class="s2">"ccrcc"</span><span class="p">,</span>
+                <span class="s2">"crc"</span><span class="p">,</span>
+                <span class="s2">"esca"</span><span class="p">,</span>
+                <span class="s2">"patch_camelyon"</span><span class="p">,</span>
+                <span class="s2">"tcga_crc_msi"</span><span class="p">,</span>
+                <span class="s2">"tcga_tils"</span><span class="p">,</span>
+                <span class="s2">"tcga_uniform"</span><span class="p">,</span>
+                <span class="s2">"wilds"</span><span class="p">,</span>
+                <span class="s2">"mhist"</span><span class="p">,</span>
+                <span class="s2">"spider_breast"</span><span class="p">,</span>
+                <span class="s2">"spider_colorectal"</span><span class="p">,</span>
+                <span class="s2">"spider_skin"</span><span class="p">,</span>
+                <span class="s2">"spider_thorax"</span><span class="p">,</span>
+                <span class="s2">"starc9"</span><span class="p">,</span>
             <span class="p">]</span>
-        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"segmentation"</span><span class="p">:</span>
             <span class="n">datasets</span> <span class="o">=</span> <span class="p">[</span>
-                <span class="s2">&quot;ocelot&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_epithelial&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;segpath_lymphocytes&quot;</span><span class="p">,</span>
+                <span class="s2">"ocelot"</span><span class="p">,</span>
+                <span class="s2">"pannuke"</span><span class="p">,</span>
+                <span class="s2">"segpath_epithelial"</span><span class="p">,</span>
+                <span class="s2">"segpath_lymphocytes"</span><span class="p">,</span>
             <span class="p">]</span>
 
-    <span class="n">base_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;THUNDER_BASE_DATA_FOLDER&quot;</span><span class="p">],</span> <span class="s2">&quot;datasets&quot;</span><span class="p">)</span>
-    <span class="n">data_splits_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_folder</span><span class="p">,</span> <span class="s2">&quot;data_splits&quot;</span><span class="p">)</span>
+    <span class="n">base_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"THUNDER_BASE_DATA_FOLDER"</span><span class="p">],</span> <span class="s2">"datasets"</span><span class="p">)</span>
+    <span class="n">data_splits_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_folder</span><span class="p">,</span> <span class="s2">"data_splits"</span><span class="p">)</span>
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">data_splits_folder</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1"># Generating data splits</span>
@@ -1988,9 +2003,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
               <details class="mkdocstrings-source">
                 <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
 <span class="normal">19</span>
@@ -2012,31 +2025,33 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">35</span>
 <span class="normal">36</span>
 <span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PretrainedModel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Abstract class to be inherited by custom pretrained models.&quot;&quot;&quot;</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PretrainedModel</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Abstract class to be inherited by custom pretrained models."""</span>
 
     <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the transform function to be applied to the input images.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the transform function to be applied to the input images."""</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_linear_probing_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the embeddings for linear probing.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the embeddings for linear probing."""</span>
         <span class="k">pass</span>
 
     <span class="nd">@abstractmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_segmentation_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the pixel dense embeddings for segmentation.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">"""Returns the pixel dense embeddings for segmentation."""</span>
         <span class="k">pass</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">get_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">task_type</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">&quot;linear_probing&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">"linear_probing"</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_linear_probing_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">task_type</span> <span class="o">==</span> <span class="s2">"segmentation"</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_segmentation_embeddings</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid task type </span><span class="si">{</span><span class="n">task_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Invalid task type </span><span class="si">{</span><span class="n">task_type</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
               </details>
 
@@ -2073,12 +2088,12 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_linear_probing_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the embeddings for linear probing.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Returns the embeddings for linear probing."""</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2106,12 +2121,12 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_segmentation_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the pixel dense embeddings for segmentation.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Returns the pixel dense embeddings for segmentation."""</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2139,12 +2154,12 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nd">@abstractmethod</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns the transform function to be applied to the input images.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""Returns the transform function to be applied to the input images."""</span>
     <span class="k">pass</span>
 </code></pre></div></td></tr></table></div>
             </details>
@@ -2180,8 +2195,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>uni</li>
 <li>uni2h</li>
 <li>virchow</li>
+<li>virchow_spectra</li>
 <li>virchow2</li>
 <li>hoptimus0</li>
+<li>hoptimus0_spectra</li>
 <li>h0mini</li>
 <li>hoptimus1</li>
 <li>genbio-pathfm</li>
@@ -2193,7 +2210,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <li>hiboub</li>
 <li>hiboul</li>
 <li>midnight</li>
+<li>midnight12k_spectra</li>
 <li>openmidnight</li>
+<li>openmidnight11</li>
+<li>openmidnight11_spectra</li>
 <li>kaiko_vits8</li>
 <li>kaiko_vits16</li>
 <li>kaiko_vitb8</li>
@@ -2315,15 +2335,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src/thunder/models/pretrained_models.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">390</span>
-<span class="normal">391</span>
-<span class="normal">392</span>
-<span class="normal">393</span>
-<span class="normal">394</span>
-<span class="normal">395</span>
-<span class="normal">396</span>
-<span class="normal">397</span>
-<span class="normal">398</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">398</span>
 <span class="normal">399</span>
 <span class="normal">400</span>
 <span class="normal">401</span>
@@ -2386,15 +2398,30 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="normal">458</span>
 <span class="normal">459</span>
 <span class="normal">460</span>
-<span class="normal">461</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_model_from_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Loading pretrained model from input name.</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_model_from_name</span><span class="p">(</span><span class="n">model_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">device</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Loading pretrained model from input name.</span>
 
 <span class="sd">    The list of all available models:</span>
 <span class="sd">        * uni</span>
 <span class="sd">        * uni2h</span>
 <span class="sd">        * virchow</span>
+<span class="sd">        * virchow_spectra</span>
 <span class="sd">        * virchow2</span>
 <span class="sd">        * hoptimus0</span>
+<span class="sd">        * hoptimus0_spectra</span>
 <span class="sd">        * h0mini</span>
 <span class="sd">        * hoptimus1</span>
 <span class="sd">        * genbio-pathfm</span>
@@ -2406,7 +2433,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * hiboub</span>
 <span class="sd">        * hiboul</span>
 <span class="sd">        * midnight</span>
+<span class="sd">        * midnight12k_spectra</span>
 <span class="sd">        * openmidnight</span>
+<span class="sd">        * openmidnight11</span>
+<span class="sd">        * openmidnight11_spectra</span>
 <span class="sd">        * kaiko_vits8</span>
 <span class="sd">        * kaiko_vits16</span>
 <span class="sd">        * kaiko_vitb8</span>
@@ -2438,11 +2468,11 @@ which indicates the base directory where the datasets will be downloaded.</p>
 <span class="sd">        * src (torch.Tensor): Batch of transformed images with shape (B, 3, H, W).</span>
 <span class="sd">        * pretrained_model (torch.nn.Module): Model to extract embeddings with.</span>
 <span class="sd">        * pooled_emb (bool):  Whether to output pooled (True) or spatial (False) embeddings.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 
     <span class="c1"># Loading model config</span>
     <span class="n">yaml_file</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">/config/pretrained_model/</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.yaml&quot;</span>
+        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">parent</span><span class="si">}</span><span class="s2">/config/pretrained_model/</span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2">.yaml"</span>
     <span class="p">)</span>
     <span class="n">model_cfg</span> <span class="o">=</span> <span class="n">OmegaConf</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yaml_file</span><span class="p">)</span>
 
@@ -2454,7 +2484,7 @@ which indicates the base directory where the datasets will be downloaded.</p>
         <span class="k">return</span> <span class="n">extract_embedding</span><span class="p">(</span>
             <span class="n">src</span><span class="p">,</span>
             <span class="n">pretrained_model</span><span class="p">,</span>
-            <span class="n">task_type</span><span class="o">=</span><span class="s2">&quot;linear_probing&quot;</span> <span class="k">if</span> <span class="n">pooled_emb</span> <span class="k">else</span> <span class="s2">&quot;segmentation&quot;</span><span class="p">,</span>
+            <span class="n">task_type</span><span class="o">=</span><span class="s2">"linear_probing"</span> <span class="k">if</span> <span class="n">pooled_emb</span> <span class="k">else</span> <span class="s2">"segmentation"</span><span class="p">,</span>
         <span class="p">)</span>
 
     <span class="k">return</span> <span class="n">model</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">get_embeddings</span>
@@ -2512,10 +2542,10 @@ which indicates the base directory where the datasets will be downloaded.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
       

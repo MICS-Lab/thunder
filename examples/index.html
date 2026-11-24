@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -946,15 +946,15 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;pre_computing_embeddings&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"pre_computing_embeddings"</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;pre_computing_embeddings&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"pannuke"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"pre_computing_embeddings"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -966,9 +966,9 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;knn&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"knn"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -981,10 +981,10 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;linear_probing&quot;</span><span class="p">,</span>
-    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"linear_probing"</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">"embedding_pre_loading"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -996,10 +996,10 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;pannuke&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;segmentation&quot;</span><span class="p">,</span>
-    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"pannuke"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"segmentation"</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">"embedding_pre_loading"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -1011,10 +1011,10 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;simple_shot&quot;</span><span class="p">,</span>
-    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">&quot;embedding_pre_loading&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"simple_shot"</span><span class="p">,</span>
+    <span class="n">loading_mode</span><span class="o">=</span><span class="s2">"embedding_pre_loading"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -1026,9 +1026,9 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;transformation_invariance&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"transformation_invariance"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -1040,9 +1040,9 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 
 <span class="n">benchmark</span><span class="p">(</span>
-    <span class="s2">&quot;hoptimus1&quot;</span><span class="p">,</span>
-    <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;mhist&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;adversarial_attack&quot;</span><span class="p">,</span>
+    <span class="s2">"hoptimus1"</span><span class="p">,</span>
+    <span class="n">dataset</span><span class="o">=</span><span class="s2">"mhist"</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">"adversarial_attack"</span><span class="p">,</span>
 <span class="p">)</span>
 </code></pre></div>
 <hr />
@@ -1100,10 +1100,10 @@ thunder<span class="w"> </span>benchmark<span class="w"> </span>hoptimus1<span c
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
       

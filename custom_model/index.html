@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -29,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -658,14 +658,14 @@
         <span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
         <span class="kn">from</span><span class="w"> </span><span class="nn">torchvision</span><span class="w"> </span><span class="kn">import</span> <span class="n">transforms</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">dinov2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;facebookresearch/dinov2&quot;</span><span class="p">,</span> <span class="s2">&quot;dinov2_vits14&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dinov2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">"facebookresearch/dinov2"</span><span class="p">,</span> <span class="s2">"dinov2_vits14"</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">(</span>
             <span class="p">[</span>
                 <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
                 <span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)),</span>
             <span class="p">]</span>
         <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;dinov2_vits14&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">"dinov2_vits14"</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">emb_dim</span> <span class="o">=</span> <span class="mi">384</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vlm</span> <span class="o">=</span> <span class="kc">False</span>
 
@@ -678,11 +678,11 @@
 
     <span class="k">def</span><span class="w"> </span><span class="nf">get_linear_probing_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dinov2</span><span class="o">.</span><span class="n">forward_features</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;x_norm_clstoken&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s2">"x_norm_clstoken"</span><span class="p">]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">get_segmentation_embeddings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dinov2</span><span class="o">.</span><span class="n">forward_features</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;x_norm_patchtokens&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="s1">'x_norm_patchtokens'</span><span class="p">]</span>
 </code></pre></div>
 <p>With this file ready, you can run any benchmark task using the following command:</p>
 <div class="highlight"><pre><span></span><code><span class="go">thunder benchmark custom:/path/to/my_model.py db_name task_name</span>
@@ -691,9 +691,9 @@
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">thunder</span><span class="w"> </span><span class="kn">import</span> <span class="n">benchmark</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">my_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">DINOv2Features</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">DINOv2Features</span><span class="p">()</span>
-    <span class="n">benchmark</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s2">&quot;ccrcc&quot;</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="s2">&quot;linear_probing&quot;</span><span class="p">)</span>
+    <span class="n">benchmark</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">dataset</span><span class="o">=</span><span class="s2">"ccrcc"</span><span class="p">,</span> <span class="n">task</span><span class="o">=</span><span class="s2">"linear_probing"</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -744,10 +744,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
       
