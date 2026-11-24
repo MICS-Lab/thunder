@@ -28,7 +28,7 @@
   border: 1px solid #ede9f7;
   text-align: center;
   vertical-align: middle;
-  padding: 0.55rem 0.75rem;
+  padding: 0.25rem 0.55rem;
   font-weight: 600;
 }
 
@@ -36,7 +36,7 @@
 :is(#ranksumTableOriginal, #ranksumTableUpToDate, #spiderTable, #perDatasetLinearTable, #zeroshotTable).table tbody th {
   border: 1px solid #ede9f7;
   vertical-align: middle;
-  padding: 0.55rem 0.75rem;
+  padding: 0.25rem 0.55rem;
   text-align: center;
   white-space: nowrap;
 }
@@ -163,17 +163,17 @@ div.dtsp-panesContainer {
 
 /* ─── spiderTable specific ─────────────────────────────────── */
 #spiderTable.table {
-  font-size: 0.60rem;
+  font-size: 0.55rem;
 }
 
 #spiderTable.table thead th {
-  font-size: 0.60rem;
-  padding: 0.60rem 0.3rem !important;
+  font-size: 0.55rem;
+  padding: 0.1rem 0.3rem !important;
 }
 
 #spiderTable.table tbody td,
 #spiderTable.table tbody th {
-  padding: 0.4rem 0.3rem !important;
+  padding: 0.1rem 0.3rem !important;
   white-space: nowrap;
 }
 #spiderTable_filter input[type="search"] {
