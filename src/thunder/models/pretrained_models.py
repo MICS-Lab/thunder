@@ -313,6 +313,7 @@ def get_model(model_cfg: dict, device: str):
         "dinov3vits16pretrainlvd1689m",
         "dinov3vitb16pretrainlvd1689m",
         "dinov3vitl16pretrainlvd1689m",
+        "mettle15",
     ]:
 
         def extract_embedding(src, pretrained_model, task_type="linear_probing"):
@@ -321,7 +322,7 @@ def get_model(model_cfg: dict, device: str):
                 emb = out.pooler_output
             else:
                 emb = out.last_hidden_state[:, 1:]
-                if "dinov3" in model_cfg.model_name:
+                if "dinov3" in model_cfg.model_name or model_cfg.model_name == "mettle15":
                     nb_reg = 4
                 else:
                     nb_reg = 0
@@ -347,7 +348,7 @@ def get_model(model_cfg: dict, device: str):
                 return emb
             else:
                 return patch_tokens
-
+    
     elif model_cfg.model_name in ["midnight", "midnight12k_spectra"]:
 
         def extract_embedding(src, pretrained_model, task_type):
@@ -406,6 +407,7 @@ def get_model_from_name(model_name: str, device: str):
         * virchow2
         * hoptimus0
         * hoptimus0_spectra
+        * mettle15
         * h0mini
         * hoptimus1
         * genbio-pathfm
@@ -548,7 +550,7 @@ def get_from_safetensors(ckpt_path: str, use_fast: str = False):
     :param use_fast: whether to use fast image processor.
     """
     # Model
-    model = AutoModel.from_pretrained(ckpt_path)
+    model = AutoModel.from_pretrained(ckpt_path, trust_remote_code=True)
 
     # Transform
     processor = AutoImageProcessor.from_pretrained(ckpt_path, use_fast=use_fast)
@@ -818,4 +820,3 @@ def get_genbio_pathfm(ckpt_path: str):
     ])
 
     return model, transform
-

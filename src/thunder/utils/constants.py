@@ -8,6 +8,7 @@ class ModelConstants(Enum):
         "hiboul",
         "hoptimus0",
         "hoptimus0_spectra",
+        "mettle15",
         "h0mini",
         "hoptimus1",
         "genbio-pathfm",
